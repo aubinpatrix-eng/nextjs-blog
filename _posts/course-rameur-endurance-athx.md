@@ -26,4 +26,4 @@ Beaucoup d'athlètes s'entraînent avec des intervalles courts et intenses. C'es
 
 ## En pratique
 
-Avec 3 séances d'endurance par semaine en plus de votre force, vous construisez en 8 semaines un moteur nettement plus solide. Pour le dernier bloc de la compétition, lisez aussi [le Metcon X expliqué](/blog/metcon-x-explique).
+Avec 3 séances d'endurance par semaine en plus de votre force, vous construisez en 12 semaines un moteur nettement plus solide. Pour le dernier bloc de la compétition, lisez aussi [le Metcon X expliqué](/blog/metcon-x-explique).

@@ -31,7 +31,7 @@ Prenez 3 à 5 minutes de repos entre les tentatives lourdes, et faites-vous assi
 
 ## Quand tester ?
 
-Idéalement **8 semaines avant la compétition**, au début de votre préparation. Ne testez jamais un nouveau maximum dans les 10 jours qui précèdent l'épreuve.
+Idéalement **10 à 12 semaines avant la compétition**, au début de votre préparation. Ne testez jamais un nouveau maximum dans les 10 jours qui précèdent l'épreuve.
 
 ## Et si je n'ai pas testé ?
 

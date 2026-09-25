@@ -38,7 +38,7 @@ export default function OpengraphImage() {
             sur vos PR.
           </div>
         </div>
-        <div style={{ fontSize: 32, color: "#A9A69C" }}>{`8 semaines · force + endurance + Metcon X · ${price}`}</div>
+        <div style={{ fontSize: 32, color: "#A9A69C" }}>{`12 semaines · force + endurance + Metcon X · ${price}`}</div>
       </div>
     ),
     size,
