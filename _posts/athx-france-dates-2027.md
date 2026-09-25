@@ -4,7 +4,7 @@ slug: athx-france-dates-2027
 excerpt: "Paris en février, Montpellier en mai, Marseille en septembre : le calendrier des compétitions ATHX en France pour la saison 2027, et quand commencer sa préparation."
 tag: Format
 date: 2026-09-24
-updated: 2026-09-26
+updated: 2026-09-25
 ---
 
 Après une première saison française en 2026 (Paris en avril, Marseille en septembre), l'ATHX revient en 2027 avec **trois étapes en France**. Voici le calendrier et le bon moment pour commencer votre préparation.

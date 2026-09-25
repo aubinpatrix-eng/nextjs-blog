@@ -4,7 +4,7 @@ slug: course-rameur-endurance-athx
 excerpt: "La différence entre s'entraîner à être rapide et s'entraîner à tenir un effort continu sur toute une compétition ATHX."
 tag: Endurance
 date: 2026-09-08
-updated: 2026-09-26
+updated: 2026-09-25
 ---
 
 L'ATHX dure environ 2h30 du début à la fin. Même si toutes les minutes ne sont pas à fond, votre organisme reste sollicité pendant tout ce temps. La zone Endurance, avec la course et le rameur enchaînés, en est le cœur. Et elle se prépare très différemment d'un 10 km chrono.

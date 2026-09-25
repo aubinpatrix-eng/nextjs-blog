@@ -11,7 +11,7 @@ Hyrox et ATHX sont les deux compétitions de fitness hybride qui montent. Elles 
 ## Le format
 
 - **Hyrox** : un format fixe et identique partout dans le monde. **8 × 1 km de course**, chacun suivi d'une station de travail (SkiErg, traîneau, burpees, rameur, fentes…). On enchaîne tout, sans pause, jusqu'à l'arrivée.
-- **ATHX** : environ **2h30 découpées en 6 zones**. On passe par une zone de force, une zone d'endurance et un metcon final, séparés par des zones de ravitaillement et de récupération. Voir [le format ATHX expliqué](/blog/athx-cest-quoi).
+- **ATHX** : environ **2h30 découpées en 6 zones**. On passe par une zone de force, une zone d'endurance et un metcon final, séparés par des zones de ravitaillement et de récupération. Voir [ATHX Games : qu'est-ce que c'est ?](/blog/athx-games-quest-ce-que-cest).
 
 ## La place de la force
 
