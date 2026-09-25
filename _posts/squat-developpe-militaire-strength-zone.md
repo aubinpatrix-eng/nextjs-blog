@@ -4,9 +4,12 @@ slug: squat-developpe-militaire-strength-zone
 excerpt: "Pourquoi la Strength Zone de l'ATHX récompense la technique autant que la charge, et comment structurer sa progression sur 12 semaines."
 tag: Force
 date: 2026-09-15
+updated: 2026-09-26
 ---
 
 La Strength Zone de l'ATHX tourne autour de mouvements polyarticulaires comme le **squat arrière** et le **développé militaire strict**. Deux exercices classiques, mais qui posent problème à beaucoup d'athlètes orientés endurance ou fonctionnel.
+
+> **Mise à jour saison 2027** : la Strength zone passe à un 1RM shoulder-to-overhead (impulsion des jambes autorisée), un 2RM squat arrière et un 3RM soulevé de terre. Détails dans [la Strength zone ATHX 2027 expliquée](/blog/strength-zone-athx-2027). Les principes de progression ci-dessous restent valables.
 
 ## La technique compte autant que la charge
 

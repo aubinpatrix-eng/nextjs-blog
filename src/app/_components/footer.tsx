@@ -13,6 +13,7 @@ export default function Footer() {
           <div>
             <Link href="/">Accueil</Link>
             <Link href="/#programme">Programme</Link>
+            <Link href="/calculateur-1rm">Calculateur 1RM</Link>
             <Link href="/blog">Blog</Link>
             {site.instagram && (
               <a href={site.instagram} rel="me noopener" target="_blank">

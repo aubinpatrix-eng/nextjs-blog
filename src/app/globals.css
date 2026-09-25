@@ -79,7 +79,7 @@ header.site-nav {
 .burger { display: none; background: none; border: 1px solid var(--line); color: var(--paper); padding: 8px 12px; border-radius: 3px; font-size: 14px; font-family: inherit; }
 @media (max-width: 780px) {
   .nav-links { position: fixed; top: calc(68px + env(safe-area-inset-top, 0px)); left: 0; right: 0; background: var(--ink); flex-direction: column; align-items: stretch; gap: 0; border-bottom: 1px solid var(--line); max-height: 0; overflow: hidden; transition: max-height 0.25s ease; }
-  .nav-links.open { max-height: 320px; }
+  .nav-links.open { max-height: 400px; }
   .nav-links a { width: 100%; padding: 16px 20px; border-bottom: 1px solid var(--line); }
   .nav-links a.nav-cta { margin: 16px 20px; width: auto; text-align: center; }
   .burger { display: block; }
@@ -260,3 +260,7 @@ footer { padding: 48px 0; }
 .article-cta h2 { font-size: 28px; margin-bottom: 10px; }
 .article-cta p { color: var(--mute); margin: 0 0 20px; }
 .related h2 { margin-bottom: 36px; }
+
+/* ---------- 1RM CALCULATOR ---------- */
+.h-card { font-size: 18px; margin-bottom: 8px; }
+.big-num { font-family: var(--ff-display), sans-serif; font-weight: 700; font-size: 64px; line-height: 1; color: var(--signal); margin-bottom: 22px; }
