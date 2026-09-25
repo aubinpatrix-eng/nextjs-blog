@@ -2,14 +2,13 @@
 title: Mentions légales
 description: Mentions légales du site ATHX PREP.
 ---
-
 ## Éditeur du site
 
-- Nom / raison sociale : **[À COMPLÉTER]**
-- Statut (micro-entreprise, SAS…) et SIRET : **[À COMPLÉTER]**
-- Adresse : **[À COMPLÉTER]**
-- E-mail : **[À COMPLÉTER]**
-- Directeur de la publication : **[À COMPLÉTER]**
+- Nom / raison sociale : **Patrix Aubin**
+- Statut (micro-entreprise, SAS…) et SIRET : **auto-entrepreneur**
+- Adresse : **Paris**
+- E-mail : **aubinpatrix@gmail.com**
+- Directeur de la publication : **Patrix Aubin**
 
 ## Hébergement
 
