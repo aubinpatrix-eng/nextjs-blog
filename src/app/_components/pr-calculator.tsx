@@ -123,7 +123,7 @@ export default function PrCalculator({ buyUrl, priceLabel, comparePriceLabel }: 
               Bientôt disponible
             </span>
           )}
-          <p className="fine">Paiement sécurisé. Accès immédiat au PDF complet + suivi des 8 semaines.</p>
+          <p className="fine">Paiement sécurisé. Accès immédiat au PDF complet + suivi des 12 semaines.</p>
         </div>
       </div>
     </div>

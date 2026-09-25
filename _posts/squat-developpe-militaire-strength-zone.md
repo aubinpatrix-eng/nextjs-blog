@@ -1,7 +1,7 @@
 ---
 title: "Squat arrière et développé militaire : les deux mouvements à ne pas négliger"
 slug: squat-developpe-militaire-strength-zone
-excerpt: "Pourquoi la Strength Zone de l'ATHX récompense la technique autant que la charge, et comment structurer sa progression sur 8 semaines."
+excerpt: "Pourquoi la Strength Zone de l'ATHX récompense la technique autant que la charge, et comment structurer sa progression sur 12 semaines."
 tag: Force
 date: 2026-09-15
 ---
@@ -19,15 +19,15 @@ Consultez le standard de mouvement de votre édition : c'est lui qui fait foi.
 
 ## Structurer la progression
 
-Sur une préparation de 8 semaines, une approche simple et efficace consiste à travailler en **pourcentage de votre 1RM** (votre charge maximale sur une répétition) :
+Sur une préparation de 12 semaines, une approche simple et efficace consiste à travailler en **pourcentage de votre 1RM** (votre charge maximale sur une répétition) :
 
 | Semaines | Intensité | Séries × répétitions |
 | --- | --- | --- |
-| 1–2 | 70–75 % | 5 × 3 à 5 |
-| 3–4 | 75–82 % | 5 × 3 |
-| 5–6 | 82–88 % | 4 × 2 à 3 |
-| 7 | 88–92 % | quelques singles |
-| 8 | 60–70 % | décharge avant la compétition |
+| 1–3 | 65–72 % | 5 × 5 |
+| 4–6 | 72–80 % | 5 × 3 à 5 |
+| 7–9 | 80–87 % | 4 × 3 |
+| 10–11 | 87–92 % | 3 × 2, puis quelques singles |
+| 12 | 60–70 % | décharge avant la compétition |
 
 L'idée : monter progressivement l'intensité, puis réduire le volume la dernière semaine pour arriver frais. Pas besoin de tester un nouveau record le jour J.
 
