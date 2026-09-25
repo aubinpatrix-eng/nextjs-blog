@@ -1,37 +1,40 @@
-# Mon site — Next.js + Pages CMS
+# ATHX PREP — athxgames.fr
 
-Site statique construit avec [Next.js](https://nextjs.org) et [Tailwind CSS](https://tailwindcss.com), dont le contenu se modifie depuis [Pages CMS](https://pagescms.org) : une interface d'édition gratuite qui enregistre directement vos changements dans ce dépôt GitHub.
+Site de vente du programme de préparation ATHX (14,99 €) + blog, construit avec [Next.js](https://nextjs.org) et éditable depuis [Pages CMS](https://pagescms.org).
 
-## Où se trouve le contenu
+## Structure
 
-| Contenu | Fichier(s) | Dans Pages CMS |
+| Page | URL | Contenu éditable dans Pages CMS |
 | --- | --- | --- |
-| Titre, texte d'accueil, pied de page | `_data/site.json` | **Réglages du site** |
-| Articles | `_posts/*.md` | **Articles** |
-| Images | `public/assets/` | **Media** |
+| Accueil (format ATHX, programme, calculateur de PR, FAQ) | `/` | **Page d'accueil** → `_data/home.json` |
+| Blog | `/blog`, `/blog/categorie/force`… | **Articles de blog** → `_posts/*.md` |
+| Article | `/blog/<adresse>` | idem |
+| Mentions légales, CGV, confidentialité | `/mentions-legales`… | **Pages** → `_pages/*.md` |
+| Confirmation d'achat (non indexée) | `/merci` | — |
+| Prix, lien de paiement, newsletter, URL du site | — | **Réglages du site** → `_data/site.json` |
 
-La configuration de Pages CMS est dans [`.pages.yml`](./.pages.yml) (voir la [documentation](https://pagescms.org/docs/configuration/)).
+SEO généré automatiquement : `sitemap.xml`, `robots.txt`, balises canonical et Open Graph, image de partage, données structurées (Product, FAQPage, BlogPosting, BreadcrumbList).
 
-## 1. Éditer le contenu avec Pages CMS
+## Mise en route
 
-1. Allez sur [app.pagescms.org](https://app.pagescms.org) et connectez-vous avec votre compte GitHub.
-2. Installez l'application GitHub Pages CMS et donnez-lui accès au dépôt `nextjs-blog`.
-3. Ouvrez le dépôt, choisissez la branche, puis modifiez **Réglages du site** ou créez un **Article**.
-4. Chaque enregistrement crée un commit sur la branche : le site se redéploie automatiquement (étape 2).
+1. **Paiement** — créez un [Payment Link Stripe](https://dashboard.stripe.com/payment-links) à 14,99 € :
+   - après le paiement, redirigez vers `https://athxgames.fr/merci` ;
+   - ajoutez la case d'acceptation des CGV (renonciation au droit de rétractation pour un contenu numérique).
 
-## 2. Mettre le site en ligne (Vercel)
+   Collez le lien dans **Réglages du site → Lien de paiement Stripe**. Tant qu'il est vide, le bouton affiche « Bientôt disponible ».
+   Les PR saisis dans le calculateur arrivent dans Stripe, dans le champ `client_reference_id` du paiement, toujours en kg (ex. `ATHX_SQ100_DM45_SDT130`), et l'e-mail est prérempli.
+2. **Mise en ligne** — importez ce dépôt sur [vercel.com/new](https://vercel.com/new), puis ajoutez le domaine dans *Settings → Domains*.
+3. **Pages CMS** — connectez-vous sur [app.pagescms.org](https://app.pagescms.org) avec GitHub et ouvrez ce dépôt. Chaque enregistrement crée un commit et redéploie le site.
+4. **Google Search Console** — ajoutez le domaine et soumettez `https://<domaine>/sitemap.xml`.
+5. Complétez les **[À COMPLÉTER]** des mentions légales, CGV et politique de confidentialité.
 
-1. Sur [vercel.com/new](https://vercel.com/new), importez le dépôt GitHub `nextjs-blog`.
-2. Laissez les réglages par défaut (Next.js est détecté) et cliquez sur **Deploy**.
-3. Chaque commit — y compris ceux faits depuis Pages CMS — déclenche un nouveau déploiement.
+## Écrire un article
 
-Netlify ou Cloudflare Pages fonctionnent aussi (commande de build : `npm run build`).
+Dans Pages CMS → **Articles de blog** → *Add an entry* : titre, adresse (ex. `hyrox-vs-athx`, sans accents), résumé (~155 caractères, c'est le texte affiché par Google), catégorie, date. Un article daté dans le futur n'apparaît qu'au prochain déploiement après cette date.
 
 ## Développement local
 
 ```bash
 npm install
-npm run dev
+npm run dev   # http://localhost:3000
 ```
-
-Le site est alors disponible sur [http://localhost:3000](http://localhost:3000).

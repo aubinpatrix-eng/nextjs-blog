@@ -1,39 +1,118 @@
 media:
-  input: public/assets
-  output: /assets
+  input: public/assets/images
+  output: /assets/images
   categories: [ "image" ]
 content:
+  - name: posts
+    label: Articles de blog
+    type: collection
+    path: _posts
+    filename: "{fields.slug}.md"
+    view:
+      fields: [ title, tag, date ]
+      primary: title
+    fields:
+      - { name: title, label: Titre (H1, ~60 caractères max), type: string, required: true }
+      - { name: slug, label: "Adresse de l'article (ex. metcon-x-explique, sans accents)", type: string, required: true, pattern: { regex: "^[a-z0-9]+(-[a-z0-9]+)*$", message: "Minuscules, chiffres et tirets uniquement" } }
+      - { name: excerpt, label: Résumé (meta description, ~155 caractères), type: text, required: true }
+      - name: tag
+        label: Catégorie
+        type: select
+        required: true
+        options:
+          values: [ Force, Endurance, Nutrition, Format, Mental ]
+      - { name: date, label: Date de publication, type: date, required: true }
+      - { name: updated, label: Date de mise à jour (optionnel), type: date }
+      - { name: author, label: Auteur (optionnel), type: string }
+      - { name: coverImage, label: Image de couverture (optionnel, 1200×630), type: image }
+      - { name: body, label: Contenu, type: rich-text }
+
+  - name: pages
+    label: Pages (mentions légales, CGV…)
+    type: collection
+    path: _pages
+    view:
+      fields: [ title ]
+    fields:
+      - { name: title, label: Titre, type: string, required: true }
+      - { name: description, label: Description (SEO), type: text }
+      - { name: body, label: Contenu, type: rich-text }
+
+  - name: home
+    label: Page d'accueil
+    type: file
+    path: _data/home.json
+    fields:
+      - name: hero
+        label: En-tête
+        type: object
+        fields:
+          - { name: kicker, label: Surtitre, type: string }
+          - { name: title, label: "Titre (H1) — un retour à la ligne = une ligne", type: text }
+          - { name: lede, label: Texte d'introduction, type: text }
+          - { name: offerNote, label: Mention sous le prix, type: string }
+          - { name: features, label: Contenu de l'offre, type: string, list: true }
+      - name: stats
+        label: Chiffres clés
+        type: object
+        list: true
+        fields:
+          - { name: value, label: Valeur, type: string }
+          - { name: label, label: Légende, type: string }
+      - name: format
+        label: Section « Le format »
+        type: object
+        fields:
+          - { name: title, label: Titre, type: text }
+          - { name: lede, label: Introduction, type: text }
+          - name: zones
+            label: Zones
+            type: object
+            list: true
+            fields:
+              - { name: name, label: Nom, type: string }
+              - { name: description, label: Description, type: text }
+              - { name: duration, label: Durée, type: string }
+      - name: program
+        label: Section « Le programme »
+        type: object
+        fields:
+          - { name: title, label: Titre, type: text }
+          - { name: lede, label: Introduction, type: text }
+          - name: blocks
+            label: Blocs
+            type: object
+            list: true
+            fields:
+              - { name: title, label: Titre, type: string }
+              - { name: description, label: Description, type: text }
+      - name: cta
+        label: Section achat (calculateur de PR)
+        type: object
+        fields:
+          - { name: title, label: Titre, type: text }
+          - { name: lede, label: Introduction, type: text }
+      - name: faq
+        label: FAQ
+        type: object
+        list: true
+        fields:
+          - { name: question, label: Question, type: string }
+          - { name: answer, label: Réponse, type: text }
+      - { name: finalCta, label: Phrase d'appel final, type: string }
+
   - name: site
     label: Réglages du site
     type: file
     path: _data/site.json
     fields:
-      - { name: title, label: Titre du site, type: string, required: true }
-      - { name: description, label: Description (SEO), type: text }
-      - { name: intro, label: Texte d'accueil, type: text }
-      - { name: footerTitle, label: Texte du pied de page, type: string }
-      - { name: footerLinkLabel, label: Libellé du lien (pied de page), type: string }
-      - { name: footerLinkUrl, label: URL du lien (pied de page), type: string }
-  - name: posts
-    label: Articles
-    type: collection
-    path: _posts
-    view:
-      fields: [ coverImage, title, date ]
-    fields:
-      - { name: title, label: Titre, type: string, required: true }
-      - { name: excerpt, label: Résumé, type: string }
-      - { name: coverImage, label: Image de couverture, type: image }
-      - { name: date, label: Date, type: date, options: { time: true, format: "yyyy-MM-dd'T'HH:mm:ss.SSS'Z'" } }
-      - name: author
-        label: Auteur
-        type: object
-        fields:
-          - { name: name, label: Nom, type: string }
-          - { name: picture, label: Photo, type: image }
-      - name: ogImage
-        label: Image (partage réseaux sociaux)
-        type: object
-        fields:
-          - { name: url, label: URL, type: image }
-      - { name: body, label: Contenu, type: rich-text }
+      - { name: name, label: Nom du site, type: string, required: true }
+      - { name: url, label: "Adresse du site (ex. https://athxgames.fr)", type: string, required: true }
+      - { name: title, label: Titre SEO de la page d'accueil, type: string }
+      - { name: description, label: Description SEO de la page d'accueil (~155 caractères), type: text }
+      - { name: price, label: Prix du programme (€), type: number, required: true }
+      - { name: comparePrice, label: "Ancien prix barré (€) — uniquement s'il a réellement été pratiqué", type: number }
+      - { name: buyUrl, label: "Lien de paiement Stripe (https://buy.stripe.com/…)", type: string }
+      - { name: newsletterAction, label: URL du formulaire newsletter (Brevo, Mailchimp…), type: string }
+      - { name: instagram, label: Lien Instagram, type: string }
+      - { name: disclaimer, label: Mention d'indépendance (pied de page), type: text }
