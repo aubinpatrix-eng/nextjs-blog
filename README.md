@@ -1,4 +1,4 @@
-# ATHX PREP — athxgames.fr
+# ATHX PREP — preparation-athx.fr
 
 Site de vente du programme de préparation ATHX (14,99 €) + blog, construit avec [Next.js](https://nextjs.org) et éditable depuis [Pages CMS](https://pagescms.org).
 
@@ -18,14 +18,14 @@ SEO généré automatiquement : `sitemap.xml`, `robots.txt`, balises canonical e
 ## Mise en route
 
 1. **Paiement** — créez un [Payment Link Stripe](https://dashboard.stripe.com/payment-links) à 14,99 € :
-   - après le paiement, redirigez vers `https://athxgames.fr/merci` ;
+   - après le paiement, redirigez vers `https://preparation-athx.fr/merci` ;
    - ajoutez la case d'acceptation des CGV (renonciation au droit de rétractation pour un contenu numérique).
 
    Collez le lien dans **Réglages du site → Lien de paiement Stripe**. Tant qu'il est vide, le bouton affiche « Bientôt disponible ».
    Les PR saisis dans le calculateur arrivent dans Stripe, dans le champ `client_reference_id` du paiement, toujours en kg (ex. `ATHX_SQ100_DM45_SDT130`), et l'e-mail est prérempli.
 2. **Mise en ligne** — importez ce dépôt sur [vercel.com/new](https://vercel.com/new), puis ajoutez le domaine dans *Settings → Domains*.
 3. **Pages CMS** — connectez-vous sur [app.pagescms.org](https://app.pagescms.org) avec GitHub et ouvrez ce dépôt. Chaque enregistrement crée un commit et redéploie le site.
-4. **Google Search Console** — ajoutez le domaine et soumettez `https://<domaine>/sitemap.xml`.
+4. **Google Search Console** — ajoutez le domaine et soumettez `https://preparation-athx.fr/sitemap.xml`.
 5. Complétez les **[À COMPLÉTER]** des mentions légales, CGV et politique de confidentialité.
 
 ## Écrire un article

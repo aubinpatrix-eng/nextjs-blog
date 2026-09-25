@@ -107,7 +107,7 @@ content:
     path: _data/site.json
     fields:
       - { name: name, label: Nom du site, type: string, required: true }
-      - { name: url, label: "Adresse du site (ex. https://athxgames.fr)", type: string, required: true }
+      - { name: url, label: "Adresse du site (ex. https://preparation-athx.fr)", type: string, required: true }
       - { name: title, label: Titre SEO de la page d'accueil, type: string }
       - { name: description, label: Description SEO de la page d'accueil (~155 caractères), type: text }
       - { name: price, label: Prix du programme (€), type: number, required: true }

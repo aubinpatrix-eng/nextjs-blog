@@ -1,7 +1,7 @@
 import { Metadata } from "next";
 import Link from "next/link";
 
-// Use this page as the Stripe Payment Link confirmation URL: https://athxgames.fr/merci
+// Use this page as the Stripe Payment Link confirmation URL: https://preparation-athx.fr/merci
 export const metadata: Metadata = {
   title: "Merci pour votre achat",
   robots: { index: false },
