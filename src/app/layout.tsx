@@ -1,18 +1,33 @@
 import Footer from "@/app/_components/footer";
-import { CMS_NAME, HOME_OG_IMAGE_URL } from "@/lib/constants";
-import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import Nav from "@/app/_components/nav";
+import { formatPrice, getSite } from "@/lib/site";
+import type { Metadata, Viewport } from "next";
+import { Big_Shoulders_Display, Work_Sans } from "next/font/google";
 
 import "./globals.css";
 
-const inter = Inter({ subsets: ["latin"] });
+const display = Big_Shoulders_Display({
+  subsets: ["latin"],
+  weight: ["700"],
+  variable: "--ff-display",
+});
+const body = Work_Sans({ subsets: ["latin"], variable: "--ff-body" });
 
-export const metadata: Metadata = {
-  title: `Next.js Blog Example with ${CMS_NAME}`,
-  description: `A statically generated blog example using Next.js and ${CMS_NAME}.`,
-  openGraph: {
-    images: [HOME_OG_IMAGE_URL],
-  },
+export function generateMetadata(): Metadata {
+  const site = getSite();
+  return {
+    metadataBase: new URL(site.url),
+    title: { default: `${site.name} — ${site.title}`, template: `%s | ${site.name}` },
+    description: site.description,
+    alternates: { canonical: "/" },
+    openGraph: { type: "website", locale: "fr_FR", siteName: site.name },
+    twitter: { card: "summary_large_image" },
+  };
+}
+
+export const viewport: Viewport = {
+  themeColor: "#14140f",
+  viewportFit: "cover",
 };
 
 export default function RootLayout({
@@ -20,43 +35,13 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const site = getSite();
+
   return (
-    <html lang="en">
-      <head>
-        <link
-          rel="apple-touch-icon"
-          sizes="180x180"
-          href="/favicon/apple-touch-icon.png"
-        />
-        <link
-          rel="icon"
-          type="image/png"
-          sizes="32x32"
-          href="/favicon/favicon-32x32.png"
-        />
-        <link
-          rel="icon"
-          type="image/png"
-          sizes="16x16"
-          href="/favicon/favicon-16x16.png"
-        />
-        <link rel="manifest" href="/favicon/site.webmanifest" />
-        <link
-          rel="mask-icon"
-          href="/favicon/safari-pinned-tab.svg"
-          color="#000000"
-        />
-        <link rel="shortcut icon" href="/favicon/favicon.ico" />
-        <meta name="msapplication-TileColor" content="#000000" />
-        <meta
-          name="msapplication-config"
-          content="/favicon/browserconfig.xml"
-        />
-        <meta name="theme-color" content="#000" />
-        <link rel="alternate" type="application/rss+xml" href="/feed.xml" />
-      </head>
-      <body className={inter.className}>
-        <div className="min-h-screen">{children}</div>
+    <html lang="fr" className={`${display.variable} ${body.variable}`}>
+      <body>
+        <Nav priceLabel={formatPrice(site.price)} />
+        {children}
         <Footer />
       </body>
     </html>
