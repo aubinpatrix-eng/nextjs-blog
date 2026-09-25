@@ -48,6 +48,13 @@ export default function Nav({ priceLabel }: Props) {
           >
             Blog
           </Link>
+          <Link
+            href="/qui-suis-je"
+            onClick={close}
+            className={pathname === "/qui-suis-je" ? "active" : undefined}
+          >
+            Qui suis-je
+          </Link>
           <Link href="/#cta" className="nav-cta" onClick={close}>
             Mon programme — {priceLabel}
           </Link>

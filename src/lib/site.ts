@@ -40,6 +40,20 @@ export type Home = {
   finalCta: string;
 };
 
+export type About = {
+  name: string;
+  kicker: string;
+  title: string;
+  headline: string;
+  intro: string;
+  paragraphs: string[];
+  results: { value: string; label: string }[];
+  proofImage: string;
+  proofCaption: string;
+  photo: string;
+  photos: { image: string; caption: string }[];
+};
+
 function readData<T>(file: string): T {
   return JSON.parse(fs.readFileSync(join(process.cwd(), "_data", file), "utf8"));
 }
@@ -51,6 +65,10 @@ export function getSite(): Site {
 
 export function getHome(): Home {
   return readData<Home>("home.json");
+}
+
+export function getAbout(): About {
+  return readData<About>("about.json");
 }
 
 export function formatPrice(price: number) {

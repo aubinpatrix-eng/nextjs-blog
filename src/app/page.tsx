@@ -1,6 +1,7 @@
 import JsonLd from "@/app/_components/json-ld";
 import PostCard from "@/app/_components/post-card";
 import PrCalculator from "@/app/_components/pr-calculator";
+import Proof from "@/app/_components/proof";
 import { getAllPosts } from "@/lib/api";
 import { formatPrice, getHome, getSite } from "@/lib/site";
 import Link from "next/link";
@@ -93,6 +94,8 @@ export default function Index() {
           ))}
         </div>
       </section>
+
+      <Proof />
 
       <section id="format">
         <div className="wrap">
