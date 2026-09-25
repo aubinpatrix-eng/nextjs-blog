@@ -1,0 +1,8 @@
+{
+  "title": "Mon site",
+  "description": "Un site statique géré avec Pages CMS et Next.js.",
+  "intro": "Bienvenue sur mon site. Modifiez ce texte depuis Pages CMS.",
+  "footerTitle": "Propulsé par Next.js et Pages CMS.",
+  "footerLinkLabel": "Voir sur GitHub",
+  "footerLinkUrl": "https://github.com/aubinpatrix-eng/nextjs-blog"
+}

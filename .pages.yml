@@ -3,26 +3,37 @@ media:
   output: /assets
   categories: [ "image" ]
 content:
+  - name: site
+    label: Réglages du site
+    type: file
+    path: _data/site.json
+    fields:
+      - { name: title, label: Titre du site, type: string, required: true }
+      - { name: description, label: Description (SEO), type: text }
+      - { name: intro, label: Texte d'accueil, type: text }
+      - { name: footerTitle, label: Texte du pied de page, type: string }
+      - { name: footerLinkLabel, label: Libellé du lien (pied de page), type: string }
+      - { name: footerLinkUrl, label: URL du lien (pied de page), type: string }
   - name: posts
-    label: Posts
+    label: Articles
     type: collection
     path: _posts
     view:
       fields: [ coverImage, title, date ]
     fields:
-      - { name: title, label: Title, type: string, required: true }
-      - { name: excerpt, label: Excerpt, type: string }
-      - { name: coverImage, label: Cover image, type: image }
+      - { name: title, label: Titre, type: string, required: true }
+      - { name: excerpt, label: Résumé, type: string }
+      - { name: coverImage, label: Image de couverture, type: image }
       - { name: date, label: Date, type: date, options: { time: true, format: "yyyy-MM-dd'T'HH:mm:ss.SSS'Z'" } }
       - name: author
-        label: Author
+        label: Auteur
         type: object
         fields:
-          - { name: name, label: Name, type: string }
-          - { name: picture, label: Picture, type: image }
+          - { name: name, label: Nom, type: string }
+          - { name: picture, label: Photo, type: image }
       - name: ogImage
-        label: Image (social sharing)
+        label: Image (partage réseaux sociaux)
         type: object
         fields:
           - { name: url, label: URL, type: image }
-      - { name: body, label: Body, type: rich-text }
+      - { name: body, label: Contenu, type: rich-text }
