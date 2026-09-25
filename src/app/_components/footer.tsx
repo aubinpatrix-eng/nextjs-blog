@@ -15,6 +15,7 @@ export default function Footer() {
             <Link href="/#programme">Programme</Link>
             <Link href="/calculateur-1rm">Calculateur 1RM</Link>
             <Link href="/blog">Blog</Link>
+            <Link href="/qui-suis-je">Qui suis-je</Link>
             {site.instagram && (
               <a href={site.instagram} rel="me noopener" target="_blank">
                 Instagram

@@ -11,6 +11,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   return [
     { url, lastModified: new Date(), changeFrequency: "weekly", priority: 1 },
     { url: `${url}/calculateur-1rm`, changeFrequency: "monthly", priority: 0.9 },
+    { url: `${url}/qui-suis-je`, changeFrequency: "monthly", priority: 0.6 },
     { url: `${url}/blog`, lastModified: lastPost, changeFrequency: "weekly", priority: 0.8 },
     ...TAGS.map((tag) => ({ url: `${url}/blog/categorie/${tag.slug}`, lastModified: lastPost, priority: 0.5 })),
     ...posts.map((post) => ({

@@ -1,0 +1,27 @@
+{
+  "name": "Aubin Patrix",
+  "kicker": "Le coach derrière ATHX PREP",
+  "title": "Qui suis-je ?",
+  "headline": "1er de la Strength zone à l'ATHX Paris 2026",
+  "intro": "Je m'appelle Aubin. Je pratique le sport, et en particulier la musculation, depuis plusieurs années maintenant.",
+  "paragraphs": [
+    "La force a toujours été mon terrain de jeu : squat, soulevé de terre, développé militaire. Des années à construire des bases solides, séance après séance, en suivant mes charges et en progressant par cycles.",
+    "En avril 2026, j'ai participé à mon tout premier ATHX, à Paris. Résultat : 1er de la Strength zone, toutes catégories confondues, avec 70 kg au développé strict (1RM), 200 kg au squat arrière (3RM) et 220 kg au soulevé de terre (5RM).",
+    "Cette première compétition m'a surtout appris une chose : à l'ATHX, la force se prépare en pensant à tout ce qui vient après. Il faut soulever lourd, puis enchaîner l'endurance et le Metcon X sans exploser.",
+    "C'est pour ça que j'ai créé ATHX PREP : un programme de 12 semaines qui part de vos propres PR, pour que chaque charge soit adaptée à votre niveau et que vous arriviez le jour J prêt sur les six zones."
+  ],
+  "results": [
+    { "value": "70 kg", "label": "1RM développé strict" },
+    { "value": "200 kg", "label": "3RM squat arrière" },
+    { "value": "220 kg", "label": "5RM soulevé de terre" }
+  ],
+  "proofImage": "/assets/images/athx/classement-force-athx-paris-2026.webp",
+  "proofCaption": "Classement officiel de la Strength zone, ATHX Paris 2026.",
+  "photo": "/assets/images/athx/aubin-patrix-strength-zone-athx.webp",
+  "photos": [
+    { "image": "/assets/images/athx/aubin-patrix-strength-zone-athx.webp", "caption": "Strength zone, ATHX Paris 2026" },
+    { "image": "/assets/images/athx/aubin-patrix-athx-paris-2026.webp", "caption": "Entre deux zones à l'ATHX Paris 2026" },
+    { "image": "/assets/images/athx/strength-zone-athx-paris-2026.webp", "caption": "Les racks de la Strength zone avant le départ" },
+    { "image": "/assets/images/athx/endurance-zone-athx-paris-2026.webp", "caption": "Endurance zone : le rameur et le classement en direct" }
+  ]
+}

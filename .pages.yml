@@ -101,6 +101,35 @@ content:
           - { name: answer, label: Réponse, type: text }
       - { name: finalCta, label: Phrase d'appel final, type: string }
 
+  - name: about
+    label: Qui suis-je
+    type: file
+    path: _data/about.json
+    fields:
+      - { name: name, label: Nom, type: string, required: true }
+      - { name: kicker, label: Surtitre, type: string }
+      - { name: title, label: Titre de la page (H1), type: string }
+      - { name: headline, label: "Accroche (ex. 1er de la Strength zone…)", type: string }
+      - { name: intro, label: Introduction, type: text }
+      - { name: paragraphs, label: Paragraphes, type: text, list: true }
+      - name: results
+        label: Résultats (chiffres)
+        type: object
+        list: true
+        fields:
+          - { name: value, label: Valeur, type: string }
+          - { name: label, label: Légende, type: string }
+      - { name: proofImage, label: Capture du classement, type: image }
+      - { name: proofCaption, label: Légende de la capture, type: string }
+      - { name: photo, label: Photo principale, type: image }
+      - name: photos
+        label: Photos du slider
+        type: object
+        list: true
+        fields:
+          - { name: image, label: Photo, type: image }
+          - { name: caption, label: Légende, type: string }
+
   - name: site
     label: Réglages du site
     type: file
