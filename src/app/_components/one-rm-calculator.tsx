@@ -1,20 +1,7 @@
 "use client";
 
+import { estimateOneRm, formatLoad, loadForReps } from "@/lib/one-rm";
 import { useState } from "react";
-
-// Average of the Epley and Brzycki formulas, reliable up to about 10 reps.
-function estimateOneRm(weight: number, reps: number) {
-  if (reps === 1) return weight;
-  const epley = weight * (1 + reps / 30);
-  const brzycki = (weight * 36) / (37 - reps);
-  return (epley + brzycki) / 2;
-}
-
-// Inverse of the same average: the load you can lift for `reps` reps.
-function loadForReps(oneRm: number, reps: number) {
-  if (reps === 1) return oneRm;
-  return oneRm / ((1 + reps / 30 + 36 / (37 - reps)) / 2);
-}
 
 const PERCENTAGES = [95, 90, 85, 80, 75, 70, 65, 60];
 const REP_MAXES = [2, 3, 5];
@@ -27,8 +14,7 @@ export default function OneRmCalculator() {
   const w = parseFloat(weight);
   const r = parseInt(reps, 10);
   const oneRm = w > 0 && r >= 1 && r <= 10 ? estimateOneRm(w, r) : null;
-  const format = (value: number) =>
-    `${(Math.round(value / 2.5) * 2.5).toFixed(1).replace(/\.0$/, "").replace(".", ",")} ${unit}`;
+  const format = (value: number) => formatLoad(value, unit);
 
   return (
     <div className="cta-grid">

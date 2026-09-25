@@ -1,4 +1,5 @@
 import JsonLd from "@/app/_components/json-ld";
+import LiftCalculators from "@/app/_components/lift-calculators";
 import OneRmCalculator from "@/app/_components/one-rm-calculator";
 import { formatPrice, getSite } from "@/lib/site";
 import { Metadata } from "next";
@@ -78,6 +79,23 @@ export default function OneRmPage() {
       <section className="cta-section">
         <div className="wrap">
           <OneRmCalculator />
+        </div>
+      </section>
+
+      <section id="mouvements">
+        <div className="wrap">
+          <div className="sec-head">
+            <h2 className="h-sec">
+              Vos 3 mouvements
+              <br />
+              de force
+            </h2>
+            <p className="lede">
+              Calculez votre 1RM au squat, au soulevé de terre et au développé militaire, et estimez votre score à la
+              Strength zone de l&apos;ATHX 2027 (2RM squat, 3RM soulevé de terre, 1RM shoulder-to-overhead).
+            </p>
+          </div>
+          <LiftCalculators />
         </div>
       </section>
 

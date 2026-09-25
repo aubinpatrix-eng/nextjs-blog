@@ -264,3 +264,7 @@ footer { padding: 48px 0; }
 /* ---------- 1RM CALCULATOR ---------- */
 .h-card { font-size: 18px; margin-bottom: 8px; }
 .big-num { font-family: var(--ff-display), sans-serif; font-weight: 700; font-size: 64px; line-height: 1; color: var(--signal); margin-bottom: 22px; }
+.lift-unit { max-width: 360px; }
+.lift-cell h3 { margin-bottom: 20px; }
+.lift-total { display: flex; justify-content: space-between; align-items: center; gap: 16px; flex-wrap: wrap; border: 1px solid var(--line); border-top: none; padding: 22px 30px; background: var(--ink-2); font-size: 14.5px; color: var(--mute); }
+.lift-total .val { font-family: var(--ff-display), sans-serif; font-weight: 700; font-size: 28px; color: var(--signal); }
