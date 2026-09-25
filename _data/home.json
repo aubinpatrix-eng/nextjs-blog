@@ -2,8 +2,8 @@
   "hero": {
     "kicker": "Passez les 6 zones. Sans surprise. ",
     "title": "Programme de sport pour l'ATHX",
-    "lede": "Un programme de force et de conditionnement pensé pour le format ATHX — 12 semaines, construites autour de vos PR, pour arriver le jour J avec les bons chiffres sur la barre et de l'essence dans le réservoir.",
-    "offerNote": "Paiement unique — accès permanent",
+    "lede": "Un programme de force et de conditionnement pensé pour le format ATHX - 12 semaines, construites autour de vos PR, pour arriver le jour J avec les bons chiffres sur la barre et de l'essence dans le réservoir.",
+    "offerNote": "Paiement unique - accès permanent",
     "features": [
       "12 semaines, adapté à vos PR (squat, développé militaire, soulevé de terre)",
       "Bloc force + bloc endurance + simulation Metcon X",
@@ -22,7 +22,7 @@
     },
     {
       "value": "3",
-      "label": "Catégories : Lite, ATHX, Pro — un même format, trois niveaux d'exigence"
+      "label": "Catégories : Lite, ATHX, Pro - un même format, trois niveaux d'exigence"
     },
     {
       "value": "12 sem.",
@@ -31,7 +31,7 @@
   ],
   "format": {
     "title": "Le format,\nzone par zone",
-    "lede": "L'ATHX se court en continu, sans pause hors chrono. Chaque zone sollicite une qualité physique différente — c'est ce qui rend la préparation générale aussi décisive que la préparation spécifique.",
+    "lede": "L'ATHX se court en continu, sans pause hors chrono. Chaque zone sollicite une qualité physique différente, c'est ce qui rend la préparation générale aussi décisive que la préparation spécifique.",
     "zones": [
       {
         "name": "Warm-up zone",
@@ -45,7 +45,7 @@
       },
       {
         "name": "Refuel zone",
-        "description": "Fenêtre de récupération active — hydratation, respiration, préparation mentale au bloc suivant.",
+        "description": "Fenêtre de récupération active : hydratation, respiration, préparation mentale au bloc suivant.",
         "duration": "≈ 10 min"
       },
       {
@@ -60,7 +60,7 @@
       },
       {
         "name": "Metcon X",
-        "description": "Final à haute intensité mêlant mouvements fonctionnels et travail au sac — c'est souvent là que se joue le classement.",
+        "description": "Final à haute intensité mêlant mouvements fonctionnels et travail au sac, c'est souvent là que se joue le classement.",
         "duration": "tout donner"
       }
     ]
