@@ -40,7 +40,7 @@
       },
       {
         "name": "Strength zone",
-        "description": "Des mouvements polyarticulaires type squat arrière et développé militaire strict, jugés sur charge et technique.",
+        "description": "Saison 2027 : 1RM shoulder-to-overhead, 2RM squat arrière et 3RM soulevé de terre. Le score est le total des charges soulevées.",
         "duration": "≈ 20 min"
       },
       {
@@ -50,18 +50,18 @@
       },
       {
         "name": "Endurance zone",
-        "description": "Course et rameur enchaînés, sur un rythme qu'il faut savoir tenir sans exploser avant le dernier bloc.",
-        "duration": "variable"
+        "description": "Saison 2027 : course et SkiErg en alternance, sur un rythme qu'il faut savoir tenir sans exploser avant le dernier bloc.",
+        "duration": "≈ 30 min"
       },
       {
         "name": "Recovery zone",
-        "description": "Dernière remise à zéro avant le format le plus exigeant de la compétition.",
-        "duration": "courte"
+        "description": "Récupération avant le format le plus exigeant de la compétition. Le classement se fait uniquement sur les zones Strength, Endurance et Metcon X.",
+        "duration": "≈ 30 min"
       },
       {
         "name": "Metcon X",
-        "description": "Final à haute intensité mêlant mouvements fonctionnels et travail au sac, c'est souvent là que se joue le classement.",
-        "duration": "tout donner"
+        "description": "Final à haute intensité : rameur, haltères, développé couché, squats au sac de sable, burpees. C'est souvent là que se joue le classement.",
+        "duration": "≈ 30 min"
       }
     ]
   },
@@ -71,11 +71,11 @@
     "blocks": [
       {
         "title": "Bloc force",
-        "description": "3 cycles de 4 semaines de montée en charge sur squat arrière et développé militaire strict, avec paliers calculés sur vos PR pour arriver affûté sans être cramé."
+        "description": "3 cycles de 4 semaines de montée en charge sur squat arrière, soulevé de terre et travail au-dessus de la tête, avec paliers calculés sur vos PR pour arriver affûté sans être cramé."
       },
       {
         "title": "Bloc endurance & conditionnement",
-        "description": "Course, rameur et circuits enchaînés pour construire la capacité à tenir un effort continu de 2h30, pas seulement un effort isolé."
+        "description": "Course, SkiErg, rameur et circuits enchaînés pour construire la capacité à tenir un effort continu de 2h30, pas seulement un effort isolé."
       },
       {
         "title": "Simulation Metcon X",
