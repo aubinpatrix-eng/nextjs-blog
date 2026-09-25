@@ -1,7 +1,7 @@
 {
   "hero": {
-    "kicker": "Préparation physique pour l'ATHX",
-    "title": "Passez les\n6 zones.\nSans surprise.",
+    "kicker": "Passez les 6 zones. Sans surprise. ",
+    "title": "Programme de sport pour l'ATHX",
     "lede": "Un programme de force et de conditionnement pensé pour le format ATHX — 12 semaines, construites autour de vos PR, pour arriver le jour J avec les bons chiffres sur la barre et de l'essence dans le réservoir.",
     "offerNote": "Paiement unique — accès permanent",
     "features": [
@@ -12,30 +12,75 @@
     ]
   },
   "stats": [
-    { "value": "2h30", "label": "Durée totale de la compétition, du warm-up au Metcon X" },
-    { "value": "6", "label": "Zones enchaînées sans retour en arrière possible" },
-    { "value": "3", "label": "Catégories : Lite, ATHX, Pro — un même format, trois niveaux d'exigence" },
-    { "value": "12 sem.", "label": "Durée du programme pour arriver prêt le jour de l'épreuve" }
+    {
+      "value": "2h30",
+      "label": "Durée totale de la compétition, du warm-up au Metcon X"
+    },
+    {
+      "value": "6",
+      "label": "Zones enchaînées sans retour en arrière possible"
+    },
+    {
+      "value": "3",
+      "label": "Catégories : Lite, ATHX, Pro — un même format, trois niveaux d'exigence"
+    },
+    {
+      "value": "12 sem.",
+      "label": "Durée du programme pour arriver prêt le jour de l'épreuve"
+    }
   ],
   "format": {
     "title": "Le format,\nzone par zone",
     "lede": "L'ATHX se court en continu, sans pause hors chrono. Chaque zone sollicite une qualité physique différente — c'est ce qui rend la préparation générale aussi décisive que la préparation spécifique.",
     "zones": [
-      { "name": "Warm-up zone", "description": "Montée en température encadrée, mobilité et activation avant le chrono officiel.", "duration": "≈ 30 min" },
-      { "name": "Strength zone", "description": "Des mouvements polyarticulaires type squat arrière et développé militaire strict, jugés sur charge et technique.", "duration": "≈ 20 min" },
-      { "name": "Refuel zone", "description": "Fenêtre de récupération active — hydratation, respiration, préparation mentale au bloc suivant.", "duration": "≈ 10 min" },
-      { "name": "Endurance zone", "description": "Course et rameur enchaînés, sur un rythme qu'il faut savoir tenir sans exploser avant le dernier bloc.", "duration": "variable" },
-      { "name": "Recovery zone", "description": "Dernière remise à zéro avant le format le plus exigeant de la compétition.", "duration": "courte" },
-      { "name": "Metcon X", "description": "Final à haute intensité mêlant mouvements fonctionnels et travail au sac — c'est souvent là que se joue le classement.", "duration": "tout donner" }
+      {
+        "name": "Warm-up zone",
+        "description": "Montée en température encadrée, mobilité et activation avant le chrono officiel.",
+        "duration": "≈ 30 min"
+      },
+      {
+        "name": "Strength zone",
+        "description": "Des mouvements polyarticulaires type squat arrière et développé militaire strict, jugés sur charge et technique.",
+        "duration": "≈ 20 min"
+      },
+      {
+        "name": "Refuel zone",
+        "description": "Fenêtre de récupération active — hydratation, respiration, préparation mentale au bloc suivant.",
+        "duration": "≈ 10 min"
+      },
+      {
+        "name": "Endurance zone",
+        "description": "Course et rameur enchaînés, sur un rythme qu'il faut savoir tenir sans exploser avant le dernier bloc.",
+        "duration": "variable"
+      },
+      {
+        "name": "Recovery zone",
+        "description": "Dernière remise à zéro avant le format le plus exigeant de la compétition.",
+        "duration": "courte"
+      },
+      {
+        "name": "Metcon X",
+        "description": "Final à haute intensité mêlant mouvements fonctionnels et travail au sac — c'est souvent là que se joue le classement.",
+        "duration": "tout donner"
+      }
     ]
   },
   "program": {
     "title": "Un programme qui\ns'adapte à vos PR",
     "lede": "Pas de charges génériques. Vos pourcentages de travail sont calculés à partir de votre squat, votre développé militaire et votre soulevé de terre actuels.",
     "blocks": [
-      { "title": "Bloc force", "description": "3 cycles de 4 semaines de montée en charge sur squat arrière et développé militaire strict, avec paliers calculés sur vos PR pour arriver affûté sans être cramé." },
-      { "title": "Bloc endurance & conditionnement", "description": "Course, rameur et circuits enchaînés pour construire la capacité à tenir un effort continu de 2h30, pas seulement un effort isolé." },
-      { "title": "Simulation Metcon X", "description": "Séances de mise en situation reproduisant l'enchaînement fatigue-force-fonctionnel du dernier bloc, pour ne pas le découvrir le jour J." }
+      {
+        "title": "Bloc force",
+        "description": "3 cycles de 4 semaines de montée en charge sur squat arrière et développé militaire strict, avec paliers calculés sur vos PR pour arriver affûté sans être cramé."
+      },
+      {
+        "title": "Bloc endurance & conditionnement",
+        "description": "Course, rameur et circuits enchaînés pour construire la capacité à tenir un effort continu de 2h30, pas seulement un effort isolé."
+      },
+      {
+        "title": "Simulation Metcon X",
+        "description": "Séances de mise en situation reproduisant l'enchaînement fatigue-force-fonctionnel du dernier bloc, pour ne pas le découvrir le jour J."
+      }
     ]
   },
   "cta": {
@@ -43,10 +88,22 @@
     "lede": "Indiquez vos charges actuelles pour un aperçu des paliers de votre bloc force. Le programme complet, calculé sur vos PR, est envoyé après achat."
   },
   "faq": [
-    { "question": "Le programme convient-il si je n'ai jamais fait d'ATHX ?", "answer": "Oui. Le bloc force part de vos PR actuels quel que soit votre niveau, et le bloc endurance est progressif. La catégorie Lite est pensée pour une première participation." },
-    { "question": "Que se passe-t-il si je n'ai pas testé mes PR récemment ?", "answer": "Le programme inclut une semaine 0 de tests guidés pour établir des PR à jour avant de calculer vos paliers d'entraînement." },
-    { "question": "Le programme fonctionne-t-il pour une préparation en binôme ?", "answer": "Les charges sont individuelles, mais les séances de bloc endurance et de simulation Metcon X peuvent se faire à deux." },
-    { "question": "Sous quel format je reçois le programme ?", "answer": "Un PDF structuré par semaine, lisible sur mobile ou imprimable, envoyé à l'adresse indiquée à l'achat." }
+    {
+      "question": "Le programme convient-il si je n'ai jamais fait d'ATHX ?",
+      "answer": "Oui. Le bloc force part de vos PR actuels quel que soit votre niveau, et le bloc endurance est progressif. La catégorie Lite est pensée pour une première participation."
+    },
+    {
+      "question": "Que se passe-t-il si je n'ai pas testé mes PR récemment ?",
+      "answer": "Le programme inclut une semaine 0 de tests guidés pour établir des PR à jour avant de calculer vos paliers d'entraînement."
+    },
+    {
+      "question": "Le programme fonctionne-t-il pour une préparation en binôme ?",
+      "answer": "Les charges sont individuelles, mais les séances de bloc endurance et de simulation Metcon X peuvent se faire à deux."
+    },
+    {
+      "question": "Sous quel format je reçois le programme ?",
+      "answer": "Un PDF structuré par semaine, lisible sur mobile ou imprimable, envoyé à l'adresse indiquée à l'achat."
+    }
   ],
   "finalCta": "Six zones. Une seule chance de bien les enchaîner."
 }
