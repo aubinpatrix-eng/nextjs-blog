@@ -2,16 +2,44 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
+
+type NavEvent = {
+  slug: string;
+  city: string;
+  dates: string;
+};
 
 type Props = {
   priceLabel: string;
+  events: NavEvent[];
 };
 
-export default function Nav({ priceLabel }: Props) {
+export default function Nav({ priceLabel, events }: Props) {
   const [open, setOpen] = useState(false);
+  const [eventsOpen, setEventsOpen] = useState(false);
+  const dropdown = useRef<HTMLDivElement>(null);
   const pathname = usePathname();
-  const close = () => setOpen(false);
+  const close = () => {
+    setOpen(false);
+    setEventsOpen(false);
+  };
+  const onEventPage = events.some((event) => pathname === `/${event.slug}`);
+
+  // Close the dropdown on outside click or Escape.
+  useEffect(() => {
+    if (!eventsOpen) return;
+    const onClick = (e: MouseEvent) => {
+      if (!dropdown.current?.contains(e.target as Node)) setEventsOpen(false);
+    };
+    const onKey = (e: KeyboardEvent) => e.key === "Escape" && setEventsOpen(false);
+    document.addEventListener("click", onClick);
+    document.addEventListener("keydown", onKey);
+    return () => {
+      document.removeEventListener("click", onClick);
+      document.removeEventListener("keydown", onKey);
+    };
+  }, [eventsOpen]);
 
   return (
     <header className="site-nav">
@@ -31,9 +59,33 @@ export default function Nav({ priceLabel }: Props) {
           <Link href="/#format" onClick={close}>
             Le format
           </Link>
-          <Link href="/#programme" onClick={close}>
-            Le programme
-          </Link>
+          {events.length > 0 && (
+            <div className={`nav-dropdown${eventsOpen ? " open" : ""}`} ref={dropdown}>
+              <button
+                type="button"
+                className={`nav-dropdown-toggle${onEventPage ? " active" : ""}`}
+                aria-expanded={eventsOpen}
+                aria-controls="navEvents"
+                onClick={() => setEventsOpen(!eventsOpen)}
+              >
+                Compétitions <span aria-hidden>▾</span>
+              </button>
+              <div className="nav-dropdown-menu" id="navEvents">
+                <div className="nav-dropdown-title">Prochains ATHX en France</div>
+                {events.map((event) => (
+                  <Link
+                    key={event.slug}
+                    href={`/${event.slug}`}
+                    onClick={close}
+                    className={pathname === `/${event.slug}` ? "active" : undefined}
+                  >
+                    <strong>ATHX {event.city}</strong>
+                    <span>{event.dates}</span>
+                  </Link>
+                ))}
+              </div>
+            </div>
+          )}
           <Link
             href="/calculateur-1rm"
             onClick={close}
