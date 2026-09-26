@@ -1,4 +1,6 @@
+import EventLanding from "@/app/_components/event-landing";
 import { getAllPages, getPageBySlug } from "@/lib/api";
+import { getAllEvents, getEventBySlug } from "@/lib/events";
 import markdownToHtml from "@/lib/markdownToHtml";
 import { Metadata } from "next";
 import { notFound } from "next/navigation";
@@ -11,11 +13,26 @@ type Params = {
 
 export const dynamicParams = false;
 
+// Serves both the simple pages (_pages: legal…) and the city landing pages (_events).
 export function generateStaticParams() {
-  return getAllPages().map((page) => ({ slug: page.slug }));
+  return [...getAllPages(), ...getAllEvents()].map((page) => ({ slug: page.slug }));
 }
 
 export function generateMetadata({ params }: Params): Metadata {
+  const event = getEventBySlug(params.slug);
+  if (event) {
+    return {
+      title: event.title,
+      description: event.excerpt,
+      alternates: { canonical: `/${event.slug}` },
+      openGraph: {
+        type: "article",
+        title: event.title,
+        description: event.excerpt,
+        ...(event.heroImage && { images: [event.heroImage] }),
+      },
+    };
+  }
   const page = getPageBySlug(params.slug);
   if (!page) {
     return {};
@@ -28,6 +45,10 @@ export function generateMetadata({ params }: Params): Metadata {
 }
 
 export default async function StaticPage({ params }: Params) {
+  const event = getEventBySlug(params.slug);
+  if (event) {
+    return <EventLanding event={event} />;
+  }
   const page = getPageBySlug(params.slug);
   if (!page) {
     notFound();

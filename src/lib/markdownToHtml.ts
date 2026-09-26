@@ -54,3 +54,12 @@ export async function markdownToHtmlWithToc(markdown: string) {
 
   return { content, toc };
 }
+
+// Splits article html in two before the h2 closest to the middle (for a mid-content call to action).
+export function splitAtMiddleHeading(html: string): [string, string] {
+  const positions = Array.from(html.matchAll(/<h2[ >]/g), (match) => match.index ?? 0).filter((index) => index > 0);
+  if (positions.length < 2) return [html, ""];
+  const middle = html.length / 2;
+  const cut = positions.reduce((best, index) => (Math.abs(index - middle) < Math.abs(best - middle) ? index : best));
+  return [html.slice(0, cut), html.slice(cut)];
+}
