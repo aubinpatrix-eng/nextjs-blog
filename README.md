@@ -9,6 +9,7 @@ Site de vente du programme de préparation ATHX (14,99 €) + blog, construit av
 | Accueil (format ATHX, programme, calculateur de PR, FAQ) | `/` | **Page d'accueil** → `_data/home.json` |
 | Blog | `/blog`, `/blog/categorie/force`… | **Articles de blog** → `_posts/*.md` |
 | Article | `/blog/<adresse>` | idem |
+| Préparation ATHX Paris / Montpellier / Marseille (menu « Compétitions ») | `/preparation-athx-paris`… | **Préparation ATHX (pages villes)** → `_events/*.md` |
 | Mentions légales, CGV, confidentialité | `/mentions-legales`… | **Pages** → `_pages/*.md` |
 | Confirmation d'achat (non indexée) | `/merci` | — |
 | Prix, lien de paiement, newsletter, URL du site | — | **Réglages du site** → `_data/site.json` |

@@ -1,5 +1,6 @@
 import Footer from "@/app/_components/footer";
 import Nav from "@/app/_components/nav";
+import { getAllEvents } from "@/lib/events";
 import { formatPrice, getSite } from "@/lib/site";
 import type { Metadata, Viewport } from "next";
 import { Big_Shoulders_Display, Work_Sans } from "next/font/google";
@@ -40,7 +41,10 @@ export default function RootLayout({
   return (
     <html lang="fr" className={`${display.variable} ${body.variable}`}>
       <body>
-        <Nav priceLabel={formatPrice(site.price)} />
+        <Nav
+          priceLabel={formatPrice(site.price)}
+          events={getAllEvents().map(({ slug, city, dates }) => ({ slug, city, dates }))}
+        />
         {children}
         <Footer />
       </body>

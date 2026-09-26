@@ -1,4 +1,5 @@
 import { remark } from "remark";
+import remarkGfm from "remark-gfm";
 import html from "remark-html";
 
 export type TocEntry = {
@@ -9,8 +10,10 @@ export type TocEntry = {
 
 export default async function markdownToHtml(markdown: string) {
   // Pages CMS rich-text fields can contain raw HTML (tables, embeds): keep it.
-  const result = await remark().use(html, { sanitize: false }).process(markdown);
-  return result.toString();
+  // remark-gfm adds tables, strikethrough and autolinks (GitHub-flavoured Markdown).
+  const result = await remark().use(remarkGfm).use(html, { sanitize: false }).process(markdown);
+  // Wrap tables so wide ones scroll horizontally on mobile instead of breaking the layout.
+  return result.toString().replace(/<table>[\s\S]*?<\/table>/g, (table) => `<div class="table-wrap">${table}</div>`);
 }
 
 function slugify(text: string) {
