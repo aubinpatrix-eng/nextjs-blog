@@ -40,4 +40,4 @@ Une séance de ce type toutes les une à deux semaines suffit. Le reste du temps
 
 ## À retenir
 
-Le Metcon X récompense ceux qui arrivent au dernier bloc avec encore de la marge. C'est pour cela que le programme ATHX PREP intègre des **simulations Metcon X** dans la seconde moitié des 12 semaines, calées après vos séances de force calculées sur vos PR.
+Le Metcon X récompense ceux qui arrivent au dernier bloc avec encore de la marge. C'est pour cela que le programme ATHX PREP intègre des **simulations Metcon X** dans la seconde moitié des 12 semaines, calées après vos séances de force calculées sur vos PR. Pour les dates exactes de ces simulations avant février, consultez le [programme ATHX Paris](/preparation-athx-paris).

@@ -112,6 +112,12 @@ export default function OneRmPage() {
             quelles charges viser le jour de la compétition, consultez{" "}
             <Link href="/blog/strength-zone-athx-2027">la Strength zone ATHX 2027 expliquée</Link>.
           </p>
+          <p>
+            Vous visez une date précise ? Calez vos charges sur la{" "}
+            <Link href="/preparation-athx-paris">prépa ATHX Paris</Link> (février), l&apos;
+            <Link href="/preparation-athx-montpellier">ATHX Montpellier</Link> (mai) ou le{" "}
+            <Link href="/preparation-athx-marseille">programme ATHX Marseille</Link> (septembre).
+          </p>
           </div>
         </div>
       </section>

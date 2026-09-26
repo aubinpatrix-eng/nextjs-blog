@@ -21,9 +21,9 @@ Après une première saison française en 2026 (Paris en avril, Marseille en sep
 
 | Ville | Dates | Lieu | Commencer la prépa (12 semaines) |
 | --- | --- | --- | --- |
-| **Paris** | 13-14 février 2027 | Paris Event Center | mi-novembre 2026 |
-| **Montpellier** | 28-29 mai 2027 | Parc des Expositions & Sud de France Arena | début mars 2027 |
-| **Marseille** | 10-11 septembre 2027 | Parc Chanot | mi-juin 2027 |
+| **[ATHX Paris](/preparation-athx-paris)** | 13-14 février 2027 | Paris Event Center | mi-novembre 2026 |
+| **[ATHX Montpellier](/preparation-athx-montpellier)** | 28-29 mai 2027 | Parc des Expositions & Sud de France Arena | début mars 2027 |
+| **[ATHX Marseille](/preparation-athx-marseille)** | 10-11 septembre 2027 | Parc Chanot | mi-juin 2027 |
 
 Chaque étape propose les trois catégories (**Lite, ATHX, Pro**) en solo ou en binôme (hommes, femmes, mixte). Les places partent vite : inscrivez-vous tôt sur le site officiel de l'ATHX, qui fait foi pour les dates et horaires.
 
@@ -48,4 +48,4 @@ Avant de démarrer, faites le point sur vos charges avec notre [calculateur 1RM 
 
 ## Votre programme
 
-Paris en février ? Il faut commencer à la mi-novembre. Le programme ATHX PREP vous donne 12 semaines calculées sur vos PR, pour arriver prêt le jour J. [Obtenir mon programme](/#cta).
+Paris en février ? Il faut commencer à la mi-novembre : tout est détaillé dans notre [prépa ATHX Paris](/preparation-athx-paris). Pour le printemps, suivez le [programme ATHX Montpellier](/preparation-athx-montpellier), et pour la rentrée, la [prépa ATHX Marseille](/preparation-athx-marseille). Le programme ATHX PREP vous donne 12 semaines calculées sur vos PR, pour arriver prêt le jour J. [Obtenir mon programme](/#cta).

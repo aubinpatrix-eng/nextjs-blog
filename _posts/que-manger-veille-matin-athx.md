@@ -36,6 +36,8 @@ Exemple de dîner : riz blanc, poulet ou poisson, courgettes cuites, compote.
 
 Une banane ou une compote 30 à 45 minutes avant la Warm-up zone permet de compléter le plein sans alourdir l'estomac.
 
+Vous venez de loin pour l'[ATHX Paris](/preparation-athx-paris) ? Arrivez la veille et gardez vos habitudes alimentaires : un dîner au restaurant inconnu la veille de l'épreuve est un risque inutile.
+
 ## La règle d'or
 
 **Rien de nouveau le jour J.** Testez votre petit-déjeuner de compétition avant l'une de vos grosses séances d'entraînement. Et pour le ravitaillement pendant l'épreuve, lisez [que manger pendant la Refuel Zone](/blog/que-manger-refuel-zone).

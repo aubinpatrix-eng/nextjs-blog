@@ -41,4 +41,6 @@ Tout ce que vous consommez pendant la Refuel zone doit avoir été testé à l'e
 
 Préparez vos aliments dans un sac ou une boîte facile à ouvrir, avec des emballages déjà entamés si besoin. Les quelques minutes de la zone passent très vite.
 
+À Montpellier fin mai ou à Marseille en septembre, prévoyez plus d'eau et de sodium qu'à l'entraînement : conseils détaillés dans notre [prépa ATHX Montpellier](/preparation-athx-montpellier) et notre guide [ATHX Marseille](/preparation-athx-marseille).
+
 Pour la veille et le matin de l'épreuve, consultez notre article [que manger la veille et le matin d'un ATHX](/blog/que-manger-veille-matin-athx).

@@ -39,4 +39,4 @@ Le secret : ce sont les **hanches**, pas les bras, qui font le travail.
 
 ## Comment l'intégrer à l'entraînement
 
-Ajoutez le sac à 1 ou 2 séances par semaine, par exemple dans un circuit : 10 montées de sac à l'épaule + 200 m de course + 10 burpees, 4 tours. En 6 à 8 semaines, le mouvement devient naturel. Pour mettre ça en situation, découvrez [le Metcon X expliqué](/blog/metcon-x-explique).
+Ajoutez le sac à 1 ou 2 séances par semaine, par exemple dans un circuit : 10 montées de sac à l'épaule + 200 m de course + 10 burpees, 4 tours. En 6 à 8 semaines, le mouvement devient naturel. Le [programme ATHX Marseille](/preparation-athx-marseille) l'intègre dès les premières semaines de l'été pour être prêt en septembre. Pour mettre ça en situation, découvrez [le Metcon X expliqué](/blog/metcon-x-explique).

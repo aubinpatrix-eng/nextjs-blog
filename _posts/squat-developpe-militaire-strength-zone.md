@@ -47,3 +47,5 @@ L'idée : monter progressivement l'intensité, puis réduire le volume la derni�
 Deux athlètes qui soulèvent 80 kg et 140 kg au squat ne peuvent pas suivre le même programme. Travailler en pourcentage garantit que chaque séance est assez lourde pour progresser, sans vous cramer. Si vos PR datent, commencez par [les tester sans vous blesser](/blog/tester-ses-pr-sans-se-blesser).
 
 C'est le principe du programme ATHX PREP : vous entrez vos PR, et toutes les charges du bloc force sont calculées pour vous. [Essayez le calculateur](/#cta) pour voir vos paliers de la semaine 1.
+
+Pour caler ce cycle sur une vraie date, voyez le [programme ATHX Paris](/preparation-athx-paris) : démarrage le 23 novembre 2026 pour une compétition les 13 et 14 février 2027.

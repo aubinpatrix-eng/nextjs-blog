@@ -35,3 +35,4 @@ Le mental se prépare aussi à l'entraînement. Une fois par semaine ou toutes l
 - Utilisez la Refuel zone pour respirer, boire et **visualiser** la zone suivante ([que manger pendant la Refuel Zone](/blog/que-manger-refuel-zone)).
 - Ne regardez pas les autres athlètes au départ de la zone Endurance : suivez votre plan.
 - Gardez de l'énergie pour le [Metcon X](/blog/metcon-x-explique), c'est là que les places se gagnent.
+- Repérez les lieux la veille si vous le pouvez : notre guide [ATHX Montpellier](/preparation-athx-montpellier) détaille comment organiser son arrivée sur une étape loin de chez soi.
