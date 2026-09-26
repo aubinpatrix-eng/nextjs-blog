@@ -7,6 +7,8 @@ import { Big_Shoulders_Display, Work_Sans } from "next/font/google";
 
 import "./globals.css";
 
+const GA_ID = "G-WE18XJYVCK";
+
 const display = Big_Shoulders_Display({
   subsets: ["latin"],
   weight: ["700"],
@@ -40,6 +42,18 @@ export default function RootLayout({
 
   return (
     <html lang="fr" className={`${display.variable} ${body.variable}`}>
+      <head>
+        {/* Google tag (gtag.js) */}
+        <script async src={`https://www.googletagmanager.com/gtag/js?id=${GA_ID}`} />
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', '${GA_ID}');`,
+          }}
+        />
+      </head>
       <body>
         <Nav
           priceLabel={formatPrice(site.price)}
