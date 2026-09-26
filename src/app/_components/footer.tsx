@@ -1,10 +1,12 @@
 import { getAllPages } from "@/lib/api";
+import { getAllEvents } from "@/lib/events";
 import { getSite } from "@/lib/site";
 import Link from "next/link";
 
 export default function Footer() {
   const site = getSite();
   const pages = getAllPages();
+  const events = getAllEvents();
 
   return (
     <footer>
@@ -26,6 +28,18 @@ export default function Footer() {
             © {new Date().getFullYear()} {site.name} — Tous droits réservés
           </div>
         </div>
+        {events.length > 0 && (
+          <div className="foot-row foot-events">
+            <div>
+              <span>Prochains ATHX en France</span>
+              {events.map((event) => (
+                <Link key={event.slug} href={`/${event.slug}`}>
+                  {event.menuLabel}
+                </Link>
+              ))}
+            </div>
+          </div>
+        )}
         {pages.length > 0 && (
           <div className="foot-row foot-legal">
             <div>

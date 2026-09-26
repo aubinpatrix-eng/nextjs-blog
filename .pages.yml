@@ -35,6 +35,38 @@ content:
           - { name: question, label: Question, type: string }
           - { name: answer, label: Réponse, type: text }
 
+  - name: events
+    label: Préparation ATHX (pages villes)
+    type: collection
+    path: _events
+    view:
+      fields: [ menuLabel, dates ]
+      primary: menuLabel
+    fields:
+      - { name: title, label: "Titre SEO (onglet et résultats Google)", type: string, required: true }
+      - { name: heading, label: "Titre affiché (H1 court, ex. Préparation ATHX Paris 2027)", type: string }
+      - { name: menuLabel, label: "Nom court (pied de page, ex. Préparation ATHX Paris)", type: string, required: true }
+      - { name: city, label: Ville, type: string, required: true }
+      - { name: kicker, label: Surtitre, type: string }
+      - { name: dates, label: "Dates affichées (ex. 13 et 14 février 2027)", type: string, required: true }
+      - { name: startDate, label: Premier jour de la compétition, type: date, required: true }
+      - { name: venue, label: Lieu, type: string }
+      - { name: prepStart, label: Début de préparation conseillé, type: date }
+      - { name: excerpt, label: "Résumé (meta description, ~155 caractères)", type: text, required: true }
+      - { name: summary, label: Ce qu'il faut retenir, type: text }
+      - { name: heroImage, label: Photo de l'en-tête, type: image }
+      - { name: heroImageAlt, label: Description de la photo, type: string }
+      - { name: ctaImage, label: Photo de l'encart programme (milieu de page), type: image }
+      - { name: updated, label: Date de mise à jour, type: date }
+      - { name: body, label: "Contenu (les H2/H3/H4 forment le sommaire ; l'encart programme se place avant le H2 du milieu)", type: rich-text }
+      - name: faq
+        label: FAQ
+        type: object
+        list: true
+        fields:
+          - { name: question, label: Question, type: string }
+          - { name: answer, label: Réponse, type: text }
+
   - name: pages
     label: Pages (mentions légales, CGV…)
     type: collection

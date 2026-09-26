@@ -1,4 +1,5 @@
 import { getAllPages, getAllPosts } from "@/lib/api";
+import { getAllEvents } from "@/lib/events";
 import { getSite } from "@/lib/site";
 import { TAGS } from "@/lib/tags";
 import type { MetadataRoute } from "next";
@@ -18,6 +19,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       url: `${url}/blog/${post.slug}`,
       lastModified: new Date(post.updated ?? post.date),
       priority: 0.7,
+    })),
+    ...getAllEvents().map((event) => ({
+      url: `${url}/${event.slug}`,
+      lastModified: new Date(event.updated ?? "2026-09-26"),
+      changeFrequency: "monthly" as const,
+      priority: 0.8,
     })),
     ...getAllPages().map((page) => ({ url: `${url}/${page.slug}`, priority: 0.2 })),
   ];
