@@ -11,6 +11,8 @@ export type Site = {
   price: number;
   comparePrice: number | null;
   buyUrl: string;
+  sessionsPerWeek: number | null;
+  sessionMinutes: number | null;
   newsletterAction: string;
   instagram: string;
   disclaimer: string;
@@ -45,12 +47,14 @@ export type About = {
   kicker: string;
   title: string;
   headline: string;
+  bio: string;
   intro: string;
   paragraphs: string[];
   results: { value: string; label: string }[];
   proofImage: string;
   proofCaption: string;
   photo: string;
+  avatar: string;
   photos: { image: string; caption: string }[];
 };
 

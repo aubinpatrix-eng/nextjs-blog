@@ -1,8 +1,10 @@
+import { ArticleFaq, AuthorBox, KeyTakeaways, TableOfContents } from "@/app/_components/article-blocks";
 import JsonLd from "@/app/_components/json-ld";
 import PostCard, { DateLabel } from "@/app/_components/post-card";
 import { getAllPosts, getPostBySlug } from "@/lib/api";
-import markdownToHtml from "@/lib/markdownToHtml";
-import { formatPrice, getSite } from "@/lib/site";
+import { markdownToHtmlWithToc } from "@/lib/markdownToHtml";
+import { breadcrumbSchema, faqSchema, organizationId, personId, personSchema } from "@/lib/schema";
+import { formatPrice, getAbout, getSite } from "@/lib/site";
 import { getTag } from "@/lib/tags";
 import { Metadata } from "next";
 import Link from "next/link";
@@ -47,7 +49,13 @@ export default async function Article({ params }: Params) {
   }
   const site = getSite();
   const tag = getTag(post.tag);
-  const content = await markdownToHtml(post.content);
+  const about = getAbout();
+  const { content, toc } = await markdownToHtmlWithToc(post.content);
+  const faq = post.faq ?? [];
+  if (faq.length > 0) toc.push({ id: "faq", text: "Questions fréquentes", level: 2 });
+  // Articles are signed by the site author unless another author is set in Pages CMS.
+  const authorName = post.author || about.name;
+  const isSiteAuthor = authorName === about.name;
   const related = getAllPosts()
     .filter((other) => other.slug !== post.slug)
     .sort((a, b) => Number(b.tag === post.tag) - Number(a.tag === post.tag))
@@ -62,29 +70,28 @@ export default async function Article({ params }: Params) {
           "@graph": [
             {
               "@type": "BlogPosting",
+              "@id": `${url}#article`,
               headline: post.title,
               description: post.excerpt,
+              ...(post.summary && { abstract: post.summary }),
               datePublished: post.date,
               dateModified: post.updated ?? post.date,
               inLanguage: "fr-FR",
               mainEntityOfPage: url,
-              ...(post.coverImage && { image: `${site.url}${post.coverImage}` }),
-              author: post.author
-                ? { "@type": "Person", name: post.author }
-                : { "@type": "Organization", name: site.name, url: site.url },
-              publisher: { "@type": "Organization", name: site.name, url: site.url },
+              image: `${site.url}${post.coverImage ?? about.photo}`,
+              ...(tag && { articleSection: tag.label }),
+              wordCount: post.content.split(/\s+/).filter(Boolean).length,
+              author: isSiteAuthor ? { "@id": personId(site) } : { "@type": "Person", name: authorName },
+              publisher: { "@type": "Organization", "@id": organizationId(site), name: site.name, url: site.url },
             },
-            {
-              "@type": "BreadcrumbList",
-              itemListElement: [
-                { "@type": "ListItem", position: 1, name: "Accueil", item: site.url },
-                { "@type": "ListItem", position: 2, name: "Blog", item: `${site.url}/blog` },
-                ...(tag
-                  ? [{ "@type": "ListItem", position: 3, name: tag.label, item: `${site.url}/blog/categorie/${tag.slug}` }]
-                  : []),
-                { "@type": "ListItem", position: tag ? 4 : 3, name: post.title },
-              ],
-            },
+            ...(isSiteAuthor ? [personSchema(site, about)] : []),
+            ...(faq.length > 0 ? [faqSchema(faq)] : []),
+            breadcrumbSchema(site, [
+              { name: "Accueil", path: "" },
+              { name: "Blog", path: "/blog" },
+              ...(tag ? [{ name: tag.label, path: `/blog/categorie/${tag.slug}` }] : []),
+              { name: post.title },
+            ]),
           ],
         }}
       />
@@ -112,7 +119,9 @@ export default async function Article({ params }: Params) {
             <div className="article-meta">
               <DateLabel date={post.date} />
               <span>{post.readingTime} min de lecture</span>
-              {post.author && <span>Par {post.author}</span>}
+              <span>
+                Par {isSiteAuthor ? <Link href="/qui-suis-je">{authorName}</Link> : authorName}
+              </span>
             </div>
             {post.coverImage && (
               // eslint-disable-next-line @next/next/no-img-element
@@ -123,7 +132,10 @@ export default async function Article({ params }: Params) {
 
         <section className="last" style={{ paddingTop: 0 }}>
           <div className="wrap">
+            {post.summary && <KeyTakeaways summary={post.summary} />}
+            {toc.length > 1 && <TableOfContents toc={toc} />}
             <div className="prose" dangerouslySetInnerHTML={{ __html: content }} />
+            {faq.length > 0 && <ArticleFaq faq={faq} />}
             <aside className="article-cta">
               <h2>Préparez l&apos;ATHX avec un plan calculé sur vos PR</h2>
               <p>12 semaines de force, d&apos;endurance et de simulation Metcon X. Paiement unique de {formatPrice(site.price)}.</p>
@@ -131,6 +143,7 @@ export default async function Article({ params }: Params) {
                 Obtenir mon programme
               </Link>
             </aside>
+            {isSiteAuthor && <AuthorBox about={about} />}
           </div>
         </section>
       </article>

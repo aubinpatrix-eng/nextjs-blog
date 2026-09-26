@@ -4,6 +4,14 @@ slug: sac-de-sable-technique
 excerpt: "Technique, prise et erreurs fréquentes sur l'un des mouvements fonctionnels les plus présents dans les metcons de l'ATHX."
 tag: Endurance
 date: 2026-08-04
+summary: Le sac de sable est instable et fatigue vite les avant-bras, le gainage et le dos. La clé est de soulever avec les hanches, dos plat, sans serrer la prise à l'excès. Une à deux séances par semaine pendant 6 à 8 semaines suffisent pour que le mouvement devienne naturel.
+faq:
+- question: Comment monter un sac de sable à l'épaule ?
+  answer: Pieds largeur de hanches, dos plat, saisissez le sac par-dessous, montez-le sur les cuisses puis propulsez-le vers l'épaule avec une poussée des hanches.
+- question: Quelles erreurs éviter avec le sac de sable ?
+  answer: Soulever dos rond avec les bras, serrer trop fort la prise et vider ses avant-bras, ou découvrir le mouvement le jour de la compétition.
+- question: Comment s'entraîner sans sac de sable en salle ?
+  answer: Un sac de sport rempli de sacs de sable ou de riz fait très bien l'affaire pour travailler la prise et la technique.
 ---
 
 Le travail au sac est très présent dans les formats fonctionnels comme le Metcon X. Sur le papier, il paraît simple. En réalité, un sac de sable instable, sans poignée solide, surprend beaucoup de débutants et les fatigue bien plus que prévu.

@@ -11,6 +11,8 @@ export type Post = {
   tag: string;
   coverImage?: string;
   author?: string;
+  summary?: string;
+  faq?: { question: string; answer: string }[];
   content: string;
   readingTime: number;
 };

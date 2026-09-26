@@ -4,6 +4,14 @@ slug: athx-vs-hyrox
 excerpt: "Hyrox est un marathon du fitness, l'ATHX un décathlon. Format, place de la force, récupération : les vraies différences pour bien choisir sa compétition."
 tag: Format
 date: 2026-09-25
+summary: 'Hyrox enchaîne 8 × 1 km de course et 8 stations sans pause : c''est un effort continu dominé par le cardio. L''ATHX sépare force, endurance et metcon avec des zones de récupération, et récompense directement la force maximale. Les profils coureurs sont avantagés sur Hyrox, les profils force et polyvalents sur l''ATHX.'
+faq:
+- question: Quelle est la principale différence entre ATHX et Hyrox ?
+  answer: 'La place de la force : l''ATHX comporte une Strength zone où l''on cherche sa charge maximale, alors que sur Hyrox les charges sont fixées et le classement se joue surtout sur le cardio.'
+- question: 'ATHX ou Hyrox : laquelle choisir pour débuter ?'
+  answer: Si vous venez de la course à pied, Hyrox sera plus naturel. Si vous venez de la musculation ou du CrossFit, ou si vous êtes polyvalent, l'ATHX valorisera mieux votre profil.
+- question: Peut-on préparer ATHX et Hyrox en même temps ?
+  answer: 'Oui, la base est commune : un bon moteur cardio et des jambes solides. Pour l''ATHX, il faut simplement ajouter un vrai travail de force lourde sur squat, soulevé de terre et travail au-dessus de la tête.'
 ---
 
 Hyrox et ATHX sont les deux compétitions de fitness hybride qui montent. Elles attirent le même public, mais elles ne testent **pas du tout la même chose**. Voici comment les distinguer.

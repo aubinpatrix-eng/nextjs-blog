@@ -3,12 +3,16 @@ import PostCard from "@/app/_components/post-card";
 import PrCalculator from "@/app/_components/pr-calculator";
 import Proof from "@/app/_components/proof";
 import { getAllPosts } from "@/lib/api";
-import { formatPrice, getHome, getSite } from "@/lib/site";
+import { organizationId, faqSchema, personId, personSchema } from "@/lib/schema";
+import { formatPrice, getAbout, getHome, getSite } from "@/lib/site";
 import Link from "next/link";
 
 export default function Index() {
   const site = getSite();
   const home = getHome();
+  const about = getAbout();
+  const weeklyMinutes = (site.sessionsPerWeek || 0) * (site.sessionMinutes || 0);
+  const workloadMinutes = 12 * weeklyMinutes;
   const latestPosts = getAllPosts().slice(0, 3);
   const priceLabel = formatPrice(site.price);
 
@@ -20,39 +24,60 @@ export default function Index() {
           "@graph": [
             {
               "@type": "Organization",
-              "@id": `${site.url}/#organization`,
+              "@id": organizationId(site),
               name: site.name,
               url: site.url,
+              logo: `${site.url}/icon.svg`,
+              founder: { "@id": personId(site) },
               ...(site.instagram && { sameAs: [site.instagram] }),
             },
+            personSchema(site, about),
             {
               "@type": "WebSite",
               name: site.name,
               url: site.url,
               inLanguage: "fr-FR",
-              publisher: { "@id": `${site.url}/#organization` },
+              publisher: { "@id": organizationId(site) },
             },
             {
-              "@type": "Product",
-              name: `Programme de préparation ATHX — ${site.name}`,
-              description: home.program.lede,
-              brand: { "@id": `${site.url}/#organization` },
+              "@type": "Course",
+              "@id": `${site.url}/#course`,
+              name: "Programme de préparation ATHX — 12 semaines",
+              description: `${home.hero.lede} ${home.program.lede}`,
+              url: site.url,
+              inLanguage: "fr-FR",
+              provider: { "@id": organizationId(site) },
+              creator: { "@id": personId(site) },
+              educationalLevel: "Tous niveaux (catégories Lite, ATHX et Pro)",
+              teaches: home.program.blocks.map((block) => block.title),
+              about: ["ATHX Games", "Préparation physique", "Musculation", "Fitness hybride"],
+              image: `${site.url}${about.photo}`,
               offers: {
                 "@type": "Offer",
+                category: "Paid",
                 price: site.price.toFixed(2),
                 priceCurrency: "EUR",
                 availability: "https://schema.org/InStock",
                 url: `${site.url}/#cta`,
               },
+              hasCourseInstance: {
+                "@type": "CourseInstance",
+                courseMode: "Online",
+                ...(workloadMinutes > 0 && {
+                  // Total workload over the 12 weeks, from the settings in Pages CMS.
+                  courseWorkload: `PT${workloadMinutes}M`,
+                  courseSchedule: {
+                    "@type": "Schedule",
+                    duration: `PT${weeklyMinutes}M`,
+                    repeatFrequency: "Weekly",
+                    repeatCount: 12,
+                  },
+                }),
+                instructor: { "@id": personId(site) },
+                inLanguage: "fr-FR",
+              },
             },
-            {
-              "@type": "FAQPage",
-              mainEntity: home.faq.map((item) => ({
-                "@type": "Question",
-                name: item.question,
-                acceptedAnswer: { "@type": "Answer", text: item.answer },
-              })),
-            },
+            faqSchema(home.faq),
           ],
         }}
       />

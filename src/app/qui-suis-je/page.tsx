@@ -1,5 +1,6 @@
 import JsonLd from "@/app/_components/json-ld";
 import PhotoSlider from "@/app/_components/photo-slider";
+import { breadcrumbSchema, personId, personSchema } from "@/lib/schema";
 import { formatPrice, getAbout, getSite } from "@/lib/site";
 import { Metadata } from "next";
 import Link from "next/link";
@@ -23,16 +24,15 @@ export default function About() {
       <JsonLd
         data={{
           "@context": "https://schema.org",
-          "@type": "ProfilePage",
-          url: `${site.url}/qui-suis-je`,
-          mainEntity: {
-            "@type": "Person",
-            name: about.name,
-            description: about.headline,
-            image: `${site.url}${about.photo}`,
-            url: `${site.url}/qui-suis-je`,
-            ...(site.instagram && { sameAs: [site.instagram] }),
-          },
+          "@graph": [
+            {
+              "@type": "ProfilePage",
+              url: `${site.url}/qui-suis-je`,
+              mainEntity: { "@id": personId(site) },
+            },
+            personSchema(site, about),
+            breadcrumbSchema(site, [{ name: "Accueil", path: "" }, { name: "Qui suis-je" }]),
+          ],
         }}
       />
 
