@@ -30,7 +30,7 @@ L'ATHX propose trois catégories : **Lite**, **ATHX** et **Pro**. Le format et l
 
 ## Le piège à éviter
 
-Viser trop haut dès la première fois est l'erreur la plus fréquente. Une compétition réussie en Lite vous apprendra beaucoup plus qu'une compétition subie en Pro. Vous pourrez toujours monter de catégorie à l'édition suivante.
+Viser trop haut dès la première fois est l'erreur la plus fréquente. Une compétition réussie en Lite vous apprendra beaucoup plus qu'une compétition subie en Pro. Vous pourrez toujours monter de catégorie à l'édition suivante. Pour une première compétition, viser l'étape de fin mai laisse tout l'hiver pour construire vos bases : voir notre [prépa ATHX Montpellier](/preparation-athx-montpellier).
 
 ## Et pour la préparation ?
 

@@ -3,6 +3,7 @@ import PostCard from "@/app/_components/post-card";
 import PrCalculator from "@/app/_components/pr-calculator";
 import Proof from "@/app/_components/proof";
 import { getAllPosts } from "@/lib/api";
+import { getAllEvents } from "@/lib/events";
 import { organizationId, faqSchema, personId, personSchema } from "@/lib/schema";
 import { formatPrice, getAbout, getHome, getSite } from "@/lib/site";
 import Link from "next/link";
@@ -14,6 +15,7 @@ export default function Index() {
   const weeklyMinutes = (site.sessionsPerWeek || 0) * (site.sessionMinutes || 0);
   const workloadMinutes = 12 * weeklyMinutes;
   const latestPosts = getAllPosts().slice(0, 3);
+  const events = getAllEvents();
   const priceLabel = formatPrice(site.price);
 
   return (
@@ -173,6 +175,34 @@ export default function Index() {
           </ol>
         </div>
       </section>
+
+      {events.length > 0 && (
+        <section id="competitions">
+          <div className="wrap">
+            <div className="sec-head">
+              <h2 className="h-sec">
+                Prochaines
+                <br />
+                compétitions
+              </h2>
+              <p className="lede">
+                Trois étapes ATHX en France en 2027. Pour chacune : les épreuves, les dates et un plan de préparation
+                semaine par semaine.
+              </p>
+            </div>
+            <div className="event-others-grid events-home">
+              {events.map((event) => (
+                <Link key={event.slug} href={`/${event.slug}`} className="event-other">
+                  <span className="post-tag">{event.dates}</span>
+                  <strong>ATHX {event.city}</strong>
+                  <span className="event-venue">{event.venue}</span>
+                  <span className="post-read">Prépa ATHX {event.city} →</span>
+                </Link>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
 
       <section id="programme">
         <div className="wrap">

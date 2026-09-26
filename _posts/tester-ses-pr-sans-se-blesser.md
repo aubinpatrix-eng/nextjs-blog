@@ -41,6 +41,8 @@ Prenez 3 à 5 minutes de repos entre les tentatives lourdes, et faites-vous assi
 
 Idéalement **10 à 12 semaines avant la compétition**, au début de votre préparation. Ne testez jamais un nouveau maximum dans les 10 jours qui précèdent l'épreuve.
 
+Concrètement : autour du 23 novembre 2026 pour la [prépa ATHX Paris](/preparation-athx-paris), du 8 mars 2027 pour l'[ATHX Montpellier](/preparation-athx-montpellier) et du 21 juin 2027 pour le [programme ATHX Marseille](/preparation-athx-marseille).
+
 ## Et si je n'ai pas testé ?
 
 Le programme ATHX PREP prévoit une semaine 0 de tests guidés. Et si vous avez un PR récent, entrez-le directement dans le [calculateur](/#cta). Pour la suite de votre progression, lisez [squat arrière et développé militaire : les deux mouvements à ne pas négliger](/blog/squat-developpe-militaire-strength-zone).

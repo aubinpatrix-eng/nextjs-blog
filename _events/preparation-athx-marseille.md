@@ -26,7 +26,7 @@ faq:
 
 ## ATHX Marseille 2027 : l'essentiel
 
-Après une première édition en septembre 2026, l'ATHX revient au **Parc Chanot** de Marseille les **10 et 11 septembre 2027**. C'est l'étape de la rentrée, avec une particularité : **toute la préparation se fait l'été**.
+Après une première édition en septembre 2026, l'ATHX revient au **Parc Chanot** de Marseille les **10 et 11 septembre 2027**. C'est l'étape de la rentrée, avec une particularité : **toute la préparation se fait l'été**. Envie d'une étape plus tôt dans la saison ? Voyez l'[ATHX Paris](/preparation-athx-paris) en février ou la [prépa ATHX Montpellier](/preparation-athx-montpellier) pour fin mai.
 
 | | |
 | --- | --- |

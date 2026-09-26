@@ -26,7 +26,7 @@ faq:
 
 ## ATHX Montpellier 2027 : l'essentiel
 
-Nouvelle venue dans le calendrier français, l'étape de **Montpellier** se tient les **28 et 29 mai 2027** au **Parc des Expositions et à la Sud de France Arena**, à Pérols. C'est l'étape idéale si Paris en février arrivait trop tôt : vous avez tout l'hiver pour construire vos bases, puis 12 semaines de préparation spécifique au printemps.
+Nouvelle venue dans le calendrier français, l'étape de **Montpellier** se tient les **28 et 29 mai 2027** au **Parc des Expositions et à la Sud de France Arena**, à Pérols. C'est l'étape idéale si Paris en février arrivait trop tôt : vous avez tout l'hiver pour construire vos bases, puis 12 semaines de préparation spécifique au printemps. Si vous êtes déjà prêt, la [prépa ATHX Paris](/preparation-athx-paris) vise février ; si mai est trop juste, voyez le [programme ATHX Marseille](/preparation-athx-marseille) pour septembre.
 
 | | |
 | --- | --- |

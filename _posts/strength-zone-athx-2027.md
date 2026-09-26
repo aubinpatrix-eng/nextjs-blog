@@ -44,6 +44,8 @@ Pour connaître vos 2RM et 3RM estimés à partir d'une série d'entraînement, 
 
 Pour la progression complète, voir [squat arrière et développé militaire : les mouvements à ne pas négliger](/blog/squat-developpe-militaire-strength-zone).
 
+Premier test de ce format en France : l'[ATHX Paris](/preparation-athx-paris), les 13 et 14 février 2027. Vous visez plutôt mai ou septembre ? Voir le [programme ATHX Montpellier](/preparation-athx-montpellier) ou la [prépa ATHX Marseille](/preparation-athx-marseille).
+
 ## Un programme calculé sur vos PR
 
 Le programme ATHX PREP construit vos séances de force à partir de vos charges actuelles au squat, au développé et au soulevé de terre, sur 12 semaines. [Entrez vos PR et obtenez votre programme](/#cta).

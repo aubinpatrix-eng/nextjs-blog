@@ -28,7 +28,7 @@ faq:
 
 L'ATHX revient à Paris les **13 et 14 février 2027**, au **Paris Event Center**, à la Porte de la Villette. C'est la première étape française de la saison 2027, et le lieu où s'est tenue la toute première édition parisienne, en avril 2026.
 
-J'y étais : c'était mon premier ATHX, et j'ai terminé **1er de la Strength zone**. Ce guide reprend ce que j'aurais aimé savoir avant d'y aller, et le plan que je suivrais pour février.
+J'y étais : c'était mon premier ATHX, et j'ai terminé **1er de la Strength zone**. Ce guide reprend ce que j'aurais aimé savoir avant d'y aller, et le plan que je suivrais pour février. Février arrive trop vite ? Le [programme ATHX Montpellier](/preparation-athx-montpellier) démarre le 8 mars 2027, et l'[ATHX Marseille](/preparation-athx-marseille) en septembre laisse tout l'été pour se préparer.
 
 | | |
 | --- | --- |

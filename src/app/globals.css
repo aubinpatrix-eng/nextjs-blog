@@ -432,3 +432,5 @@ footer { padding: 48px 0; }
   .nav-links .nav-dropdown-menu a { padding: 10px 32px; }
 }
 @media (min-width: 700px) { .prose td:not(:last-child) { white-space: nowrap; } }
+@media (min-width: 900px) { .events-home { grid-template-columns: repeat(3, 1fr); } }
+.event-venue { font-size: 13px; color: var(--mute); }

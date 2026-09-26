@@ -75,7 +75,7 @@ Le prix dépend de l'étape, de la catégorie et du format. À titre indicatif, 
 
 ## Où et quand en France ?
 
-Pour la saison 2027, trois étapes sont prévues en France : **Paris** (13-14 février 2027), **Montpellier** (28-29 mai 2027) et **Marseille** (septembre 2027). Tous les détails et le bon moment pour commencer votre préparation : [ATHX en France : les dates 2027](/blog/athx-france-dates-2027).
+Pour la saison 2027, trois étapes sont prévues en France : l'[ATHX Paris](/preparation-athx-paris) (13-14 février 2027), l'[ATHX Montpellier](/preparation-athx-montpellier) (28-29 mai 2027) et l'[ATHX Marseille](/preparation-athx-marseille) (10-11 septembre 2027). Tous les détails et le bon moment pour commencer votre préparation : [ATHX en France : les dates 2027](/blog/athx-france-dates-2027).
 
 ## ATHX ou Hyrox : quelle différence ?
 

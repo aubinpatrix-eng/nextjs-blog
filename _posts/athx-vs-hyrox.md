@@ -47,3 +47,5 @@ Rien n'empêche de faire les deux ! La base est la même : un bon moteur cardio 
 ## Se préparer à l'ATHX
 
 Le programme ATHX PREP combine force, endurance et simulations Metcon X sur 12 semaines, avec des charges calculées sur vos PR. [Découvrir le programme](/#cta).
+
+Vous visez déjà une date ? Suivez notre [prépa ATHX Paris](/preparation-athx-paris) pour février, ou le [programme ATHX Montpellier](/preparation-athx-montpellier) pour la fin mai.
