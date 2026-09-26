@@ -29,7 +29,7 @@ export default function Index() {
               "@id": organizationId(site),
               name: site.name,
               url: site.url,
-              logo: `${site.url}/icon.svg`,
+              logo: `${site.url}/icon.png`,
               founder: { "@id": personId(site) },
               ...(site.instagram && { sameAs: [site.instagram] }),
             },
