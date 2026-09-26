@@ -4,6 +4,14 @@ slug: choisir-categorie-lite-athx-pro
 excerpt: "Un même format, trois niveaux d'exigence. Comment évaluer honnêtement où vous en êtes avant de vous inscrire à l'ATHX."
 tag: Format
 date: 2026-08-18
+summary: Le format est identique dans les trois catégories, seules les charges et les standards changent. Lite convient à une première participation, ATHX aux athlètes réguliers, Pro aux compétiteurs confirmés. L'erreur la plus fréquente est de viser trop haut dès la première fois.
+faq:
+- question: Quelle catégorie ATHX choisir pour une première compétition ?
+  answer: La catégorie Lite est pensée pour les débutants en compétition ou les athlètes dont la force ou l'endurance est encore en retrait.
+- question: Quelle différence entre ATHX et ATHX Pro ?
+  answer: Les zones sont les mêmes, mais la catégorie Pro impose les charges les plus lourdes et les standards de mouvement les plus techniques.
+- question: Peut-on changer de catégorie d'une édition à l'autre ?
+  answer: Oui. Réussir une première compétition en Lite puis monter en ATHX ou en Pro à l'édition suivante est souvent la meilleure progression.
 ---
 
 L'ATHX propose trois catégories : **Lite**, **ATHX** et **Pro**. Le format et les zones restent les mêmes, mais les charges et les standards augmentent. Choisir la bonne catégorie est la première décision importante de votre préparation.

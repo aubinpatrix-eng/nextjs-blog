@@ -1,7 +1,10 @@
+import JsonLd from "@/app/_components/json-ld";
 import Newsletter from "@/app/_components/newsletter";
 import PostCard from "@/app/_components/post-card";
 import type { Post } from "@/lib/api";
-import { TAGS } from "@/lib/tags";
+import { breadcrumbSchema } from "@/lib/schema";
+import { getSite } from "@/lib/site";
+import { getTag, TAGS } from "@/lib/tags";
 import Link from "next/link";
 
 type Props = {
@@ -12,8 +15,38 @@ type Props = {
 };
 
 export default function BlogList({ title, lede, posts, activeTag }: Props) {
+  const site = getSite();
+  const tag = activeTag ? getTag(activeTag) : undefined;
+  const path = tag ? `/blog/categorie/${tag.slug}` : "/blog";
+
   return (
     <main>
+      <JsonLd
+        data={{
+          "@context": "https://schema.org",
+          "@graph": [
+            {
+              "@type": "CollectionPage",
+              name: tag ? `ATHX : ${tag.label}` : "Blog ATHX PREP",
+              description: lede,
+              url: `${site.url}${path}`,
+              inLanguage: "fr-FR",
+              mainEntity: {
+                "@type": "ItemList",
+                itemListElement: posts.map((post, index) => ({
+                  "@type": "ListItem",
+                  position: index + 1,
+                  url: `${site.url}/blog/${post.slug}`,
+                })),
+              },
+            },
+            breadcrumbSchema(site, [
+              { name: "Accueil", path: "" },
+              ...(tag ? [{ name: "Blog", path: "/blog" }, { name: tag.label }] : [{ name: "Blog" }]),
+            ]),
+          ],
+        }}
+      />
       <section className="page-hero">
         <div className="wrap">
           <div className="kicker">Blog ATHX PREP</div>

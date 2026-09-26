@@ -4,6 +4,14 @@ slug: strength-zone-athx-2027
 excerpt: "1RM shoulder-to-overhead, 2RM squat arrière, 3RM soulevé de terre : ce qui change dans la Strength zone de l'ATHX en 2027 et comment choisir ses tentatives."
 tag: Force
 date: 2026-09-23
+summary: En 2027, la Strength zone de l'ATHX passe à un 1RM shoulder-to-overhead, un 2RM squat arrière et un 3RM soulevé de terre. Le score est le total des charges. Pour performer, il faut s'entraîner lourd sur peu de répétitions et choisir des tentatives sûres avant d'aller chercher son maximum.
+faq:
+- question: Quels sont les mouvements de la Strength zone ATHX 2027 ?
+  answer: Un 1RM shoulder-to-overhead (impulsion des jambes autorisée), un 2RM squat arrière et un 3RM soulevé de terre.
+- question: Comment est calculé le score de la Strength zone ?
+  answer: C'est le total des charges soulevées sur les trois mouvements. Chaque kilo compte, sur chacun des exercices.
+- question: Quelle charge choisir pour sa première tentative ?
+  answer: 'Environ 90 % de votre maximum estimé : une charge que vous êtes sûr de réussir même stressé. Tentez votre maximum ensuite, puis ajoutez 2,5 à 5 kg s''il reste du temps.'
 ---
 
 La saison 2027 de l'ATHX change la **Strength zone**. Les formats de 2026 (1RM développé strict, 3RM squat, 5RM soulevé de terre) laissent place à **1RM, 2RM et 3RM** : moins de répétitions, des charges plus lourdes. La force pure compte encore plus.

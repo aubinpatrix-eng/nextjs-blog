@@ -4,6 +4,14 @@ slug: que-manger-refuel-zone
 excerpt: "Cette fenêtre de récupération active de l'ATHX est souvent sous-exploitée. Ce qu'il faut avoir prévu, et à quel moment le prendre."
 tag: Nutrition
 date: 2026-09-01
+summary: 'La Refuel zone sert à recharger sans alourdir : glucides rapides, eau et sodium, rien de gras ni de fibreux. Visez 30 à 40 g de glucides et 300 à 500 ml de liquide, avec uniquement des aliments déjà testés à l''entraînement.'
+faq:
+- question: Que manger pendant la Refuel zone de l'ATHX ?
+  answer: 'Des glucides rapides et digestes : compote à boire, banane mûre, boisson d''effort, gel habituel ou pâtes de fruits.'
+- question: Combien boire pendant la Refuel zone ?
+  answer: Environ 300 à 500 ml, en petites gorgées, idéalement avec un peu de sodium pour compenser la sueur.
+- question: Peut-on tester un nouveau gel le jour de l'ATHX ?
+  answer: Non. Tout ce que vous consommez le jour J doit avoir été testé à l'entraînement, idéalement lors d'une séance d'enchaînement force puis endurance.
 ---
 
 Entre la Strength zone et la zone Endurance, l'ATHX prévoit une **Refuel zone** : quelques minutes pour récupérer, boire et se préparer. Beaucoup d'athlètes la vivent comme une simple pause. C'est une erreur : bien utilisée, elle vous fait gagner de précieuses minutes sur la suite.

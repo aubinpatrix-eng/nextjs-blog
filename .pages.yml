@@ -25,7 +25,15 @@ content:
       - { name: updated, label: Date de mise à jour (optionnel), type: date }
       - { name: author, label: Auteur (optionnel), type: string }
       - { name: coverImage, label: Image de couverture (optionnel, 1200×630), type: image }
-      - { name: body, label: Contenu, type: rich-text }
+      - { name: summary, label: "Ce qu'il faut retenir (2-3 phrases, affiché avant le sommaire)", type: text }
+      - { name: body, label: "Contenu (les titres H2, H3, H4 forment le sommaire automatiquement)", type: rich-text }
+      - name: faq
+        label: FAQ (affichée en fin d'article)
+        type: object
+        list: true
+        fields:
+          - { name: question, label: Question, type: string }
+          - { name: answer, label: Réponse, type: text }
 
   - name: pages
     label: Pages (mentions légales, CGV…)
@@ -110,6 +118,7 @@ content:
       - { name: kicker, label: Surtitre, type: string }
       - { name: title, label: Titre de la page (H1), type: string }
       - { name: headline, label: "Accroche (ex. 1er de la Strength zone…)", type: string }
+      - { name: bio, label: "Bio courte (bloc auteur en bas des articles)", type: text }
       - { name: intro, label: Introduction, type: text }
       - { name: paragraphs, label: Paragraphes, type: text, list: true }
       - name: results
@@ -122,6 +131,7 @@ content:
       - { name: proofImage, label: Capture du classement, type: image }
       - { name: proofCaption, label: Légende de la capture, type: string }
       - { name: photo, label: Photo principale, type: image }
+      - { name: avatar, label: "Photo ronde du bloc auteur (carrée, centrée sur le visage)", type: image }
       - name: photos
         label: Photos du slider
         type: object
@@ -142,6 +152,8 @@ content:
       - { name: price, label: Prix du programme (€), type: number, required: true }
       - { name: comparePrice, label: "Ancien prix barré (€) — uniquement s'il a réellement été pratiqué", type: number }
       - { name: buyUrl, label: "Lien de paiement Stripe (https://buy.stripe.com/…)", type: string }
+      - { name: sessionsPerWeek, label: "Séances par semaine dans le programme (données structurées Google)", type: number }
+      - { name: sessionMinutes, label: "Durée moyenne d'une séance en minutes (données structurées Google)", type: number }
       - { name: newsletterAction, label: URL du formulaire newsletter (Brevo, Mailchimp…), type: string }
       - { name: instagram, label: Lien Instagram, type: string }
       - { name: disclaimer, label: Mention d'indépendance (pied de page), type: text }

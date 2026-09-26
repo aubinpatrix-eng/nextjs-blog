@@ -1,6 +1,7 @@
 import JsonLd from "@/app/_components/json-ld";
 import LiftCalculators from "@/app/_components/lift-calculators";
 import OneRmCalculator from "@/app/_components/one-rm-calculator";
+import { breadcrumbSchema, faqSchema } from "@/lib/schema";
 import { formatPrice, getSite } from "@/lib/site";
 import { Metadata } from "next";
 import Link from "next/link";
@@ -56,14 +57,8 @@ export default function OneRmPage() {
               inLanguage: "fr-FR",
               offers: { "@type": "Offer", price: "0", priceCurrency: "EUR" },
             },
-            {
-              "@type": "FAQPage",
-              mainEntity: faq.map((item) => ({
-                "@type": "Question",
-                name: item.question,
-                acceptedAnswer: { "@type": "Answer", text: item.answer },
-              })),
-            },
+            faqSchema(faq),
+            breadcrumbSchema(site, [{ name: "Accueil", path: "" }, { name: "Calculateur 1RM" }]),
           ],
         }}
       />

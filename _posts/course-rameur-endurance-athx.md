@@ -5,6 +5,14 @@ excerpt: "La différence entre s'entraîner à être rapide et s'entraîner à t
 tag: Endurance
 date: 2026-09-08
 updated: 2026-09-25
+summary: 'L''endurance de l''ATHX ne se prépare pas comme un 10 km chrono : il faut tenir une allure régulière longtemps puis repartir sur un autre effort. Trois séances clés suffisent : l''endurance fondamentale, le tempo et l''enchaînement force puis cardio. En 2027, le SkiErg remplace le rameur dans la zone Endurance.'
+faq:
+- question: Combien de séances d'endurance par semaine pour l'ATHX ?
+  answer: 'Trois séances en plus de la force : une ou deux d''endurance fondamentale, une de tempo et, toutes les une à deux semaines, un enchaînement force puis cardio.'
+- question: Quelle est l'erreur la plus fréquente en Endurance zone ?
+  answer: 'Partir trop vite : les 5 premières minutes doivent paraître faciles pour pouvoir tenir l''allure jusqu''au bout et garder de l''énergie pour le Metcon X.'
+- question: Quels ergomètres utilise l'ATHX en 2027 ?
+  answer: La zone Endurance alterne course et SkiErg. Le rameur reste présent dans le Metcon X.
 ---
 
 L'ATHX dure environ 2h30 du début à la fin. Même si toutes les minutes ne sont pas à fond, votre organisme reste sollicité pendant tout ce temps. La zone Endurance, avec la course et le rameur enchaînés, en est le cœur. Et elle se prépare très différemment d'un 10 km chrono.

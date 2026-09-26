@@ -295,3 +295,26 @@ footer { padding: 48px 0; }
 .slider-controls button:hover { border-color: var(--signal); }
 @media (min-width: 1100px) { .blog-grid-4 { grid-template-columns: repeat(4, 1fr); } }
 @media (min-width: 621px) and (max-width: 1099px) { .blog-grid-4 { grid-template-columns: repeat(2, 1fr); } }
+
+/* ---------- ARTICLE BLOCKS ---------- */
+.article-box { max-width: 68ch; border: 1px solid var(--line); background: var(--ink-2); padding: 26px 30px; margin-bottom: 28px; }
+.article-box h2 { font-size: 24px; margin-bottom: 14px; }
+.takeaway { border-left: 3px solid var(--signal); }
+.takeaway p { margin: 0; color: var(--paper); font-size: 16.5px; line-height: 1.65; }
+.toc ol { list-style: none; margin: 0; padding: 0; }
+.toc li { margin: 8px 0; font-size: 15.5px; }
+.toc a { text-decoration: underline; text-decoration-color: var(--line); text-underline-offset: 4px; color: var(--paper); }
+.toc a:hover { text-decoration-color: var(--signal); }
+.toc .toc-h3 { padding-left: 18px; font-size: 14.5px; }
+.toc .toc-h4 { padding-left: 36px; font-size: 14px; color: var(--mute); }
+.toc .toc-h3 a, .toc .toc-h4 a { color: var(--mute); }
+.article-faq { max-width: 68ch; margin-top: 48px; }
+.article-faq h2 { font-size: clamp(26px, 3.4vw, 34px); margin-bottom: 20px; }
+.author-box { max-width: 68ch; margin-top: 48px; display: grid; grid-template-columns: 120px 1fr; gap: 26px; align-items: start; border: 1px solid var(--line); background: var(--ink-2); padding: 28px; }
+.author-box img { width: 120px; height: 120px; border-radius: 50%; object-fit: cover; border: 2px solid var(--signal); }
+.author-label { font-size: 12px; color: var(--signal); font-weight: 600; margin-bottom: 6px; }
+.author-name { font-family: var(--ff-display), sans-serif; font-weight: 700; font-size: 26px; text-transform: uppercase; text-decoration: none; }
+.author-name:hover { color: var(--signal); }
+.author-box p { color: var(--mute); font-size: 14.5px; margin: 10px 0 14px; }
+@media (max-width: 560px) { .author-box { grid-template-columns: 1fr; } .author-box img { width: 96px; height: 96px; } }
+.article-meta a { color: var(--paper); text-decoration-color: var(--signal); }

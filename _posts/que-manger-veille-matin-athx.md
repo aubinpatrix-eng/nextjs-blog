@@ -4,6 +4,14 @@ slug: que-manger-veille-matin-athx
 excerpt: "Timing des repas, hydratation, et ce qu'il faut absolument éviter de tester pour la première fois le jour de l'ATHX."
 tag: Nutrition
 date: 2026-07-28
+summary: La veille de l'ATHX, misez sur des glucides à chaque repas, peu de fibres et de gras, et une bonne hydratation. Le matin, mangez 2h30 à 3h avant le départ un repas digeste riche en glucides, et ne testez rien de nouveau le jour J.
+faq:
+- question: Que manger la veille d'un ATHX ?
+  answer: 'Des glucides à chaque repas (pâtes, riz, pommes de terre), peu de fibres et de gras au dîner, et pas d''alcool. Par exemple : riz blanc, poulet ou poisson, courgettes cuites, compote.'
+- question: À quelle heure manger avant l'ATHX ?
+  answer: Environ 2h30 à 3h avant le départ de votre vague, puis éventuellement une banane ou une compote 30 à 45 minutes avant la Warm-up zone.
+- question: Peut-on boire un café avant l'ATHX ?
+  answer: 'Oui, si vous en avez l''habitude. La règle reste la même : rien de nouveau le jour de la compétition.'
 ---
 
 Une bonne préparation physique peut être gâchée par une mauvaise alimentation dans les 24 heures qui précèdent l'épreuve. Avec environ 2h30 d'effort varié, l'ATHX demande d'arriver avec un réservoir de glycogène plein et un estomac tranquille.

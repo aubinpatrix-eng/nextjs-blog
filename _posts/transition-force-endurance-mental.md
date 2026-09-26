@@ -4,6 +4,14 @@ slug: transition-force-endurance-mental
 excerpt: "Le vrai piège de l'ATHX n'est pas une zone isolée, c'est l'enchaînement. Comment préparer la tête (et le corps) à ces transitions."
 tag: Mental
 date: 2026-08-25
+summary: Le passage de la force à l'endurance est l'un des moments les plus durs de l'ATHX. Découper l'effort, prévoir une allure de départ prudente et utiliser une phrase clé aident à tenir. Ces transitions se travaillent aussi à l'entraînement en enchaînant force et cardio sans pause.
+faq:
+- question: Pourquoi la transition force-endurance est-elle difficile ?
+  answer: 'Après un travail lourd, la fréquence cardiaque est élevée, les jambes sont chargées et l''adrénaline retombe : beaucoup partent trop vite ou se découragent.'
+- question: Comment gérer mentalement une longue compétition ?
+  answer: En découpant l'effort en objectifs courts, en suivant une allure décidée à l'avance et en se répétant une phrase clé quand la tête lâche.
+- question: Comment s'entraîner aux transitions ?
+  answer: Une fois par semaine ou toutes les deux semaines, enchaînez une séance de force et un bloc de course ou de rameur sans pause.
 ---
 
 On prépare souvent chaque zone de l'ATHX séparément : la force d'un côté, le cardio de l'autre. Mais en compétition, le plus dur est souvent le **passage d'une zone à l'autre**, et en particulier de la force à l'endurance.

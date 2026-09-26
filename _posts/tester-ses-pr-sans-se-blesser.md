@@ -4,6 +4,14 @@ slug: tester-ses-pr-sans-se-blesser
 excerpt: "Comment tester ou estimer ses charges maximales quelques semaines avant l'ATHX sans arriver cramé ou blessé le jour J."
 tag: Force
 date: 2026-08-11
+summary: Pour connaître son 1RM sans risque, le plus sûr est de l'estimer à partir d'une série de 3 à 5 répétitions avec la formule d'Epley. Si vous testez un vrai maximum, faites-le avec un échauffement dégressif, de l'assistance, et jamais dans les 10 jours avant la compétition.
+faq:
+- question: Comment estimer son 1RM sans le tester ?
+  answer: 'Avec la formule d''Epley : 1RM ≈ charge × (1 + répétitions ÷ 30), à partir d''une série de 3 à 5 répétitions propres. Notre calculateur 1RM fait le calcul pour vous.'
+- question: Quand tester ses PR avant l'ATHX ?
+  answer: Idéalement 10 à 12 semaines avant la compétition, au début de la préparation. Ne testez jamais un nouveau maximum dans les 10 jours qui précèdent l'épreuve.
+- question: Combien de repos entre deux tentatives lourdes ?
+  answer: Prenez 3 à 5 minutes entre les tentatives lourdes, et arrêtez dès que la technique se dégrade.
 ---
 
 Pour vous entraîner en pourcentage de votre charge maximale, il faut connaître cette charge. Mais tester un 1RM (une répétition maximale) comporte des risques, surtout si vous n'en avez pas l'habitude. Voici comment faire intelligemment.

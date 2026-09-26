@@ -5,6 +5,14 @@ excerpt: "Pourquoi la Strength Zone de l'ATHX récompense la technique autant qu
 tag: Force
 date: 2026-09-15
 updated: 2026-09-25
+summary: 'À l''ATHX, la technique compte autant que la charge : une répétition non conforme ne rapporte rien. Travailler en pourcentage de son 1RM sur 12 semaines, avec une montée progressive de l''intensité et une décharge finale, permet d''arriver affûté sans être épuisé.'
+faq:
+- question: Comment progresser au squat avant l'ATHX ?
+  answer: 'En travaillant en pourcentage de votre 1RM : de 65-72 % en début de préparation jusqu''à 87-92 % dans les dernières semaines, puis une semaine de décharge avant la compétition.'
+- question: Quels sont les critères d'un squat valide ?
+  answer: Une profondeur complète, avec le pli de hanche sous le haut du genou, les pieds à plat et une remontée contrôlée. Consultez le standard officiel de votre édition.
+- question: Pourquoi s'entraîner en pourcentage de son 1RM ?
+  answer: Pour que chaque séance soit assez lourde pour progresser sans vous épuiser. Deux athlètes aux maximums différents ne peuvent pas suivre les mêmes charges.
 ---
 
 La Strength Zone de l'ATHX tourne autour de mouvements polyarticulaires comme le **squat arrière** et le **développé militaire strict**. Deux exercices classiques, mais qui posent problème à beaucoup d'athlètes orientés endurance ou fonctionnel.

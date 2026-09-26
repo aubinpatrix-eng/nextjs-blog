@@ -13,7 +13,7 @@ Site de vente du programme de préparation ATHX (14,99 €) + blog, construit av
 | Confirmation d'achat (non indexée) | `/merci` | — |
 | Prix, lien de paiement, newsletter, URL du site | — | **Réglages du site** → `_data/site.json` |
 
-SEO généré automatiquement : `sitemap.xml`, `robots.txt`, balises canonical et Open Graph, image de partage, données structurées (Product, FAQPage, BlogPosting, BreadcrumbList).
+SEO généré automatiquement : `sitemap.xml`, `robots.txt`, balises canonical et Open Graph, image de partage, données structurées (Course + CourseInstance + Offer, Person, FAQPage, BlogPosting, BreadcrumbList).
 
 ## Mise en route
 

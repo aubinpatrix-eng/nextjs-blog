@@ -5,6 +5,16 @@ excerpt: "6 zones, 2h30 d'effort, 3 catégories : origine, format 2027, classeme
 tag: Format
 date: 2026-09-25
 author: Aubin Patrix
+summary: Les ATHX Games sont une compétition de fitness hybride d'environ 2h30, découpée en 6 zones. Seules la Strength zone, l'Endurance zone et le Metcon X comptent pour le classement. On peut concourir en solo ou en binôme, en catégorie Lite, ATHX ou Pro, avec trois étapes en France en 2027.
+faq:
+- question: Combien de temps dure une compétition ATHX ?
+  answer: 'Environ 2h30 au total, en continu : 30 min de Warm-up, 20 min de Strength zone, 10 min de Refuel, 30 min d''Endurance, 30 min de Recovery et 30 min de Metcon X.'
+- question: Quelles zones comptent pour le classement ATHX ?
+  answer: 'Trois zones seulement : la Strength zone (total des charges soulevées), l''Endurance zone (distance parcourue) et le Metcon X. Les zones Warm-up, Refuel et Recovery ne sont pas notées.'
+- question: Peut-on faire l'ATHX en binôme ?
+  answer: Oui. On peut participer seul ou à deux, en binôme hommes, femmes ou mixte, dans les trois catégories Lite, ATHX et Pro.
+- question: Combien coûte une inscription à l'ATHX ?
+  answer: Le prix varie selon l'étape, la catégorie et le format. À titre indicatif, l'inscription à Paris tournait autour de 110 € en solo et 220 € en binôme.
 ---
 
 Les **ATHX Games** sont une compétition de **fitness hybride** qui teste toutes les qualités physiques au cours d'une même épreuve d'environ **2h30** : la force maximale, l'endurance et la capacité à tout donner en étant fatigué. Née au Royaume-Uni, elle s'est imposée en quelques saisons comme l'une des compétitions qui montent le plus vite en Europe, et elle s'installe désormais en France.
