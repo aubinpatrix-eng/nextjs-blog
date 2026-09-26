@@ -25,6 +25,13 @@ export type Home = {
     lede: string;
     offerNote: string;
     features: string[];
+    image?: string;
+    imageAlt?: string;
+  };
+  personas?: {
+    title: string;
+    lede: string;
+    items: { image: string; label: string; title: string; text: string }[];
   };
   stats: { value: string; label: string }[];
   format: {
@@ -40,6 +47,7 @@ export type Home = {
   cta: { title: string; lede: string };
   faq: { question: string; answer: string }[];
   finalCta: string;
+  finalImage?: string;
 };
 
 export type About = {

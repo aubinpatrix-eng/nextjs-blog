@@ -60,6 +60,8 @@ content:
           - { name: lede, label: Texte d'introduction, type: text }
           - { name: offerNote, label: Mention sous le prix, type: string }
           - { name: features, label: Contenu de l'offre, type: string, list: true }
+          - { name: image, label: "Photo de l'en-tête (portrait, sujet sur la droite)", type: image }
+          - { name: imageAlt, label: Description de la photo (accessibilité et SEO), type: string }
       - name: stats
         label: Chiffres clés
         type: object
@@ -67,6 +69,21 @@ content:
         fields:
           - { name: value, label: Valeur, type: string }
           - { name: label, label: Légende, type: string }
+      - name: personas
+        label: Section « Pour chaque profil »
+        type: object
+        fields:
+          - { name: title, label: Titre, type: text }
+          - { name: lede, label: Introduction, type: text }
+          - name: items
+            label: Profils
+            type: object
+            list: true
+            fields:
+              - { name: image, label: Photo (portrait), type: image }
+              - { name: label, label: Étiquette, type: string }
+              - { name: title, label: Titre, type: string }
+              - { name: text, label: Texte, type: text }
       - name: format
         label: Section « Le format »
         type: object
@@ -108,6 +125,7 @@ content:
           - { name: question, label: Question, type: string }
           - { name: answer, label: Réponse, type: text }
       - { name: finalCta, label: Phrase d'appel final, type: string }
+      - { name: finalImage, label: Photo de fond de l'appel final, type: image }
 
   - name: about
     label: Qui suis-je
