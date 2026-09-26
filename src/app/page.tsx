@@ -82,12 +82,21 @@ export default function Index() {
         }}
       />
 
-      <section className="hero" id="home">
+      <section className={`hero${home.hero.image ? " hero-photo" : ""}`} id="home">
+        {home.hero.image && (
+          // eslint-disable-next-line @next/next/no-img-element
+          <img className="hero-bg" src={home.hero.image} alt={home.hero.imageAlt ?? ""} fetchPriority="high" />
+        )}
         <div className="wrap hero-grid">
           <div>
             <div className="kicker">{home.hero.kicker}</div>
             <h1 className="h-hero pre-line">{home.hero.title}</h1>
             <p className="lede">{home.hero.lede}</p>
+            <ul className="hero-features">
+              {home.hero.features.map((feature) => (
+                <li key={feature}>{feature}</li>
+              ))}
+            </ul>
             <div className="hero-ctas">
               <a href="#cta" className="btn btn-signal">
                 Obtenir mon programme
@@ -97,14 +106,9 @@ export default function Index() {
               </a>
             </div>
           </div>
-          <div className="hero-card">
+          <div className="hero-card price-badge">
             <div className="price">{priceLabel}</div>
             <p className="note">{home.hero.offerNote}</p>
-            <ul>
-              {home.hero.features.map((feature) => (
-                <li key={feature}>{feature}</li>
-              ))}
-            </ul>
           </div>
         </div>
       </section>
@@ -121,6 +125,31 @@ export default function Index() {
       </section>
 
       <Proof />
+
+      {home.personas && home.personas.items.length > 0 && (
+        <section className="personas">
+          <div className="wrap">
+            <div className="sec-head">
+              <h2 className="h-sec pre-line">{home.personas.title}</h2>
+              <p className="lede">{home.personas.lede}</p>
+            </div>
+            <div className="persona-grid">
+              {home.personas.items.map((persona) => (
+                <a href="#cta" className="persona" key={persona.title}>
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img src={persona.image} alt="" loading="lazy" width={800} height={1067} />
+                  <div className="persona-body">
+                    <div className="post-tag">{persona.label}</div>
+                    <h3>{persona.title}</h3>
+                    <p>{persona.text}</p>
+                    <span className="persona-cta">Voir mon programme →</span>
+                  </div>
+                </a>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
 
       <section id="format">
         <div className="wrap">
@@ -208,7 +237,11 @@ export default function Index() {
         </section>
       )}
 
-      <section className="last">
+      <section className={`last${home.finalImage ? " final-band" : ""}`}>
+        {home.finalImage && (
+          // eslint-disable-next-line @next/next/no-img-element
+          <img className="final-bg" src={home.finalImage} alt="" loading="lazy" />
+        )}
         <div className="wrap center">
           <h2 className="h-sec">{home.finalCta}</h2>
           <a href="#cta" className="btn btn-signal">

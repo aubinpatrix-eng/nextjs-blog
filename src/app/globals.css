@@ -318,3 +318,61 @@ footer { padding: 48px 0; }
 .author-box p { color: var(--mute); font-size: 14.5px; margin: 10px 0 14px; }
 @media (max-width: 560px) { .author-box { grid-template-columns: 1fr; } .author-box img { width: 96px; height: 96px; } }
 .article-meta a { color: var(--paper); text-decoration-color: var(--signal); }
+
+/* ---------- HUMANIZED HOME ---------- */
+.hero-photo { position: relative; overflow: hidden; background: var(--ink); }
+.hero-photo .wrap { position: relative; z-index: 1; }
+.hero-bg { position: absolute; top: 0; right: 0; width: 58%; height: 100%; object-fit: cover; object-position: center 30%; }
+.hero-photo::after {
+  content: ""; position: absolute; inset: 0; pointer-events: none;
+  background:
+    linear-gradient(90deg, var(--ink) 38%, rgba(20,20,15,0.72) 55%, rgba(20,20,15,0.15) 78%, rgba(20,20,15,0.35) 100%),
+    linear-gradient(0deg, rgba(20,20,15,0.85) 0%, transparent 30%),
+    linear-gradient(115deg, transparent 60%, rgba(255,74,35,0.18) 100%);
+}
+.hero-photo .hero-card { background: rgba(27,28,22,0.72); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); border-color: rgba(255,74,35,0.45); }
+@media (max-width: 860px) {
+  .hero-bg { width: 100%; object-position: center 20%; }
+  .hero-photo::after { background: linear-gradient(0deg, var(--ink) 18%, rgba(20,20,15,0.82) 55%, rgba(20,20,15,0.55) 100%); }
+}
+
+.persona-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+@media (max-width: 900px) { .persona-grid { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 600px) { .persona-grid { grid-template-columns: 1fr; } }
+.persona { position: relative; display: block; overflow: hidden; border: 1px solid var(--line); text-decoration: none; aspect-ratio: 3 / 4; }
+.persona img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease; }
+.persona::after { content: ""; position: absolute; inset: 0; background: linear-gradient(0deg, rgba(20,20,15,0.96) 12%, rgba(20,20,15,0.6) 45%, rgba(20,20,15,0.05) 75%); }
+.persona-body { position: absolute; left: 0; right: 0; bottom: 0; z-index: 1; padding: 24px; }
+.persona h3 { font-size: 26px; margin-bottom: 10px; }
+.persona p { color: #d8d4c8; font-size: 14px; margin: 0 0 14px; }
+.persona-cta { font-size: 13px; font-weight: 600; color: var(--signal); }
+.persona:hover img { transform: scale(1.04); }
+.persona:hover { border-color: var(--signal); }
+@media (max-width: 600px) { .persona { aspect-ratio: 4 / 5; } }
+
+.final-band { position: relative; overflow: hidden; padding: 140px 0; }
+.final-band .wrap { position: relative; z-index: 1; }
+.final-bg { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center 35%; }
+.final-band::after { content: ""; position: absolute; inset: 0; background: linear-gradient(0deg, rgba(20,20,15,0.92), rgba(20,20,15,0.6)), linear-gradient(90deg, rgba(255,74,35,0.25), transparent 60%); }
+.final-band h2 { max-width: 18ch; margin: 0 auto; font-size: clamp(36px, 6vw, 68px); }
+.hero-features { list-style: none; margin: 22px 0 0; padding: 0; font-size: 14.5px; color: var(--paper); max-width: 52ch; }
+.hero-features li { display: flex; gap: 10px; padding: 5px 0; }
+.hero-features li::before { content: "＋"; color: var(--signal); font-weight: 700; }
+.hero-photo { padding-bottom: 72px; }
+.hero-photo .hero-grid { grid-template-columns: 1.15fr 0.85fr; }
+.price-badge { justify-self: end; align-self: end; padding: 20px 24px; min-width: 240px; }
+.price-badge .price { font-size: 48px; }
+.price-badge .note { margin: 6px 0 0; }
+.hero-photo .hero-bg { width: 52%; object-position: 50% 30%; }
+.hero-photo::after {
+  background:
+    linear-gradient(90deg, var(--ink) 44%, rgba(20,20,15,0.55) 56%, rgba(20,20,15,0) 72%),
+    linear-gradient(0deg, rgba(20,20,15,0.8) 0%, transparent 28%),
+    linear-gradient(115deg, transparent 62%, rgba(255,74,35,0.2) 100%);
+}
+@media (max-width: 860px) {
+  .hero-photo .hero-grid { grid-template-columns: 1fr; }
+  .hero-photo .hero-bg { width: 100%; object-position: center 20%; }
+  .hero-photo::after { background: linear-gradient(0deg, var(--ink) 18%, rgba(20,20,15,0.84) 55%, rgba(20,20,15,0.6) 100%); }
+  .price-badge { justify-self: start; }
+}

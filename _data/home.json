@@ -9,7 +9,9 @@
       "Bloc force + bloc endurance + simulation Metcon X",
       "Séances au format PDF, imprimables ou sur mobile",
       "Guide de gestion de la Refuel Zone (nutrition, timing)"
-    ]
+    ],
+    "image": "/assets/images/athx/athx-endurance-course.webp",
+    "imageAlt": "Athlète en pleine course dans l'Endurance zone de l'ATHX"
   },
   "stats": [
     {
@@ -29,6 +31,30 @@
       "label": "Durée du programme pour arriver prêt le jour de l'épreuve"
     }
   ],
+  "personas": {
+    "title": "Un programme pour\nchaque profil",
+    "lede": "Hommes, femmes, première compétition ou podium en ligne de mire : vos charges sont calculées sur vos PR, pas sur ceux de quelqu'un d'autre.",
+    "items": [
+      {
+        "image": "/assets/images/athx/athx-rameur.webp",
+        "label": "Première compétition",
+        "title": "Vous visez votre premier ATHX",
+        "text": "Catégorie Lite ou ATHX : on part de vos charges actuelles, avec une semaine 0 pour tester vos PR si besoin. Le jour J, vous savez exactement quoi faire dans chaque zone."
+      },
+      {
+        "image": "/assets/images/athx/athx-metcon-halteres.webp",
+        "label": "Profil force",
+        "title": "Vous venez de la musculation",
+        "text": "Vous êtes à l'aise sous la barre. Le programme entretient votre force et construit le moteur qui vous manque pour l'Endurance zone et le Metcon X."
+      },
+      {
+        "image": "/assets/images/athx/athx-binome-relais.webp",
+        "label": "En binôme",
+        "title": "Vous préparez l'ATHX à deux",
+        "text": "Des charges individuelles pour chacun, et des séances d'endurance et de Metcon X à faire ensemble. La motivation se partage, les kilos aussi."
+      }
+    ]
+  },
   "format": {
     "title": "Le format,\nzone par zone",
     "lede": "L'ATHX se court en continu, sans pause hors chrono. Chaque zone sollicite une qualité physique différente, c'est ce qui rend la préparation générale aussi décisive que la préparation spécifique.",
@@ -105,5 +131,6 @@
       "answer": "Un PDF structuré par semaine, lisible sur mobile ou imprimable, envoyé à l'adresse indiquée à l'achat."
     }
   ],
-  "finalCta": "Six zones. Une seule chance de bien les enchaîner."
+  "finalCta": "Six zones. Une seule chance de bien les enchaîner.",
+  "finalImage": "/assets/images/athx/athx-skierg.webp"
 }
