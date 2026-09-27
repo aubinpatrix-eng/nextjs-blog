@@ -1,7 +1,6 @@
 ---
 title: Guide du calculateur 1RM
 ---
-
 ## Le 1RM de A à Z : le guide complet
 
 Le 1RM est la mesure de référence de la force en musculation. Ce guide explique ce que c'est, à quoi il sert, comment le calculer sans risque et comment transformer le résultat du calculateur en séances d'entraînement concrètes.
@@ -55,13 +54,15 @@ On réalise une série lourde de **2 à 6 répétitions** et on estime le 1RM av
 
 #### Quelle méthode choisir ?
 
+
 | Critère | Test direct | Estimation (calculateur) |
-| --- | --- | --- |
+| ------------------ | --------------------------- | ----------------------------------------- |
 | Précision | Maximale | Très bonne entre 2 et 6 répétitions |
 | Risque de blessure | Plus élevé | Faible |
 | Fatigue | Importante | Modérée |
 | Pour qui ? | Pratiquants expérimentés | Tous les niveaux |
 | Quand ? | Hors période de compétition | À tout moment, même en pleine préparation |
+
 
 ### Comment utiliser le calculateur 1RM, étape par étape
 
@@ -77,12 +78,14 @@ On réalise une série lourde de **2 à 6 répétitions** et on estime le 1RM av
 
 Chaque zone d'intensité correspond à un objectif d'entraînement :
 
+
 | % du 1RM | Répétitions par série | Objectif |
-| --- | --- | --- |
+| ---------- | --------------------- | ------------------------------------------ |
 | 90 à 100 % | 1 à 2 | Force maximale, affûtage avant compétition |
 | 80 à 90 % | 2 à 5 | Force |
 | 70 à 80 % | 5 à 8 | Force et volume |
 | 60 à 70 % | 8 à 12 | Technique, vitesse, reprise |
+
 
 #### Les 2RM, 3RM et 5RM estimés
 
