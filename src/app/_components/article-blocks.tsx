@@ -11,10 +11,11 @@ export function KeyTakeaways({ summary }: { summary: string }) {
   );
 }
 
-export function TableOfContents({ toc }: { toc: TocEntry[] }) {
+export function TableOfContents({ toc, headingLevel = 2 }: { toc: TocEntry[]; headingLevel?: 2 | 3 }) {
+  const Heading = headingLevel === 3 ? "h3" : "h2";
   return (
     <nav className="article-box toc" aria-label="Sommaire">
-      <h2>Sommaire</h2>
+      <Heading>Sommaire</Heading>
       <ol>
         {toc.map((entry) => (
           <li key={entry.id} className={`toc-h${entry.level}`}>

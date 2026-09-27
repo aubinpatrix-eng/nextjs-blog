@@ -47,7 +47,9 @@ export async function markdownToHtmlWithToc(markdown: string) {
 
   const content = rendered.replace(/<h([234])>([\s\S]*?)<\/h\1>/g, (_, level: string, inner: string) => {
     const text = stripTags(inner);
-    const base = slugify(text);
+    // Ids must not start with a digit to stay valid CSS selectors (e.g. "1RM…").
+    const slug = slugify(text);
+    const base = /^[0-9]/.test(slug) ? `s-${slug}` : slug;
     const count = used.get(base) ?? 0;
     used.set(base, count + 1);
     const id = count ? `${base}-${count + 1}` : base;

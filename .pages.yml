@@ -190,6 +190,14 @@ content:
           - { name: image, label: Photo, type: image }
           - { name: caption, label: Légende, type: string }
 
+  - name: guide1rm
+    label: Guide du calculateur 1RM
+    type: file
+    path: _data/guide-1rm.md
+    fields:
+      - { name: title, label: Titre interne, type: string }
+      - { name: body, label: "Contenu (H2 = titre du guide, H3 = sections, H4 = sous-parties ; le sommaire se crée tout seul)", type: rich-text }
+
   - name: site
     label: Réglages du site
     type: file

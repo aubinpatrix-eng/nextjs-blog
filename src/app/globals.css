@@ -434,3 +434,6 @@ footer { padding: 48px 0; }
 @media (min-width: 700px) { .prose td:not(:last-child) { white-space: nowrap; } }
 @media (min-width: 900px) { .events-home { grid-template-columns: repeat(3, 1fr); } }
 .event-venue { font-size: 13px; color: var(--mute); }
+.guide-intro h2 { margin-top: 0; font-size: clamp(30px, 4.4vw, 48px); }
+.guide-intro p { color: var(--mute); }
+.article-box h3 { font-size: 24px; margin-bottom: 14px; }
