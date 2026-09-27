@@ -19,6 +19,13 @@ export default async function GuideLanding({ guide }: { guide: Guide }) {
   const faq = guide.faq ?? [];
   if (children.length > 0) toc.push({ id: "pages-du-guide", text: "Les pages de ce guide", level: 2 });
   if (faq.length > 0) toc.push({ id: "faq", text: "Questions fréquentes", level: 2 });
+  // Lead-magnet pages (free week): the main call to action is the free PDF, not the paid program.
+  const leadMagnet = Boolean(guide.newsletter);
+  const pdfForm = {
+    title: "Recevez la semaine gratuite en PDF",
+    text: "Inscrivez-vous et confirmez votre adresse : le PDF imprimable (5 séances, 8 pages) se télécharge juste après. Ensuite, un e-mail par semaine avec des conseils de préparation. Désinscription en un clic.",
+    button: "Recevoir le PDF",
+  };
   const path = guidePath(guide);
   const url = `${site.url}${path}`;
   const crumbs = [
@@ -82,12 +89,25 @@ export default async function GuideLanding({ guide }: { guide: Guide }) {
             <h1 className="h-hero event-title">{guide.heading || guide.title}</h1>
             <p className="lede">{guide.excerpt}</p>
             <div className="hero-ctas">
-              <a href="#contenu" className="btn btn-ghost">
-                Lire le guide
-              </a>
-              <Link href="/#cta" className="btn btn-signal">
-                Mon programme — {priceLabel}
-              </Link>
+              {leadMagnet ? (
+                <>
+                  <a href="#recevoir-le-pdf" className="btn btn-signal">
+                    Recevoir la semaine gratuite (PDF)
+                  </a>
+                  <a href="#contenu" className="btn btn-ghost">
+                    Voir les séances
+                  </a>
+                </>
+              ) : (
+                <>
+                  <a href="#contenu" className="btn btn-ghost">
+                    Lire le guide
+                  </a>
+                  <Link href="/#cta" className="btn btn-signal">
+                    Mon programme — {priceLabel}
+                  </Link>
+                </>
+              )}
             </div>
           </div>
         </div>
@@ -97,19 +117,33 @@ export default async function GuideLanding({ guide }: { guide: Guide }) {
         <div className="wrap">
           {guide.summary && <KeyTakeaways summary={guide.summary} />}
           {toc.length > 1 && <TableOfContents toc={toc} />}
+          {leadMagnet && <NewsletterForm id="recevoir-le-pdf" source={guide.slug} {...pdfForm} />}
           <div className="prose" dangerouslySetInnerHTML={{ __html: firstHalf }} />
           {secondHalf && (
             <>
-              <aside className="event-cta">
-                <div className="event-cta-body">
-                  <div className="kicker">Programme ATHX PREP</div>
-                  <h2>Préparez chaque zone avec un plan calculé sur vos PR.</h2>
-                  <p>12 semaines de force, d&apos;endurance et de simulations Metcon X, adaptées à votre catégorie.</p>
-                  <Link href="/#cta" className="btn btn-signal">
-                    Accéder à mon programme — {priceLabel}
-                  </Link>
-                </div>
-              </aside>
+              {leadMagnet ? (
+                <aside className="event-cta">
+                  <div className="event-cta-body">
+                    <div className="kicker">Gratuit · PDF imprimable</div>
+                    <h2>Recevez ces 5 séances en PDF.</h2>
+                    <p>Le PDF de 8 pages, avec un encadré pour noter vos maximums et une page de notes par séance.</p>
+                    <a href="#recevoir-le-pdf" className="btn btn-signal">
+                      Recevoir la semaine gratuite
+                    </a>
+                  </div>
+                </aside>
+              ) : (
+                <aside className="event-cta">
+                  <div className="event-cta-body">
+                    <div className="kicker">Programme ATHX PREP</div>
+                    <h2>Préparez chaque zone avec un plan calculé sur vos PR.</h2>
+                    <p>12 semaines de force, d&apos;endurance et de simulations Metcon X, adaptées à votre catégorie.</p>
+                    <Link href="/#cta" className="btn btn-signal">
+                      Accéder à mon programme — {priceLabel}
+                    </Link>
+                  </div>
+                </aside>
+              )}
               <div className="prose" dangerouslySetInnerHTML={{ __html: secondHalf }} />
             </>
           )}
@@ -133,7 +167,11 @@ export default async function GuideLanding({ guide }: { guide: Guide }) {
           )}
 
           {faq.length > 0 && <ArticleFaq faq={faq} />}
-          <NewsletterForm source={guide.slug} />
+          {leadMagnet ? (
+            <NewsletterForm id="recevoir-le-pdf-fin" source={`${guide.slug}-fin`} {...pdfForm} />
+          ) : (
+            <NewsletterForm source={guide.slug} />
+          )}
         </div>
       </section>
 
