@@ -459,3 +459,8 @@ footer { padding: 48px 0; }
 @media (min-width: 900px) { .guide-children-grid { grid-template-columns: repeat(3, 1fr); } }
 .zones-more { margin-top: 24px; color: var(--mute); font-size: 15px; max-width: none; }
 .zones-more a { color: var(--paper); text-decoration-color: var(--signal); text-underline-offset: 3px; }
+/* Wide tables (5+ columns, e.g. training sessions) use the full content width on desktop. */
+@media (min-width: 900px) {
+  .prose .table-wrap:has(th:nth-child(5)) { width: min(1064px, calc(100vw - 56px)); }
+  .prose .table-wrap:has(th:nth-child(5)) td:last-child { min-width: 260px; }
+}
