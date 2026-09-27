@@ -1,6 +1,8 @@
 import EventLanding from "@/app/_components/event-landing";
+import GuideLanding from "@/app/_components/guide-landing";
 import { getAllPages, getPageBySlug } from "@/lib/api";
 import { getAllEvents, getEventBySlug } from "@/lib/events";
+import { getHub, getHubs } from "@/lib/guides";
 import markdownToHtml from "@/lib/markdownToHtml";
 import { Metadata } from "next";
 import { notFound } from "next/navigation";
@@ -13,12 +15,21 @@ type Params = {
 
 export const dynamicParams = false;
 
-// Serves both the simple pages (_pages: legal…) and the city landing pages (_events).
+// Serves the simple pages (_pages: legal…), the city landing pages (_events) and the guide hubs (_guides).
 export function generateStaticParams() {
-  return [...getAllPages(), ...getAllEvents()].map((page) => ({ slug: page.slug }));
+  return [...getAllPages(), ...getAllEvents(), ...getHubs()].map((page) => ({ slug: page.slug }));
 }
 
 export function generateMetadata({ params }: Params): Metadata {
+  const hub = getHub(params.slug);
+  if (hub) {
+    return {
+      title: hub.title,
+      description: hub.excerpt,
+      alternates: { canonical: `/${hub.slug}` },
+      openGraph: { type: "article", title: hub.title, description: hub.excerpt, ...(hub.heroImage && { images: [hub.heroImage] }) },
+    };
+  }
   const event = getEventBySlug(params.slug);
   if (event) {
     return {
@@ -45,6 +56,10 @@ export function generateMetadata({ params }: Params): Metadata {
 }
 
 export default async function StaticPage({ params }: Params) {
+  const hub = getHub(params.slug);
+  if (hub) {
+    return <GuideLanding guide={hub} />;
+  }
   const event = getEventBySlug(params.slug);
   if (event) {
     return <EventLanding event={event} />;

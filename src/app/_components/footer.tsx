@@ -1,5 +1,6 @@
 import { getAllPages } from "@/lib/api";
 import { getAllEvents } from "@/lib/events";
+import { getHubs, guidePath } from "@/lib/guides";
 import { getSite } from "@/lib/site";
 import Link from "next/link";
 
@@ -7,6 +8,7 @@ export default function Footer() {
   const site = getSite();
   const pages = getAllPages();
   const events = getAllEvents();
+  const hubs = getHubs();
 
   return (
     <footer>
@@ -35,6 +37,18 @@ export default function Footer() {
               {events.map((event) => (
                 <Link key={event.slug} href={`/${event.slug}`}>
                   {event.menuLabel}
+                </Link>
+              ))}
+            </div>
+          </div>
+        )}
+        {hubs.length > 0 && (
+          <div className="foot-row foot-events">
+            <div>
+              <span>Guides</span>
+              {hubs.map((hub) => (
+                <Link key={hub.slug} href={guidePath(hub)}>
+                  {hub.menuLabel}
                 </Link>
               ))}
             </div>

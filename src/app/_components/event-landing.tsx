@@ -1,5 +1,6 @@
 import { ArticleFaq, AuthorBox, KeyTakeaways, TableOfContents } from "@/app/_components/article-blocks";
 import JsonLd from "@/app/_components/json-ld";
+import NewsletterForm from "@/app/_components/newsletter-form";
 import PrCalculator from "@/app/_components/pr-calculator";
 import { getAllEvents, type AthxEvent } from "@/lib/events";
 import { markdownToHtmlWithToc, splitAtMiddleHeading } from "@/lib/markdownToHtml";
@@ -132,6 +133,11 @@ export default async function EventLanding({ event }: { event: AthxEvent }) {
             </>
           )}
           {faq.length > 0 && <ArticleFaq faq={faq} />}
+          <NewsletterForm
+            source={event.slug}
+            title={`Préparez l'ATHX ${event.city} avec nous`}
+            text={`Un e-mail par semaine jusqu'au jour J : séances, conseils et rappels de dates pour l'ATHX ${event.city}. Désinscription en un clic.`}
+          />
         </div>
       </section>
 

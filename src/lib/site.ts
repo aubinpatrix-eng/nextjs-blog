@@ -13,7 +13,6 @@ export type Site = {
   buyUrl: string;
   sessionsPerWeek: number | null;
   sessionMinutes: number | null;
-  newsletterAction: string;
   instagram: string;
   disclaimer: string;
 };

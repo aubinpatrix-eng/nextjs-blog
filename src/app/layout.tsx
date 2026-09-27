@@ -1,6 +1,7 @@
 import Footer from "@/app/_components/footer";
 import Nav from "@/app/_components/nav";
 import { getAllEvents } from "@/lib/events";
+import { getHubs, guidePath } from "@/lib/guides";
 import { formatPrice, getSite } from "@/lib/site";
 import type { Metadata, Viewport } from "next";
 import { Big_Shoulders_Display, Work_Sans } from "next/font/google";
@@ -57,7 +58,24 @@ gtag('config', '${GA_ID}');`,
       <body>
         <Nav
           priceLabel={formatPrice(site.price)}
-          events={getAllEvents().map(({ slug, city, dates }) => ({ slug, city, dates }))}
+          menus={[
+            {
+              id: "guides",
+              label: "Guides",
+              title: "Préparer l'ATHX",
+              items: getHubs().map((hub) => ({ href: guidePath(hub), label: hub.menuLabel, hint: hub.kicker })),
+            },
+            {
+              id: "competitions",
+              label: "Compétitions",
+              title: "Prochains ATHX en France",
+              items: getAllEvents().map((event) => ({
+                href: `/${event.slug}`,
+                label: `ATHX ${event.city}`,
+                hint: event.dates,
+              })),
+            },
+          ]}
         />
         {children}
         <Footer />

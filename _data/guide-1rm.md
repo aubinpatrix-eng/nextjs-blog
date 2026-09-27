@@ -31,7 +31,7 @@ Recalculer son 1RM toutes les 8 à 12 semaines permet de mesurer objectivement s
 
 #### Choisir ses tentatives en compétition
 
-À l'ATHX, la Strength zone 2027 se joue sur un **1RM shoulder-to-overhead, un 2RM squat arrière et un 3RM soulevé de terre**. Connaître ces charges avant le jour J permet de choisir une première tentative sûre, puis de monter progressivement. Tous les détails dans [la Strength zone ATHX 2027 expliquée](/blog/strength-zone-athx-2027).
+À l'ATHX, la Strength zone 2027 se joue sur un **1RM shoulder-to-overhead, un 2RM squat arrière et un 3RM soulevé de terre**. Connaître ces charges avant le jour J permet de choisir une première tentative sûre, puis de monter progressivement. Tous les détails dans [la Strength zone ATHX 2027 expliquée](/workouts-athx-2027/strength-zone).
 
 ### Comment calculer son 1RM ?
 

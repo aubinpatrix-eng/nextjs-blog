@@ -12,12 +12,12 @@ faq:
 - question: Quelle est l'erreur la plus fréquente en Endurance zone ?
   answer: 'Partir trop vite : les 5 premières minutes doivent paraître faciles pour pouvoir tenir l''allure jusqu''au bout et garder de l''énergie pour le Metcon X.'
 - question: Quels ergomètres utilise l'ATHX en 2027 ?
-  answer: La zone Endurance alterne course et SkiErg. Le rameur reste présent dans le Metcon X.
+  answer: "En 2027, la zone Endurance enchaîne une course (3 km en ATHX et Pro) puis un maximum de mètres au SkiErg, dans une limite de 24 minutes. Le rameur reste présent dans le Metcon X."
 ---
 
 L'ATHX dure environ 2h30 du début à la fin. Même si toutes les minutes ne sont pas à fond, votre organisme reste sollicité pendant tout ce temps. La zone Endurance, avec la course et le rameur enchaînés, en est le cœur. Et elle se prépare très différemment d'un 10 km chrono.
 
-> **Mise à jour saison 2027** : la zone Endurance alterne désormais course et **SkiErg** (au lieu du rameur). Les principes ci-dessous s'appliquent de la même façon : remplacez simplement le rameur par le SkiErg dans vos séances, en gardant le rameur pour le Metcon X.
+> **Mise à jour saison 2027** : la zone Endurance devient une **course de distance fixe (3 km en ATHX et Pro), suivie d'un maximum de mètres au SkiErg**, dans une limite de 24 minutes. Les principes ci-dessous restent valables : remplacez le rameur par le SkiErg dans vos séances et entraînez-vous à passer de la course au SkiErg. Tous les détails dans [l'Endurance zone ATHX 2027](/workouts-athx-2027/endurance-zone).
 
 ## Rapide ≠ endurant
 

@@ -67,6 +67,34 @@ content:
           - { name: question, label: Question, type: string }
           - { name: answer, label: Réponse, type: text }
 
+  - name: guides
+    label: Guides (workouts, catégories, mouvements…)
+    type: collection
+    path: _guides
+    view:
+      fields: [ menuLabel, parent ]
+      primary: menuLabel
+    fields:
+      - { name: title, label: "Titre SEO (onglet et résultats Google)", type: string, required: true }
+      - { name: heading, label: Titre affiché (H1 court), type: string }
+      - { name: menuLabel, label: "Nom court (menus, fil d'Ariane)", type: string, required: true }
+      - { name: parent, label: "Page parente (vide = page principale d'un guide ; sinon adresse de la page parente, ex. workouts-athx-2027)", type: string }
+      - { name: order, label: Ordre d'affichage, type: number }
+      - { name: kicker, label: Surtitre, type: string }
+      - { name: excerpt, label: "Résumé (meta description, ~155 caractères)", type: text, required: true }
+      - { name: summary, label: Ce qu'il faut retenir, type: text }
+      - { name: heroImage, label: Photo de l'en-tête (optionnel), type: image }
+      - { name: heroImageAlt, label: Description de la photo, type: string }
+      - { name: updated, label: Date de mise à jour, type: date }
+      - { name: body, label: "Contenu (H2/H3/H4 = sommaire ; l'encart programme se place avant le H2 du milieu)", type: rich-text }
+      - name: faq
+        label: FAQ
+        type: object
+        list: true
+        fields:
+          - { name: question, label: Question, type: string }
+          - { name: answer, label: Réponse, type: text }
+
   - name: pages
     label: Pages (mentions légales, CGV…)
     type: collection

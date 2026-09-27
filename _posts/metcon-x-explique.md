@@ -18,7 +18,7 @@ Le Metcon X est le dernier bloc de l'ATHX. Il arrive après la force, le travail
 
 ## Ce qu'on y trouve
 
-« Metcon » est la contraction de *metabolic conditioning* : un effort à haute intensité qui enchaîne plusieurs mouvements fonctionnels sans vraie pause. Dans le cas de l'ATHX, on y retrouve des mouvements au poids du corps, du travail au sac et des déplacements. Le contenu exact peut évoluer d'une édition à l'autre : vérifiez toujours le règlement officiel de votre événement avant de caler votre préparation.
+« Metcon » est la contraction de *metabolic conditioning* : un effort à haute intensité qui enchaîne plusieurs mouvements fonctionnels sans vraie pause. Dans le cas de l'ATHX, on y retrouve des mouvements au poids du corps, du travail au sac et des déplacements. Le contenu exact peut évoluer d'une édition à l'autre : vérifiez toujours le règlement officiel de votre événement avant de caler votre préparation. Pour la saison 2027, le détail station par station est dans [le Metcon X 2027](/workouts-athx-2027/metcon-x).
 
 ## Pourquoi c'est là que tout se joue
 

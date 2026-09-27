@@ -17,7 +17,7 @@ faq:
 
 La Strength Zone de l'ATHX tourne autour de mouvements polyarticulaires comme le **squat arrière** et le **développé militaire strict**. Deux exercices classiques, mais qui posent problème à beaucoup d'athlètes orientés endurance ou fonctionnel.
 
-> **Mise à jour saison 2027** : la Strength zone passe à un 1RM shoulder-to-overhead (impulsion des jambes autorisée), un 2RM squat arrière et un 3RM soulevé de terre. Détails dans [la Strength zone ATHX 2027 expliquée](/blog/strength-zone-athx-2027). Les principes de progression ci-dessous restent valables.
+> **Mise à jour saison 2027** : la Strength zone passe à un 1RM shoulder-to-overhead (impulsion des jambes autorisée), un 2RM squat arrière et un 3RM soulevé de terre. Détails dans [la Strength zone ATHX 2027 expliquée](/workouts-athx-2027/strength-zone). Les principes de progression ci-dessous restent valables.
 
 ## La technique compte autant que la charge
 
@@ -41,6 +41,8 @@ Sur une préparation de 12 semaines, une approche simple et efficace consiste à
 | 12 | 60–70 % | décharge avant la compétition |
 
 L'idée : monter progressivement l'intensité, puis réduire le volume la dernière semaine pour arriver frais. Pas besoin de tester un nouveau record le jour J.
+
+Pour le détail technique, voir [le squat arrière](/mouvements-athx/squat-arriere) et [le shoulder-to-overhead](/mouvements-athx/shoulder-to-overhead), le mouvement qui remplace le développé strict en 2027.
 
 ## Pourquoi partir de vos PR
 

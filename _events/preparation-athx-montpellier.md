@@ -45,9 +45,11 @@ Le format est celui de la saison 2027, identique sur toutes les étapes :
 | Warm-up zone | 30 min | Échauffement et activation |
 | **Strength zone** | 20 min | 1RM shoulder-to-overhead, 2RM squat arrière, 3RM soulevé de terre |
 | Refuel zone | 10 min | Hydratation, ravitaillement |
-| **Endurance zone** | 30 min | Course et SkiErg en alternance |
+| **Endurance zone** | 30 min | Course (3 km en ATHX et Pro), puis un maximum de mètres au SkiErg, le tout en 24 min max |
 | Recovery zone | 30 min | Récupération |
-| **Metcon X** | 30 min | Rameur, haltères, développé couché, squats au sac, burpees |
+| **Metcon X** | 30 min | Rameur, haltères (sol-au-dessus-de-la-tête et développé couché), squats et portage au sac, burpees, rameur : 25 min max |
+
+Le détail de chaque zone est dans notre guide [des workouts ATHX 2027](/workouts-athx-2027), et les charges par catégorie dans [les catégories ATHX](/categories-athx).
 
 Les trois zones en gras font le classement. Pour comprendre chacune en détail : [ATHX Games : qu'est-ce que c'est ?](/blog/athx-games-quest-ce-que-cest)
 

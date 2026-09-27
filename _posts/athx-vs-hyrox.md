@@ -26,7 +26,7 @@ Hyrox et ATHX sont les deux compétitions de fitness hybride qui montent. Elles 
 C'est la plus grosse différence.
 
 - Sur **Hyrox**, les charges sont fixées par catégorie. Être très fort aide un peu, mais c'est le cardio qui fait le classement.
-- Sur l'**ATHX**, il existe une vraie **Strength zone** où l'on cherche sa charge maximale (en 2027 : 1RM shoulder-to-overhead, 2RM squat arrière, 3RM soulevé de terre). Soulever lourd rapporte directement des points. Voir [la Strength zone ATHX 2027 expliquée](/blog/strength-zone-athx-2027).
+- Sur l'**ATHX**, il existe une vraie **Strength zone** où l'on cherche sa charge maximale (en 2027 : 1RM shoulder-to-overhead, 2RM squat arrière, 3RM soulevé de terre). Soulever lourd rapporte directement des points. Voir [la Strength zone ATHX 2027 expliquée](/workouts-athx-2027/strength-zone).
 
 ## La gestion de la fatigue
 

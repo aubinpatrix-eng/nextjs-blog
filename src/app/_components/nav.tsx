@@ -4,42 +4,65 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
 
-type NavEvent = {
-  slug: string;
-  city: string;
-  dates: string;
-};
+export type NavItem = { href: string; label: string; hint?: string };
+export type NavMenu = { id: string; label: string; title: string; items: NavItem[] };
 
 type Props = {
   priceLabel: string;
-  events: NavEvent[];
+  menus: NavMenu[];
 };
 
-export default function Nav({ priceLabel, events }: Props) {
+function Dropdown({ menu, open, onToggle, onNavigate }: { menu: NavMenu; open: boolean; onToggle: () => void; onNavigate: () => void }) {
+  const pathname = usePathname();
+  const active = menu.items.some((item) => pathname === item.href || pathname.startsWith(`${item.href}/`));
+  return (
+    <div className={`nav-dropdown${open ? " open" : ""}`} data-menu={menu.id}>
+      <button
+        type="button"
+        className={`nav-dropdown-toggle${active ? " active" : ""}`}
+        aria-expanded={open}
+        aria-controls={`nav-${menu.id}`}
+        onClick={onToggle}
+      >
+        {menu.label} <span aria-hidden>▾</span>
+      </button>
+      <div className="nav-dropdown-menu" id={`nav-${menu.id}`}>
+        <div className="nav-dropdown-title">{menu.title}</div>
+        {menu.items.map((item) => (
+          <Link key={item.href} href={item.href} onClick={onNavigate} className={pathname === item.href ? "active" : undefined}>
+            <strong>{item.label}</strong>
+            {item.hint && <span>{item.hint}</span>}
+          </Link>
+        ))}
+      </div>
+    </div>
+  );
+}
+
+export default function Nav({ priceLabel, menus }: Props) {
   const [open, setOpen] = useState(false);
-  const [eventsOpen, setEventsOpen] = useState(false);
-  const dropdown = useRef<HTMLDivElement>(null);
+  const [openMenu, setOpenMenu] = useState<string | null>(null);
+  const nav = useRef<HTMLElement>(null);
   const pathname = usePathname();
   const close = () => {
     setOpen(false);
-    setEventsOpen(false);
+    setOpenMenu(null);
   };
-  const onEventPage = events.some((event) => pathname === `/${event.slug}`);
 
-  // Close the dropdown on outside click or Escape.
+  // Close dropdowns on outside click or Escape.
   useEffect(() => {
-    if (!eventsOpen) return;
+    if (!openMenu) return;
     const onClick = (e: MouseEvent) => {
-      if (!dropdown.current?.contains(e.target as Node)) setEventsOpen(false);
+      if (!(e.target as HTMLElement).closest?.(".nav-dropdown")) setOpenMenu(null);
     };
-    const onKey = (e: KeyboardEvent) => e.key === "Escape" && setEventsOpen(false);
+    const onKey = (e: KeyboardEvent) => e.key === "Escape" && setOpenMenu(null);
     document.addEventListener("click", onClick);
     document.addEventListener("keydown", onKey);
     return () => {
       document.removeEventListener("click", onClick);
       document.removeEventListener("keydown", onKey);
     };
-  }, [eventsOpen]);
+  }, [openMenu]);
 
   return (
     <header className="site-nav">
@@ -47,64 +70,28 @@ export default function Nav({ priceLabel, events }: Props) {
         <Link href="/" className="brand" onClick={close}>
           ATH<em>X</em> PREP
         </Link>
-        <button
-          className="burger"
-          aria-expanded={open}
-          aria-controls="navLinks"
-          onClick={() => setOpen(!open)}
-        >
+        <button className="burger" aria-expanded={open} aria-controls="navLinks" onClick={() => setOpen(!open)}>
           Menu
         </button>
-        <nav className={`nav-links${open ? " open" : ""}`} id="navLinks">
-          <Link href="/#format" onClick={close}>
-            Le format
-          </Link>
-          {events.length > 0 && (
-            <div className={`nav-dropdown${eventsOpen ? " open" : ""}`} ref={dropdown}>
-              <button
-                type="button"
-                className={`nav-dropdown-toggle${onEventPage ? " active" : ""}`}
-                aria-expanded={eventsOpen}
-                aria-controls="navEvents"
-                onClick={() => setEventsOpen(!eventsOpen)}
-              >
-                Compétitions <span aria-hidden>▾</span>
-              </button>
-              <div className="nav-dropdown-menu" id="navEvents">
-                <div className="nav-dropdown-title">Prochains ATHX en France</div>
-                {events.map((event) => (
-                  <Link
-                    key={event.slug}
-                    href={`/${event.slug}`}
-                    onClick={close}
-                    className={pathname === `/${event.slug}` ? "active" : undefined}
-                  >
-                    <strong>ATHX {event.city}</strong>
-                    <span>{event.dates}</span>
-                  </Link>
-                ))}
-              </div>
-            </div>
-          )}
-          <Link
-            href="/calculateur-1rm"
-            onClick={close}
-            className={pathname === "/calculateur-1rm" ? "active" : undefined}
-          >
+        <nav className={`nav-links${open ? " open" : ""}`} id="navLinks" ref={nav}>
+          {menus
+            .filter((menu) => menu.items.length > 0)
+            .map((menu) => (
+              <Dropdown
+                key={menu.id}
+                menu={menu}
+                open={openMenu === menu.id}
+                onToggle={() => setOpenMenu(openMenu === menu.id ? null : menu.id)}
+                onNavigate={close}
+              />
+            ))}
+          <Link href="/calculateur-1rm" onClick={close} className={pathname === "/calculateur-1rm" ? "active" : undefined}>
             Calculateur 1RM
           </Link>
-          <Link
-            href="/blog"
-            onClick={close}
-            className={pathname.startsWith("/blog") ? "active" : undefined}
-          >
+          <Link href="/blog" onClick={close} className={pathname.startsWith("/blog") ? "active" : undefined}>
             Blog
           </Link>
-          <Link
-            href="/qui-suis-je"
-            onClick={close}
-            className={pathname === "/qui-suis-je" ? "active" : undefined}
-          >
+          <Link href="/qui-suis-je" onClick={close} className={pathname === "/qui-suis-je" ? "active" : undefined}>
             Qui suis-je
           </Link>
           <Link href="/#cta" className="nav-cta" onClick={close}>

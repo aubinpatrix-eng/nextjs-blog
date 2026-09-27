@@ -4,7 +4,7 @@ import type { MetadataRoute } from "next";
 export default function robots(): MetadataRoute.Robots {
   const { url } = getSite();
   return {
-    rules: { userAgent: "*", allow: "/", disallow: "/merci" },
+    rules: { userAgent: "*", allow: "/", disallow: ["/merci", "/api/"] },
     sitemap: `${url}/sitemap.xml`,
   };
 }
