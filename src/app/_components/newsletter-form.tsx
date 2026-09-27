@@ -4,8 +4,10 @@ import Link from "next/link";
 import { useState } from "react";
 
 type Props = {
+  id?: string;
   title?: string;
   text?: string;
+  button?: string;
   source?: string;
 };
 
@@ -20,6 +22,8 @@ const MESSAGES: Record<string, string> = {
 
 // Plain HTML form (works without JavaScript), enhanced with an inline confirmation when JS is available.
 export default function NewsletterForm({
+  id,
+  button = "Je m'inscris",
   title = "La prépa ATHX dans votre boîte mail",
   text = "Un e-mail par semaine : séances, conseils de préparation et dates des prochaines compétitions. Pas de spam, désinscription en un clic.",
   source,
@@ -45,10 +49,10 @@ export default function NewsletterForm({
   const done = state.result === "ok" || state.result === "confirm";
 
   return (
-    <aside className="newsletter-block" aria-labelledby={`nl-${source ?? "form"}`}>
+    <aside id={id} className="newsletter-block" aria-labelledby={`nl-${id ?? source ?? "form"}`}>
       <div>
         <div className="kicker">Newsletter</div>
-        <h2 id={`nl-${source ?? "form"}`}>{title}</h2>
+        <h2 id={`nl-${id ?? source ?? "form"}`}>{title}</h2>
         <p>{text}</p>
       </div>
       {done ? (
@@ -58,11 +62,11 @@ export default function NewsletterForm({
       ) : (
         <form action="/api/newsletter" method="post" onSubmit={onSubmit} className="nl-form">
           <div className="nl-row">
-            <label htmlFor={`nl-email-${source ?? "form"}`} className="sr-only">
+            <label htmlFor={`nl-email-${id ?? source ?? "form"}`} className="sr-only">
               Adresse e-mail
             </label>
             <input
-              id={`nl-email-${source ?? "form"}`}
+              id={`nl-email-${id ?? source ?? "form"}`}
               type="email"
               name="email"
               required
@@ -70,7 +74,7 @@ export default function NewsletterForm({
               placeholder="vous@exemple.fr"
             />
             <button type="submit" className="btn btn-signal" disabled={state.pending}>
-              {state.pending ? "Envoi…" : "Je m'inscris"}
+              {state.pending ? "Envoi…" : button}
             </button>
           </div>
           {/* Honeypot: hidden from people, filled by bots. */}

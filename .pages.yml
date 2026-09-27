@@ -85,6 +85,7 @@ content:
       - { name: summary, label: Ce qu'il faut retenir, type: text }
       - { name: heroImage, label: Photo de l'en-tête (optionnel), type: image }
       - { name: heroImageAlt, label: Description de la photo, type: string }
+      - { name: newsletter, label: "Page « contenu gratuit » : boutons et encarts vers le PDF / la newsletter au lieu du programme", type: boolean }
       - { name: updated, label: Date de mise à jour, type: date }
       - { name: body, label: "Contenu (H2/H3/H4 = sommaire ; l'encart programme se place avant le H2 du milieu)", type: rich-text }
       - name: faq

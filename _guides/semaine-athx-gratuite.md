@@ -8,6 +8,7 @@ excerpt: 'Une semaine gratuite extraite du programme ATHX PREP : 4 séances de f
 summary: 'Cette semaine est extraite de la semaine 1 du programme ATHX PREP : 4 séances full body de force (squat, développé militaire, soulevé de terre, développé couché), chacune terminée par un finisher au SkiErg ou au rameur, et 1 séance Metcon ATHX qui enchaîne course, SkiErg et un mini Metcon X. L''intensité est donnée en RPE ou en pourcentage de votre 1RM.'
 heroImage: /assets/images/athx/athx-binome-relais.webp
 heroImageAlt: Athlète en course pendant une compétition ATHX
+newsletter: true
 faq:
 - question: Ce programme ATHX gratuit suffit-il pour préparer la compétition ?
   answer: 'Cette semaine vous donne la structure et le niveau d''une semaine du programme. Pour arriver prêt, il faut la progression complète sur 12 semaines : montée des charges, variation des séances, simulations et décharge avant la compétition.'
@@ -16,7 +17,7 @@ faq:
 - question: Comment calculer mes charges ?
   answer: Pour les séries en pourcentage, estimez votre 1RM avec le calculateur 1RM puis appliquez le pourcentage. Pour les séries en RPE, choisissez la charge qui correspond à la difficulté indiquée.
 - question: Comment recevoir la version PDF ?
-  answer: 'Inscrivez-vous à la newsletter en bas de cette page et confirmez votre adresse : le bouton de téléchargement du PDF s''affiche sur la page de confirmation.'
+  answer: 'Inscrivez-vous avec le formulaire de cette page et confirmez votre adresse : le bouton de téléchargement du PDF s''affiche sur la page de confirmation.'
 ---
 
 ## Avant de commencer
@@ -40,7 +41,7 @@ Cette semaine est **extraite du programme ATHX PREP** (semaine 1) : 4 séances d
 - **Échauffement** : le nombre de séries de montée en charge avant les séries de travail.
 - **Top set** : une série lourde unique, suivie de séries plus légères (*back-off*).
 
-Recevez cette semaine en **PDF imprimable** : inscrivez-vous à la newsletter en bas de page, le lien de téléchargement s'affiche après confirmation de votre adresse.
+Recevez cette semaine en **PDF imprimable** : inscrivez-vous avec le [formulaire ci-dessus](#recevoir-le-pdf), le lien de téléchargement s'affiche après confirmation de votre adresse.
 
 ## Séance 1 (lundi) : squat et développé militaire
 
