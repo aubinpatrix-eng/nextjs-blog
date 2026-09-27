@@ -37,6 +37,8 @@ Le secret : ce sont les **hanches**, pas les bras, qui font le travail.
 - **Serrer trop fort la prise** : vous videz vos avant-bras pour la suite.
 - **Ne jamais s'entraîner avec un sac** : si votre salle n'en a pas, un sac de sport rempli de sacs de sable ou de riz fait l'affaire.
 
+En 2027, le sac sert à deux stations du Metcon X : 30 à 45 squats puis 60 m de portage, avec un sac de 20 à 70 kg selon la catégorie (voir [le Metcon X 2027](/workouts-athx-2027/metcon-x)).
+
 ## Comment l'intégrer à l'entraînement
 
 Ajoutez le sac à 1 ou 2 séances par semaine, par exemple dans un circuit : 10 montées de sac à l'épaule + 200 m de course + 10 burpees, 4 tours. En 6 à 8 semaines, le mouvement devient naturel. Le [programme ATHX Marseille](/preparation-athx-marseille) l'intègre dès les premières semaines de l'été pour être prêt en septembre. Pour mettre ça en situation, découvrez [le Metcon X expliqué](/blog/metcon-x-explique).

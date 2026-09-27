@@ -1,5 +1,6 @@
 import { getAllPages, getAllPosts } from "@/lib/api";
 import { getAllEvents } from "@/lib/events";
+import { getAllGuides, guidePath } from "@/lib/guides";
 import { getSite } from "@/lib/site";
 import { TAGS } from "@/lib/tags";
 import type { MetadataRoute } from "next";
@@ -25,6 +26,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: new Date(event.updated ?? "2026-09-26"),
       changeFrequency: "monthly" as const,
       priority: 0.8,
+    })),
+    ...getAllGuides().map((guide) => ({
+      url: `${url}${guidePath(guide)}`,
+      lastModified: new Date(guide.updated ?? "2026-09-27"),
+      changeFrequency: "monthly" as const,
+      priority: guide.parent ? 0.7 : 0.8,
     })),
     ...getAllPages().map((page) => ({ url: `${url}/${page.slug}`, priority: 0.2 })),
   ];

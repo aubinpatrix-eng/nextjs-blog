@@ -45,17 +45,19 @@ L'épreuve se déroule dans cet ordre (format de la saison 2027) :
 | **Warm-up zone** | 30 min | Échauffement, mobilité, activation |
 | **Strength zone** | 20 min | 1RM shoulder-to-overhead, 2RM squat arrière, 3RM soulevé de terre |
 | **Refuel zone** | 10 min | Hydratation, ravitaillement, récupération |
-| **Endurance zone** | 30 min | Course et SkiErg en alternance |
+| **Endurance zone** | 30 min | Course (3 km en ATHX et Pro), puis un maximum de mètres au SkiErg, le tout en 24 min max |
 | **Recovery zone** | 30 min | Récupération avant le dernier bloc |
-| **Metcon X** | 30 min | Circuit intense : rameur, haltères, développé couché, squats au sac de sable, burpees |
+| **Metcon X** | 30 min | Rameur, haltères (sol-au-dessus-de-la-tête et développé couché), squats et portage au sac, burpees, rameur : 25 min max |
 
 ### Les zones qui comptent
 
 **Seules trois zones rapportent des points** : la Strength zone, l'Endurance zone et le Metcon X. Les zones Warm-up, Refuel et Recovery ne sont pas notées, mais elles font partie de la stratégie : bien les utiliser, c'est arriver frais sur les zones suivantes.
 
-- **Strength zone** : votre score est le **total des charges** soulevées sur les trois mouvements. Chaque kilo compte. Détails dans [la Strength zone ATHX 2027 expliquée](/blog/strength-zone-athx-2027).
-- **Endurance zone** : il s'agit de couvrir un maximum de distance en alternant course et SkiErg, sur une durée fixe.
+- **Strength zone** : votre score est le **total des charges** soulevées sur les trois mouvements. Chaque kilo compte. Détails dans [la Strength zone ATHX 2027 expliquée](/workouts-athx-2027/strength-zone).
+- **Endurance zone** : une course de distance fixe (3 km en ATHX et Pro), puis un maximum de mètres au SkiErg dans le temps restant, avec une limite de 24 minutes. Détails dans [l'Endurance zone ATHX 2027](/workouts-athx-2027/endurance-zone).
 - **Metcon X** : le final à haute intensité, souvent décisif pour le classement. Voir [le Metcon X expliqué](/blog/metcon-x-explique).
+
+Le détail de chaque zone, des répétitions et des charges est dans notre guide [des workouts ATHX 2027](/workouts-athx-2027).
 
 ## Les 3 catégories
 
@@ -63,7 +65,7 @@ L'épreuve se déroule dans cet ordre (format de la saison 2027) :
 - **ATHX** : charges plus lourdes et standards complets, pour les athlètes qui s'entraînent régulièrement.
 - **ATHX Pro** : les charges les plus lourdes et les standards les plus techniques, pour viser le podium.
 
-Pour choisir la vôtre : [Lite, ATHX ou Pro : quelle catégorie choisir](/blog/choisir-categorie-lite-athx-pro).
+Pour choisir la vôtre : [Lite, ATHX ou Pro : quelle catégorie choisir](/blog/choisir-categorie-lite-athx-pro), et les charges détaillées dans [les catégories ATHX](/categories-athx).
 
 ## Solo ou binôme ?
 

@@ -28,6 +28,8 @@ L'ATHX propose trois catégories : **Lite**, **ATHX** et **Pro**. Le format et l
 - **ATHX** : pour les athlètes réguliers, à l'aise en force comme en cardio, qui ont déjà une expérience de compétition.
 - **Pro** : pour les athlètes confirmés, qui visent le classement et dont les charges de compétition représentent une fraction modérée de leurs PR.
 
+Les charges et répétitions de chaque catégorie sont détaillées dans nos pages [ATHX Lite](/categories-athx/athx-lite), [ATHX](/categories-athx/athx) et [ATHX Pro](/categories-athx/athx-pro).
+
 ## Le piège à éviter
 
 Viser trop haut dès la première fois est l'erreur la plus fréquente. Une compétition réussie en Lite vous apprendra beaucoup plus qu'une compétition subie en Pro. Vous pourrez toujours monter de catégorie à l'édition suivante. Pour une première compétition, viser l'étape de fin mai laisse tout l'hiver pour construire vos bases : voir notre [prépa ATHX Montpellier](/preparation-athx-montpellier).

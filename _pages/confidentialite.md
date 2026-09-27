@@ -5,7 +5,7 @@ description: Comment ATHX PREP traite vos données personnelles.
 ## Données collectées
 
 - **Achat** : e-mail, PR déclarés (squat, développé militaire, soulevé de terre) et catégorie visée, transmis à Stripe lors du paiement pour préparer votre programme. Les données bancaires sont traitées uniquement par Stripe.
-- **Newsletter** (si vous vous inscrivez) : votre adresse e-mail.
+- **Newsletter** (si vous vous inscrivez) : votre adresse e-mail, gérée par notre prestataire d'envoi Brevo (Sendinblue SAS, France). Vous pouvez vous désinscrire à tout moment via le lien présent dans chaque e-mail.
 
 Les PR saisis dans le calculateur de la page d'accueil restent dans votre navigateur tant que vous ne cliquez pas sur le bouton d'achat.
 

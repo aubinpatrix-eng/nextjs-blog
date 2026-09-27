@@ -173,6 +173,12 @@ export default function Index() {
               </li>
             ))}
           </ol>
+          <p className="zones-more">
+            Répétitions, charges par catégorie et scoring : voir le guide{" "}
+            <Link href="/workouts-athx-2027">des workouts ATHX 2027</Link>, les{" "}
+            <Link href="/categories-athx">catégories ATHX</Link> et la{" "}
+            <Link href="/semaine-athx-gratuite">semaine d&apos;entraînement gratuite</Link>.
+          </p>
         </div>
       </section>
 

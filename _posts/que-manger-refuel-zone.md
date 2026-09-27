@@ -16,6 +16,8 @@ faq:
 
 Entre la Strength zone et la zone Endurance, l'ATHX prévoit une **Refuel zone** : quelques minutes pour récupérer, boire et se préparer. Beaucoup d'athlètes la vivent comme une simple pause. C'est une erreur : bien utilisée, elle vous fait gagner de précieuses minutes sur la suite.
 
+Pour situer la Refuel zone dans l'ensemble de l'épreuve, voir [les workouts ATHX 2027](/workouts-athx-2027).
+
 ## L'objectif : recharger sans alourdir
 
 Après la force et avant un long effort d'endurance, vous avez besoin :

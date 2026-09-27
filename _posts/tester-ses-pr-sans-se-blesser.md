@@ -37,6 +37,8 @@ Si vous avez l'expérience du travail lourd :
 
 Prenez 3 à 5 minutes de repos entre les tentatives lourdes, et faites-vous assister (pareurs ou barres de sécurité).
 
+Pour la technique de chaque mouvement, voir nos pages [squat arrière](/mouvements-athx/squat-arriere), [soulevé de terre](/mouvements-athx/souleve-de-terre) et [shoulder-to-overhead](/mouvements-athx/shoulder-to-overhead).
+
 ## Quand tester ?
 
 Idéalement **10 à 12 semaines avant la compétition**, au début de votre préparation. Ne testez jamais un nouveau maximum dans les 10 jours qui précèdent l'épreuve.

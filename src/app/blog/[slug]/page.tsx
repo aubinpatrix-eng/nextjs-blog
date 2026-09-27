@@ -1,5 +1,6 @@
 import { ArticleFaq, AuthorBox, KeyTakeaways, TableOfContents } from "@/app/_components/article-blocks";
 import JsonLd from "@/app/_components/json-ld";
+import NewsletterForm from "@/app/_components/newsletter-form";
 import PostCard, { DateLabel } from "@/app/_components/post-card";
 import { getAllPosts, getPostBySlug } from "@/lib/api";
 import { markdownToHtmlWithToc } from "@/lib/markdownToHtml";
@@ -136,6 +137,7 @@ export default async function Article({ params }: Params) {
             {toc.length > 1 && <TableOfContents toc={toc} />}
             <div className="prose" dangerouslySetInnerHTML={{ __html: content }} />
             {faq.length > 0 && <ArticleFaq faq={faq} />}
+            <NewsletterForm source={post.slug} />
             <aside className="article-cta">
               <h2>Préparez l&apos;ATHX avec un plan calculé sur vos PR</h2>
               <p>12 semaines de force, d&apos;endurance et de simulation Metcon X. Paiement unique de {formatPrice(site.price)}.</p>

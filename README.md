@@ -10,6 +10,7 @@ Site de vente du programme de préparation ATHX (14,99 €) + blog, construit av
 | Blog | `/blog`, `/blog/categorie/force`… | **Articles de blog** → `_posts/*.md` |
 | Article | `/blog/<adresse>` | idem |
 | Préparation ATHX Paris / Montpellier / Marseille (menu « Compétitions ») | `/preparation-athx-paris`… | **Préparation ATHX (pages villes)** → `_events/*.md` |
+| Guides : Workouts 2027, Catégories, Mouvements, Semaine gratuite (menu « Guides ») | `/workouts-athx-2027`, `/workouts-athx-2027/metcon-x`… | **Guides** → `_guides/*.md` (champ `parent` = page principale du guide) |
 | Mentions légales, CGV, confidentialité | `/mentions-legales`… | **Pages** → `_pages/*.md` |
 | Confirmation d'achat (non indexée) | `/merci` | — |
 | Prix, lien de paiement, newsletter, URL du site | — | **Réglages du site** → `_data/site.json` |
@@ -28,6 +29,17 @@ SEO généré automatiquement : `sitemap.xml`, `robots.txt`, balises canonical e
 3. **Pages CMS** — connectez-vous sur [app.pagescms.org](https://app.pagescms.org) avec GitHub et ouvrez ce dépôt. Chaque enregistrement crée un commit et redéploie le site.
 4. **Google Search Console** — ajoutez le domaine et soumettez `https://preparation-athx.fr/sitemap.xml`.
 5. Complétez les **[À COMPLÉTER]** des mentions légales, CGV et politique de confidentialité.
+
+## Newsletter (Brevo)
+
+Le formulaire (fin des articles, guides, pages villes, blog) envoie les inscriptions à [Brevo](https://www.brevo.com) via `/api/newsletter`. Il fonctionne aussi sans JavaScript.
+
+1. Créez un compte Brevo, puis une liste de contacts (*Contacts → Listes*) : notez son **ID**.
+2. *Paramètres → SMTP & API → Clés API* : créez une clé.
+3. Recommandé (RGPD) : *Contacts → Formulaires* ou *Templates* → créez un **modèle de double opt-in** et notez son ID.
+4. Dans Vercel → *Settings → Environment Variables*, ajoutez `BREVO_API_KEY`, `BREVO_LIST_ID` et (optionnel) `BREVO_DOI_TEMPLATE_ID`, puis redéployez.
+
+Tant que ces variables sont absentes, le formulaire affiche « L'inscription ouvre très bientôt ».
 
 ## Écrire un article
 

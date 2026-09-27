@@ -45,9 +45,11 @@ Marseille suit le format de la saison 2027 :
 | Warm-up zone | 30 min | Échauffement et activation |
 | **Strength zone** | 20 min | 1RM shoulder-to-overhead, 2RM squat arrière, 3RM soulevé de terre |
 | Refuel zone | 10 min | Hydratation, ravitaillement |
-| **Endurance zone** | 30 min | Course et SkiErg en alternance |
+| **Endurance zone** | 30 min | Course (3 km en ATHX et Pro), puis un maximum de mètres au SkiErg, le tout en 24 min max |
 | Recovery zone | 30 min | Récupération |
-| **Metcon X** | 30 min | Rameur, haltères, développé couché, squats au sac, burpees |
+| **Metcon X** | 30 min | Rameur, haltères (sol-au-dessus-de-la-tête et développé couché), squats et portage au sac, burpees, rameur : 25 min max |
+
+Le détail de chaque zone est dans notre guide [des workouts ATHX 2027](/workouts-athx-2027), et les charges par catégorie dans [les catégories ATHX](/categories-athx).
 
 Seules Strength, Endurance et Metcon X comptent au classement. Vous hésitez sur la catégorie ? Lire [Lite, ATHX ou Pro : quelle catégorie choisir](/blog/choisir-categorie-lite-athx-pro).
 
@@ -71,6 +73,6 @@ Juillet et août à Marseille, c'est souvent plus de 30 °C. Entraînez-vous **t
 ## Mes conseils pour le jour J à Marseille
 
 - **La rentrée** tombe la semaine de la compétition : anticipez l'organisation (travail, enfants) pour que la décharge soit vraiment reposante.
-- **Strength zone** : ouvrez prudemment, puis montez. Mes repères de tentatives sont dans [la Strength zone ATHX 2027 expliquée](/blog/strength-zone-athx-2027).
+- **Strength zone** : ouvrez prudemment, puis montez. Mes repères de tentatives sont dans [la Strength zone ATHX 2027 expliquée](/workouts-athx-2027/strength-zone).
 - **En binôme ?** Marseille est une étape conviviale : préparez les séances d'endurance et de Metcon X à deux, c'est plus facile de tenir tout l'été.
 - **Metcon X** : entraînez-vous à enchaîner fatigué. Voir [le Metcon X expliqué](/blog/metcon-x-explique).
