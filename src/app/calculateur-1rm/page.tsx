@@ -1,7 +1,12 @@
+import { TableOfContents } from "@/app/_components/article-blocks";
 import JsonLd from "@/app/_components/json-ld";
 import LiftCalculators from "@/app/_components/lift-calculators";
 import OneRmCalculator from "@/app/_components/one-rm-calculator";
+import { markdownToHtmlWithToc } from "@/lib/markdownToHtml";
 import { breadcrumbSchema, faqSchema } from "@/lib/schema";
+import fs from "fs";
+import matter from "gray-matter";
+import { join } from "path";
 import { formatPrice, getSite } from "@/lib/site";
 import { Metadata } from "next";
 import Link from "next/link";
@@ -38,8 +43,25 @@ const faq = [
   },
 ];
 
-export default function OneRmPage() {
+// The guide below the FAQ is editable in Pages CMS (_data/guide-1rm.md).
+async function getGuide() {
+  const { content } = matter(fs.readFileSync(join(process.cwd(), "_data", "guide-1rm.md"), "utf8"));
+  const { content: html, toc } = await markdownToHtmlWithToc(content);
+  // Split the guide's intro (H2 + first paragraph) from its sections so the table of contents sits in between.
+  const firstSection = html.indexOf("<h3");
+  return {
+    guideIntro: firstSection > 0 ? html.slice(0, firstSection) : "",
+    guideBody: firstSection > 0 ? html.slice(firstSection) : html,
+    // Sections are H3 under the guide's H2: show them as top-level entries in the table of contents.
+    guideToc: toc
+      .filter((entry) => entry.level > 2)
+      .map((entry) => ({ ...entry, level: (entry.level - 1) as 2 | 3 })),
+  };
+}
+
+export default async function OneRmPage() {
   const site = getSite();
+  const { guideIntro, guideBody, guideToc } = await getGuide();
 
   return (
     <main>
@@ -94,34 +116,6 @@ export default function OneRmPage() {
         </div>
       </section>
 
-      <section>
-        <div className="wrap">
-          <div className="prose">
-          <h2>Comment utiliser le calculateur</h2>
-          <ol>
-            <li>Après un échauffement, faites une série lourde de 2 à 6 répétitions avec une technique propre.</li>
-            <li>Entrez la charge et le nombre de répétitions réalisées.</li>
-            <li>
-              Utilisez les pourcentages pour vos séances : autour de 70 à 80 % pour construire la force, 85 à 92 % pour
-              vous rapprocher de la compétition.
-            </li>
-          </ol>
-          <p>
-            Pour tester vos charges sans risque, lisez notre guide{" "}
-            <Link href="/blog/tester-ses-pr-sans-se-blesser">calculer ses PR sans se blesser</Link>. Et pour savoir
-            quelles charges viser le jour de la compétition, consultez{" "}
-            <Link href="/blog/strength-zone-athx-2027">la Strength zone ATHX 2027 expliquée</Link>.
-          </p>
-          <p>
-            Vous visez une date précise ? Calez vos charges sur la{" "}
-            <Link href="/preparation-athx-paris">prépa ATHX Paris</Link> (février), l&apos;
-            <Link href="/preparation-athx-montpellier">ATHX Montpellier</Link> (mai) ou le{" "}
-            <Link href="/preparation-athx-marseille">programme ATHX Marseille</Link> (septembre).
-          </p>
-          </div>
-        </div>
-      </section>
-
       <section id="faq">
         <div className="wrap">
           <h2 className="h-sec" style={{ marginBottom: 40 }}>
@@ -133,6 +127,14 @@ export default function OneRmPage() {
               <p>{item.answer}</p>
             </details>
           ))}
+        </div>
+      </section>
+
+      <section id="guide">
+        <div className="wrap">
+          <div className="prose guide-intro" dangerouslySetInnerHTML={{ __html: guideIntro }} />
+          {guideToc.length > 1 && <TableOfContents toc={guideToc} headingLevel={3} />}
+          <div className="prose" dangerouslySetInnerHTML={{ __html: guideBody }} />
         </div>
       </section>
 
