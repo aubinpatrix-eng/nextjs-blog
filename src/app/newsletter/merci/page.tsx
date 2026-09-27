@@ -41,14 +41,9 @@ export default function NewsletterThanks({ searchParams }: { searchParams: { sta
           <p className="lede">{content.text}</p>
           <div className="hero-ctas">
             {subscribed ? (
-              <>
-                <a href={FREE_WEEK_PDF} download className="btn btn-signal">
-                  Télécharger la semaine gratuite (PDF)
-                </a>
-                <Link href="/semaine-athx-gratuite" className="btn btn-ghost">
-                  La voir en ligne
-                </Link>
-              </>
+              <a href={FREE_WEEK_PDF} download className="btn btn-signal">
+                Télécharger la semaine gratuite (PDF)
+              </a>
             ) : (
               <>
                 <Link href="/semaine-athx-gratuite" className="btn btn-signal">
