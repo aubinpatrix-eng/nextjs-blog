@@ -25,10 +25,13 @@ export default function OpengraphImage() {
           fontFamily: "sans-serif",
         }}
       >
-        <div style={{ display: "flex", fontSize: 44, fontWeight: 700 }}>
-          <span>ATH</span>
-          <span style={{ color: "#FF4A23" }}>X</span>
-          <span>&nbsp;PREP</span>
+        <div style={{ display: "flex", alignItems: "center", gap: 24 }}>
+          <div style={{ display: "flex", fontSize: 72, fontWeight: 700, lineHeight: 1 }}>
+            <span>ATH</span>
+            <span style={{ color: "#FF4A23" }}>X</span>
+          </div>
+          <div style={{ width: 3, height: 52, background: "#FF4A23" }} />
+          <div style={{ fontSize: 26, fontWeight: 600, letterSpacing: 11 }}>PREP</div>
         </div>
         <div style={{ display: "flex", flexDirection: "column" }}>
           <div style={{ fontSize: 84, fontWeight: 700, lineHeight: 1, textTransform: "uppercase" }}>

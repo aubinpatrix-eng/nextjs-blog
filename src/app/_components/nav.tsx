@@ -67,8 +67,10 @@ export default function Nav({ priceLabel, menus }: Props) {
   return (
     <header className="site-nav">
       <div className="wrap nav-row">
-        <Link href="/" className="brand" onClick={close}>
-          ATH<em>X</em> PREP
+        <Link href="/" className="brand" onClick={close} aria-label="ATHX PREP — accueil">
+          <span className="brand-mark">ATH<em>X</em></span>
+          <span className="brand-rule" aria-hidden />
+          <span className="brand-word">PREP</span>
         </Link>
         <button className="burger" aria-expanded={open} aria-controls="navLinks" onClick={() => setOpen(!open)}>
           Menu
