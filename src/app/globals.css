@@ -55,14 +55,28 @@ header.site-nav {
 }
 .nav-row { display: flex; align-items: center; justify-content: space-between; height: 68px; }
 .brand {
-  font-family: var(--ff-display), sans-serif;
-  font-weight: 700;
-  font-size: 22px;
-  letter-spacing: 0.02em;
-  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  gap: 12px;
   text-decoration: none;
 }
-.brand em { font-style: normal; color: var(--signal); }
+.brand-mark {
+  font-family: var(--ff-display), sans-serif;
+  font-weight: 900;
+  font-size: 34px;
+  line-height: 0.8;
+  letter-spacing: -0.01em;
+}
+.brand-mark em { font-style: normal; color: var(--signal); }
+.brand-rule { width: 2px; height: 24px; background: var(--signal); }
+.brand-word {
+  font-family: var(--ff-body), sans-serif;
+  font-weight: 600;
+  font-size: 13px;
+  letter-spacing: 0.42em;
+  margin-right: -0.42em;
+}
+.brand:hover .brand-rule { height: 28px; transition: height 0.15s ease; }
 .nav-links { display: flex; align-items: center; gap: 28px; font-size: 14px; }
 .nav-links a { text-decoration: none; color: var(--mute); padding: 6px 0; border-bottom: 1px solid transparent; }
 .nav-links a:hover, .nav-links a.active { color: var(--paper); border-color: var(--signal); }

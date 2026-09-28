@@ -12,7 +12,7 @@ const GA_ID = "G-WE18XJYVCK";
 
 const display = Big_Shoulders_Display({
   subsets: ["latin"],
-  weight: ["700"],
+  weight: ["700", "900"],
   variable: "--ff-display",
 });
 const body = Work_Sans({ subsets: ["latin"], variable: "--ff-body" });
