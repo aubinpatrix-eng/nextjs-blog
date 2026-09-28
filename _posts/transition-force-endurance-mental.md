@@ -30,6 +30,8 @@ Après un travail lourd, votre fréquence cardiaque est élevée, vos jambes son
 
 Le mental se prépare aussi à l'entraînement. Une fois par semaine ou toutes les deux semaines, enchaînez une séance de force et un bloc de course ou de rameur **sans pause**. Vous apprendrez à connaître ces sensations, et elles vous feront beaucoup moins peur le jour J.
 
+Pour un premier exemple de ce type d'enchaînement, suivez le [programme ATHX gratuit](/semaine-athx-gratuite) : sa séance Metcon vous met en situation dès la première semaine.
+
 ## Le jour de la compétition
 
 - Utilisez la Refuel zone pour respirer, boire et **visualiser** la zone suivante ([que manger pendant la Refuel Zone](/blog/que-manger-refuel-zone)).

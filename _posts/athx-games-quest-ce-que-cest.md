@@ -97,4 +97,6 @@ Une bonne préparation ATHX travaille trois choses en parallèle :
 
 Comptez **12 semaines** pour une préparation complète. C'est exactement ce que propose le programme ATHX PREP : 12 semaines de force, d'endurance et de simulations Metcon X, avec des charges calculées sur **vos** PR. [Obtenir mon programme](/#cta).
 
+[Testez le programme gratuit ATHX](/semaine-athx-gratuite) pour découvrir la méthode avant de vous lancer : 5 séances, dont un metcon au SkiErg et au rameur.
+
 > Le format, les mouvements et les tarifs évoluent d'une saison à l'autre. Vérifiez toujours les informations de votre étape sur le site officiel de l'organisateur. ATHX PREP est un site indépendant, non affilié à ATHX Games.

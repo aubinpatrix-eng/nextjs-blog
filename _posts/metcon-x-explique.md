@@ -38,6 +38,8 @@ La meilleure préparation au Metcon X n'est pas de faire des metcons tous les jo
 
 Une séance de ce type toutes les une à deux semaines suffit. Le reste du temps, vous construisez la force et le moteur qui rendent ces simulations possibles. Pour le côté mental de ces enchaînements, lisez aussi [gérer la transition force → endurance](/blog/transition-force-endurance-mental).
 
+[Testez le programme gratuit ATHX](/semaine-athx-gratuite) pour un premier essai : sa séance du samedi est un metcon au rameur et au SkiErg.
+
 ## À retenir
 
 Le Metcon X récompense ceux qui arrivent au dernier bloc avec encore de la marge. C'est pour cela que le programme ATHX PREP intègre des **simulations Metcon X** dans la seconde moitié des 12 semaines, calées après vos séances de force calculées sur vos PR. Pour les dates exactes de ces simulations avant février, consultez le [programme ATHX Paris](/preparation-athx-paris).

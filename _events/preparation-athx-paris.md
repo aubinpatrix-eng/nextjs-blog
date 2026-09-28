@@ -68,6 +68,8 @@ Douze semaines, du lundi 23 novembre 2026 à la compétition :
 | 9 à 11 | 18 janv. → 7 févr. | Charges lourdes (85-92 %), simulations Metcon X |
 | 12 | 8 → 14 févr. | Décharge et compétition |
 
+Envie d'essayer avant de vous engager ? [Testez le programme gratuit ATHX](/semaine-athx-gratuite) : une semaine type de 5 séances (force et metcon au SkiErg et au rameur), à télécharger en PDF.
+
 ### Le piège de Paris : les fêtes en pleine prépa
 
 Noël et le Nouvel An tombent en **semaines 5 et 6**, au moment où les charges montent. Ne cherchez pas à tout faire : trois séances courtes par semaine suffisent, à condition de garder **une séance de force lourde** et **une séance d'endurance**. Reprenez un rythme normal dès le 4 janvier.

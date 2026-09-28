@@ -49,3 +49,5 @@ Avant de démarrer, faites le point sur vos charges avec notre [calculateur 1RM 
 ## Votre programme
 
 Paris en février ? Il faut commencer à la mi-novembre : tout est détaillé dans notre [prépa ATHX Paris](/preparation-athx-paris). Pour le printemps, suivez le [programme ATHX Montpellier](/preparation-athx-montpellier), et pour la rentrée, la [prépa ATHX Marseille](/preparation-athx-marseille). Le programme ATHX PREP vous donne 12 semaines calculées sur vos PR, pour arriver prêt le jour J. [Obtenir mon programme](/#cta).
+
+Pas encore décidé ? Le [programme ATHX gratuit](/semaine-athx-gratuite) vous fait tester une semaine complète d'entraînement avant de choisir votre étape.

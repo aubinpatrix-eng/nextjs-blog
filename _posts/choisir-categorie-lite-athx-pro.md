@@ -37,3 +37,5 @@ Viser trop haut dès la première fois est l'erreur la plus fréquente. Une comp
 ## Et pour la préparation ?
 
 Le programme ATHX PREP vous demande votre catégorie visée : les intensités de travail sont ajustées en conséquence, en plus d'être calculées sur vos PR. [Faites le test avec le calculateur](/#cta).
+
+[Testez le programme gratuit ATHX](/semaine-athx-gratuite) : une semaine type en pourcentage de vos PR, pour vous situer avant de choisir votre catégorie.
