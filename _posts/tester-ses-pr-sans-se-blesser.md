@@ -48,3 +48,5 @@ Concrètement : autour du 23 novembre 2026 pour la [prépa ATHX Paris](/preparat
 ## Et si je n'ai pas testé ?
 
 Le programme ATHX PREP prévoit une semaine 0 de tests guidés. Et si vous avez un PR récent, entrez-le directement dans le [calculateur](/#cta). Pour la suite de votre progression, lisez [squat arrière et développé militaire : les deux mouvements à ne pas négliger](/blog/squat-developpe-militaire-strength-zone).
+
+[Testez le programme gratuit ATHX](/semaine-athx-gratuite) une fois vos PR en main : les charges de la semaine sont exprimées en % de vos maximums.

@@ -62,6 +62,8 @@ Les trois zones en gras font le classement. Pour comprendre chacune en détail :
 | 9 à 11 | 3 → 23 mai | Charges lourdes (85-92 %), simulations Metcon X |
 | 12 | 24 → 29 mai | Décharge et compétition |
 
+Vous avez du temps avant le 8 mars ? Profitez-en pour découvrir le [programme ATHX gratuit](/semaine-athx-gratuite) : une semaine complète de 5 séances pour prendre vos repères sur les charges.
+
 ### Les ponts de mai : protégez vos séances clés
 
 La phase la plus intense (semaines 9 à 11) croise **le 1er mai, le 8 mai, l'Ascension (jeudi 6 mai) et le lundi de Pentecôte (17 mai)**. C'est le moment où l'on part en week-end prolongé… et où l'on saute les séances qui comptent. Placez la **force lourde** et la **simulation Metcon X** en début de semaine, et gardez les jours fériés pour une sortie d'endurance.

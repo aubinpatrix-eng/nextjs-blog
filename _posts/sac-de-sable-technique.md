@@ -42,3 +42,5 @@ En 2027, le sac sert à deux stations du Metcon X : 30 à 45 squats puis 60 m de
 ## Comment l'intégrer à l'entraînement
 
 Ajoutez le sac à 1 ou 2 séances par semaine, par exemple dans un circuit : 10 montées de sac à l'épaule + 200 m de course + 10 burpees, 4 tours. En 6 à 8 semaines, le mouvement devient naturel. Le [programme ATHX Marseille](/preparation-athx-marseille) l'intègre dès les premières semaines de l'été pour être prêt en septembre. Pour mettre ça en situation, découvrez [le Metcon X expliqué](/blog/metcon-x-explique).
+
+[Testez le programme gratuit ATHX](/semaine-athx-gratuite) : 5 séances pour construire la force de base qui rend le portage du sac plus facile.

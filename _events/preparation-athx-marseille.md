@@ -62,6 +62,8 @@ Seules Strength, Endurance et Metcon X comptent au classement. Vous hésitez sur
 | 9 à 11 | 16 août → 5 septembre | Charges lourdes (85-92 %), simulations Metcon X |
 | 12 | 6 → 11 septembre | Décharge et compétition |
 
+[Testez le programme gratuit ATHX](/semaine-athx-gratuite) avant le 21 juin : 5 séances pour situer votre niveau et arriver au début de la prépa avec les bons réflexes.
+
 ### Un été à s'entraîner : la stratégie vacances
 
 Les semaines 5 à 8 tombent en plein mois de juillet-août. Si vous partez, emportez un **plan minimal de 3 séances par semaine** : force si vous trouvez une salle, endurance (course, vélo, natation) et un circuit au poids du corps. Ne coupez jamais plus d'une semaine. Les semaines 9 à 11, à partir du 16 août, doivent se faire en salle : c'est là que se construisent les charges lourdes.
