@@ -1,5 +1,6 @@
 ---
 title: "Squat arrière : technique, standard ATHX et progression pour le 2RM"
+seoTitle: "Squat arrière ATHX : technique et 2RM"
 heading: Squat arrière
 menuLabel: Squat arrière
 parent: mouvements-athx

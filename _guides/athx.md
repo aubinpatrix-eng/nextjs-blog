@@ -1,5 +1,6 @@
 ---
 title: "Catégorie ATHX : charges, standards et préparation (2027)"
+seoTitle: "Catégorie ATHX : charges et standards (2027)"
 heading: Catégorie ATHX
 menuLabel: ATHX
 parent: categories-athx

@@ -12,7 +12,8 @@ content:
       fields: [ title, tag, date ]
       primary: title
     fields:
-      - { name: title, label: Titre (H1, ~60 caractères max), type: string, required: true }
+      - { name: title, label: Titre (H1, affiché sur la page et dans l'image de partage), type: string, required: true }
+      - { name: seoTitle, label: "Titre Google (48 caractères max, « | ATHX PREP » est ajouté automatiquement ; vide = titre ci-dessus)", type: string }
       - { name: slug, label: "Adresse de l'article (ex. metcon-x-explique, sans accents)", type: string, required: true, pattern: { regex: "^[a-z0-9]+(-[a-z0-9]+)*$", message: "Minuscules, chiffres et tirets uniquement" } }
       - { name: excerpt, label: Résumé (meta description, ~155 caractères), type: text, required: true }
       - name: tag
@@ -24,7 +25,8 @@ content:
       - { name: date, label: Date de publication, type: date, required: true }
       - { name: updated, label: Date de mise à jour (optionnel), type: date }
       - { name: author, label: Auteur (optionnel), type: string }
-      - { name: coverImage, label: Image de couverture (optionnel, 1200×630), type: image }
+      - { name: coverImage, label: Image de couverture (optionnel, affichée en haut de l'article), type: image }
+      - { name: coverImageAlt, label: Texte alternatif de la photo (décrit l'image pour Google Images et l'accessibilité), type: string }
       - { name: summary, label: "Ce qu'il faut retenir (2-3 phrases, affiché avant le sommaire)", type: text }
       - { name: body, label: "Contenu (les titres H2, H3, H4 forment le sommaire automatiquement)", type: rich-text }
       - name: faq
@@ -43,7 +45,8 @@ content:
       fields: [ menuLabel, dates ]
       primary: menuLabel
     fields:
-      - { name: title, label: "Titre SEO (onglet et résultats Google)", type: string, required: true }
+      - { name: title, label: "Titre complet (image de partage, et Google si « Titre Google » est vide)", type: string, required: true }
+      - { name: seoTitle, label: "Titre Google (48 caractères max, « | ATHX PREP » est ajouté automatiquement ; vide = titre ci-dessus)", type: string }
       - { name: heading, label: "Titre affiché (H1 court, ex. Préparation ATHX Paris 2027)", type: string }
       - { name: menuLabel, label: "Nom court (pied de page, ex. Préparation ATHX Paris)", type: string, required: true }
       - { name: city, label: Ville, type: string, required: true }
@@ -55,8 +58,9 @@ content:
       - { name: excerpt, label: "Résumé (meta description, ~155 caractères)", type: text, required: true }
       - { name: summary, label: Ce qu'il faut retenir, type: text }
       - { name: heroImage, label: Photo de l'en-tête, type: image }
-      - { name: heroImageAlt, label: Description de la photo, type: string }
+      - { name: heroImageAlt, label: Texte alternatif de la photo (décrit l'image pour Google Images et l'accessibilité), type: string }
       - { name: ctaImage, label: Photo de l'encart programme (milieu de page), type: image }
+      - { name: ctaImageAlt, label: Texte alternatif de la photo (décrit l'image pour Google Images et l'accessibilité), type: string }
       - { name: updated, label: Date de mise à jour, type: date }
       - { name: body, label: "Contenu (les H2/H3/H4 forment le sommaire ; l'encart programme se place avant le H2 du milieu)", type: rich-text }
       - name: faq
@@ -75,7 +79,8 @@ content:
       fields: [ menuLabel, parent ]
       primary: menuLabel
     fields:
-      - { name: title, label: "Titre SEO (onglet et résultats Google)", type: string, required: true }
+      - { name: title, label: "Titre complet (image de partage, et Google si « Titre Google » est vide)", type: string, required: true }
+      - { name: seoTitle, label: "Titre Google (48 caractères max, « | ATHX PREP » est ajouté automatiquement ; vide = titre ci-dessus)", type: string }
       - { name: heading, label: Titre affiché (H1 court), type: string }
       - { name: menuLabel, label: "Nom court (menus, fil d'Ariane)", type: string, required: true }
       - { name: parent, label: "Page parente (vide = page principale d'un guide ; sinon adresse de la page parente, ex. workouts-athx-2027)", type: string }
@@ -84,7 +89,7 @@ content:
       - { name: excerpt, label: "Résumé (meta description, ~155 caractères)", type: text, required: true }
       - { name: summary, label: Ce qu'il faut retenir, type: text }
       - { name: heroImage, label: Photo de l'en-tête (optionnel), type: image }
-      - { name: heroImageAlt, label: Description de la photo, type: string }
+      - { name: heroImageAlt, label: Texte alternatif de la photo (décrit l'image pour Google Images et l'accessibilité), type: string }
       - { name: newsletter, label: "Page « contenu gratuit » : boutons et encarts vers le PDF / la newsletter au lieu du programme", type: boolean }
       - { name: updated, label: Date de mise à jour, type: date }
       - { name: body, label: "Contenu (H2/H3/H4 = sommaire ; l'encart programme se place avant le H2 du milieu)", type: rich-text }
@@ -122,7 +127,7 @@ content:
           - { name: offerNote, label: Mention sous le prix, type: string }
           - { name: features, label: Contenu de l'offre, type: string, list: true }
           - { name: image, label: "Photo de l'en-tête (portrait, sujet sur la droite)", type: image }
-          - { name: imageAlt, label: Description de la photo (accessibilité et SEO), type: string }
+          - { name: imageAlt, label: Texte alternatif de la photo (décrit l'image pour Google Images et l'accessibilité), type: string }
       - name: stats
         label: Chiffres clés
         type: object
@@ -142,6 +147,7 @@ content:
             list: true
             fields:
               - { name: image, label: Photo (portrait), type: image }
+              - { name: imageAlt, label: Texte alternatif de la photo (décrit l'image pour Google Images et l'accessibilité), type: string }
               - { name: label, label: Étiquette, type: string }
               - { name: title, label: Titre, type: string }
               - { name: text, label: Texte, type: text }
@@ -187,6 +193,7 @@ content:
           - { name: answer, label: Réponse, type: text }
       - { name: finalCta, label: Phrase d'appel final, type: string }
       - { name: finalImage, label: Photo de fond de l'appel final, type: image }
+      - { name: finalImageAlt, label: Texte alternatif de la photo (décrit l'image pour Google Images et l'accessibilité), type: string }
 
   - name: about
     label: Qui suis-je

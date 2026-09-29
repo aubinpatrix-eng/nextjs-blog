@@ -24,23 +24,22 @@ export function generateMetadata({ params }: Params): Metadata {
   const hub = getHub(params.slug);
   if (hub) {
     return {
-      title: hub.title,
+      title: hub.seoTitle || hub.title,
       description: hub.excerpt,
       alternates: { canonical: `/${hub.slug}` },
-      openGraph: { type: "article", title: hub.title, description: hub.excerpt, ...(hub.heroImage && { images: [hub.heroImage] }) },
+      openGraph: { type: "article", title: hub.title, description: hub.excerpt },
     };
   }
   const event = getEventBySlug(params.slug);
   if (event) {
     return {
-      title: event.title,
+      title: event.seoTitle || event.title,
       description: event.excerpt,
       alternates: { canonical: `/${event.slug}` },
       openGraph: {
         type: "article",
         title: event.title,
         description: event.excerpt,
-        ...(event.heroImage && { images: [event.heroImage] }),
       },
     };
   }

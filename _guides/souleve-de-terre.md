@@ -1,5 +1,6 @@
 ---
 title: "Soulevé de terre : technique, standard ATHX et stratégie pour le 3RM"
+seoTitle: "Soulevé de terre ATHX : technique et 3RM"
 heading: Soulevé de terre
 menuLabel: Soulevé de terre
 parent: mouvements-athx

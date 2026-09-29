@@ -1,5 +1,6 @@
 ---
 title: 'Programme ATHX gratuit : une semaine d''entraînement complète (PDF)'
+seoTitle: "Programme ATHX gratuit : 1 semaine (PDF)"
 heading: Semaine d'entraînement ATHX gratuite
 menuLabel: Semaine gratuite
 order: 4

@@ -115,7 +115,7 @@ export default async function EventLanding({ event }: { event: AthxEvent }) {
               <aside className={`event-cta${event.ctaImage ? " event-cta-photo" : ""}`}>
                 {event.ctaImage && (
                   // eslint-disable-next-line @next/next/no-img-element
-                  <img src={event.ctaImage} alt="" loading="lazy" />
+                  <img src={event.ctaImage} alt={event.ctaImageAlt ?? ""} loading="lazy" />
                 )}
                 <div className="event-cta-body">
                   <div className="kicker">Objectif ATHX {event.city}</div>
@@ -152,7 +152,7 @@ export default async function EventLanding({ event }: { event: AthxEvent }) {
               {home.personas.items.map((persona) => (
                 <a href="#cta" className="persona" key={persona.title}>
                   {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img src={persona.image} alt="" loading="lazy" width={800} height={1067} />
+                  <img src={persona.image} alt={persona.imageAlt ?? ""} loading="lazy" width={800} height={1067} />
                   <div className="persona-body">
                     <div className="post-tag">{persona.label}</div>
                     <h3>{persona.title}</h3>

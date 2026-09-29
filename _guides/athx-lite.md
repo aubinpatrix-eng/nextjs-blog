@@ -1,5 +1,6 @@
 ---
 title: "ATHX Lite : charges, épreuves et préparation pour une première compétition"
+seoTitle: "ATHX Lite : charges et préparation (2027)"
 heading: ATHX Lite
 menuLabel: ATHX Lite
 parent: categories-athx

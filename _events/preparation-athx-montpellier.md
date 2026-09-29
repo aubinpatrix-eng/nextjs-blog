@@ -1,5 +1,6 @@
 ---
 title: "Préparation ATHX Montpellier 2027 : épreuves, dates et plan sur 12 semaines"
+seoTitle: "Préparation ATHX Montpellier 2027"
 heading: Préparation ATHX Montpellier 2027
 menuLabel: Préparation ATHX Montpellier
 city: Montpellier
@@ -13,6 +14,7 @@ summary: "ATHX Montpellier est la nouvelle étape française de la saison 2027, 
 heroImage: /assets/images/athx/athx-rameur.webp
 heroImageAlt: Athlète sur le rameur pendant une compétition ATHX
 ctaImage: /assets/images/athx/athx-metcon-halteres.webp
+ctaImageAlt: "Athlète avec un haltère au-dessus de la tête dans le Metcon X de l'ATHX"
 faq:
   - question: Quand a lieu l'ATHX Montpellier 2027 ?
     answer: Les vendredi 28 et samedi 29 mai 2027, au Parc des Expositions et à la Sud de France Arena, à Pérols, près de Montpellier. Vérifiez l'horaire de votre vague auprès de l'organisateur.

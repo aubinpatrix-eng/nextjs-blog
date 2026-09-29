@@ -15,7 +15,7 @@ const description =
   "Calculez gratuitement votre 1RM (charge maximale) à partir d'une série de 2 à 10 répétitions, avec vos 2RM, 3RM et vos charges d'entraînement en pourcentage.";
 
 export const metadata: Metadata = {
-  title: "Calculateur 1RM gratuit : estimez votre charge maximale",
+  title: "Calculateur 1RM gratuit (2RM, 3RM, % de charge)",
   description,
   alternates: { canonical: "/calculateur-1rm" },
 };

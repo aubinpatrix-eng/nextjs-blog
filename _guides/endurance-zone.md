@@ -1,5 +1,6 @@
 ---
 title: "Endurance zone ATHX 2027 : course puis SkiErg, format et stratégie d'allure"
+seoTitle: "Endurance zone ATHX 2027 : format et allures"
 heading: Endurance zone ATHX 2027
 menuLabel: Endurance zone
 parent: workouts-athx-2027

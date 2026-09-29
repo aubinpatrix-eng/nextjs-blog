@@ -1,5 +1,6 @@
 ---
 title: "Squat arrière et développé militaire : les deux mouvements à ne pas négliger"
+seoTitle: "Squat et développé militaire pour l'ATHX"
 slug: squat-developpe-militaire-strength-zone
 excerpt: "Pourquoi la Strength Zone de l'ATHX récompense la technique autant que la charge, et comment structurer sa progression sur 12 semaines."
 tag: Force

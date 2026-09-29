@@ -11,7 +11,7 @@
       "Guide de gestion de la Refuel Zone (nutrition, timing)"
     ],
     "image": "/assets/images/athx/athx-endurance-course.webp",
-    "imageAlt": "Athlète en pleine course dans l'Endurance zone de l'ATHX"
+    "imageAlt": "Deux athlètes en course dans l'Endurance zone de l'ATHX"
   },
   "stats": [
     {
@@ -37,18 +37,21 @@
     "items": [
       {
         "image": "/assets/images/athx/athx-rameur.webp",
+        "imageAlt": "Athlète sur le rameur pendant le Metcon X de l'ATHX",
         "label": "Première compétition",
         "title": "Vous visez votre premier ATHX",
         "text": "Catégorie Lite ou ATHX : on part de vos charges actuelles, avec une semaine 0 pour tester vos PR si besoin. Le jour J, vous savez exactement quoi faire dans chaque zone."
       },
       {
         "image": "/assets/images/athx/athx-metcon-halteres.webp",
+        "imageAlt": "Athlète avec un haltère au-dessus de la tête dans le Metcon X de l'ATHX",
         "label": "Profil force",
         "title": "Vous venez de la musculation",
         "text": "Vous êtes à l'aise sous la barre. Le programme entretient votre force et construit le moteur qui vous manque pour l'Endurance zone et le Metcon X."
       },
       {
         "image": "/assets/images/athx/athx-binome-relais.webp",
+        "imageAlt": "Athlète en course devant l'écran géant d'une compétition ATHX",
         "label": "En binôme",
         "title": "Vous préparez l'ATHX à deux",
         "text": "Des charges individuelles pour chacun, et des séances d'endurance et de Metcon X à faire ensemble. La motivation se partage, les kilos aussi."
@@ -132,5 +135,6 @@
     }
   ],
   "finalCta": "Six zones. Une seule chance de bien les enchaîner.",
-  "finalImage": "/assets/images/athx/athx-skierg.webp"
+  "finalImage": "/assets/images/athx/athx-skierg.webp",
+  "finalImageAlt": "Athlète au SkiErg dans l'Endurance zone de l'ATHX"
 }

@@ -1,5 +1,6 @@
 ---
 title: "ATHX Games : qu'est-ce que c'est ? Le guide complet de la compétition"
+seoTitle: "ATHX Games : qu'est-ce que c'est ?"
 slug: athx-games-quest-ce-que-cest
 excerpt: "6 zones, 2h30 d'effort, 3 catégories : origine, format 2027, classement, prix, dates en France. Tout comprendre des ATHX Games avant de vous inscrire."
 tag: Format

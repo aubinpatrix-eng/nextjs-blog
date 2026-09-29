@@ -1,5 +1,6 @@
 ---
 title: "Calculer ses PR sans se blesser avant la compétition"
+seoTitle: "Tester ses PR sans se blesser avant l'ATHX"
 slug: tester-ses-pr-sans-se-blesser
 excerpt: "Comment tester ou estimer ses charges maximales quelques semaines avant l'ATHX sans arriver cramé ou blessé le jour J."
 tag: Force

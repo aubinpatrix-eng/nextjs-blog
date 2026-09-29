@@ -1,5 +1,6 @@
 ---
 title: "Développé couché aux haltères : technique et stratégie pour le Metcon X ATHX"
+seoTitle: "Développé couché haltères : Metcon X ATHX"
 heading: Développé couché aux haltères
 menuLabel: Développé couché haltères
 parent: mouvements-athx

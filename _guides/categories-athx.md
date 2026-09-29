@@ -1,5 +1,6 @@
 ---
 title: "Catégories ATHX : Lite, ATHX ou Pro, charges et différences (2027)"
+seoTitle: "Catégories ATHX : Lite, ATHX ou Pro (2027)"
 heading: Les catégories ATHX
 menuLabel: Catégories ATHX
 order: 2

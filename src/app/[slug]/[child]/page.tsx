@@ -23,10 +23,10 @@ export function generateMetadata({ params }: Params): Metadata {
   const guide = getChild(params.slug, params.child);
   if (!guide) return {};
   return {
-    title: guide.title,
+    title: guide.seoTitle || guide.title,
     description: guide.excerpt,
     alternates: { canonical: guidePath(guide) },
-    openGraph: { type: "article", title: guide.title, description: guide.excerpt, ...(guide.heroImage && { images: [guide.heroImage] }) },
+    openGraph: { type: "article", title: guide.title, description: guide.excerpt },
   };
 }
 

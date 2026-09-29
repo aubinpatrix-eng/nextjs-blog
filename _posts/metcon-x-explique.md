@@ -1,5 +1,6 @@
 ---
 title: "Le Metcon X expliqué : pourquoi il fait la différence au classement"
+seoTitle: "Metcon X expliqué : la clé du classement ATHX"
 slug: metcon-x-explique
 excerpt: "Ce que recouvre le dernier bloc de l'ATHX, pourquoi il est si décisif et comment le simuler à l'entraînement pour ne pas le découvrir le jour J."
 tag: Format

@@ -30,7 +30,7 @@ export type Home = {
   personas?: {
     title: string;
     lede: string;
-    items: { image: string; label: string; title: string; text: string }[];
+    items: { image: string; imageAlt?: string; label: string; title: string; text: string }[];
   };
   stats: { value: string; label: string }[];
   format: {
@@ -47,6 +47,7 @@ export type Home = {
   faq: { question: string; answer: string }[];
   finalCta: string;
   finalImage?: string;
+  finalImageAlt?: string;
 };
 
 export type About = {

@@ -1,5 +1,6 @@
 ---
 title: "Le sac de sable : le mouvement qui surprend le plus de débutants"
+seoTitle: "Sac de sable ATHX : technique et erreurs"
 slug: sac-de-sable-technique
 excerpt: "Technique, prise et erreurs fréquentes sur l'un des mouvements fonctionnels les plus présents dans les metcons de l'ATHX."
 tag: Endurance

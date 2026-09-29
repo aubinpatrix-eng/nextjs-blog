@@ -1,5 +1,6 @@
 ---
 title: "Préparation ATHX Paris 2027 : épreuves, dates et plan sur 12 semaines"
+seoTitle: "Préparation ATHX Paris 2027 : plan 12 semaines"
 heading: Préparation ATHX Paris 2027
 menuLabel: Préparation ATHX Paris
 city: Paris
@@ -11,8 +12,9 @@ prepStart: 2026-11-23
 excerpt: "ATHX Paris les 13 et 14 février 2027 : les épreuves 2027, le planning de préparation semaine par semaine dès le 23 novembre, et les conseils d'un 1er de la Strength zone à Paris."
 summary: "ATHX Paris 2027 a lieu les 13 et 14 février au Paris Event Center. Pour une préparation complète de 12 semaines, démarrez le lundi 23 novembre 2026. La saison 2027 met l'accent sur la force pure (1RM, 2RM, 3RM) et remplace le rameur par le SkiErg dans la zone Endurance. Le vrai piège de cette étape : les fêtes de fin d'année en plein milieu de la préparation."
 heroImage: /assets/images/athx/athx-endurance-course.webp
-heroImageAlt: "Athlète en pleine course dans l'Endurance zone de l'ATHX"
+heroImageAlt: "Deux athlètes en course dans l'Endurance zone de l'ATHX"
 ctaImage: /assets/images/athx/athx-skierg.webp
+ctaImageAlt: "Athlète au SkiErg dans l'Endurance zone de l'ATHX"
 faq:
   - question: Quand a lieu l'ATHX Paris 2027 ?
     answer: Les samedi 13 et dimanche 14 février 2027 au Paris Event Center, Porte de la Villette. L'horaire exact de votre vague est communiqué par l'organisateur après l'inscription.

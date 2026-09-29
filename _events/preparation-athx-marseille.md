@@ -1,5 +1,6 @@
 ---
 title: "Préparation ATHX Marseille 2027 : épreuves, dates et plan sur 12 semaines"
+seoTitle: "Préparation ATHX Marseille 2027 : plan 12 sem."
 heading: Préparation ATHX Marseille 2027
 menuLabel: Préparation ATHX Marseille
 city: Marseille
@@ -13,6 +14,7 @@ summary: "ATHX Marseille se tient les 10 et 11 septembre 2027 au Parc Chanot. La
 heroImage: /assets/images/athx/athx-skierg.webp
 heroImageAlt: Athlète au SkiErg pendant une compétition ATHX
 ctaImage: /assets/images/athx/athx-binome-relais.webp
+ctaImageAlt: "Athlète en course devant l'écran géant d'une compétition ATHX"
 faq:
   - question: Quand a lieu l'ATHX Marseille 2027 ?
     answer: "Les vendredi 10 et samedi 11 septembre 2027 au Parc Chanot (Marseille Chanot). Certaines sources n'annoncent que le 11 septembre : vérifiez l'horaire de votre vague auprès de l'organisateur."
