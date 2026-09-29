@@ -1,21 +1,31 @@
 ---
 title: "Squat arrière et développé militaire : les deux mouvements à ne pas négliger"
-seoTitle: "Squat et développé militaire pour l'ATHX"
+seoTitle: Squat et développé militaire pour l'ATHX
 slug: squat-developpe-militaire-strength-zone
-excerpt: "Pourquoi la Strength Zone de l'ATHX récompense la technique autant que la charge, et comment structurer sa progression sur 12 semaines."
+excerpt: Pourquoi la Strength Zone de l'ATHX récompense la technique autant que
+  la charge, et comment structurer sa progression sur 12 semaines.
 tag: Force
 date: 2026-09-15
 updated: 2026-09-25
-summary: 'À l''ATHX, la technique compte autant que la charge : une répétition non conforme ne rapporte rien. Travailler en pourcentage de son 1RM sur 12 semaines, avec une montée progressive de l''intensité et une décharge finale, permet d''arriver affûté sans être épuisé.'
+author: Aubin
+summary: "À l'ATHX, la technique compte autant que la charge : une répétition
+  non conforme ne rapporte rien. Travailler en pourcentage de son 1RM sur 12
+  semaines, avec une montée progressive de l'intensité et une décharge finale,
+  permet d'arriver affûté sans être épuisé."
 faq:
-- question: Comment progresser au squat avant l'ATHX ?
-  answer: 'En travaillant en pourcentage de votre 1RM : de 65-72 % en début de préparation jusqu''à 87-92 % dans les dernières semaines, puis une semaine de décharge avant la compétition.'
-- question: Quels sont les critères d'un squat valide ?
-  answer: Une profondeur complète, avec le pli de hanche sous le haut du genou, les pieds à plat et une remontée contrôlée. Consultez le standard officiel de votre édition.
-- question: Pourquoi s'entraîner en pourcentage de son 1RM ?
-  answer: Pour que chaque séance soit assez lourde pour progresser sans vous épuiser. Deux athlètes aux maximums différents ne peuvent pas suivre les mêmes charges.
+  - question: Comment progresser au squat avant l'ATHX ?
+    answer: "En travaillant en pourcentage de votre 1RM : de 65-72 % en début de
+      préparation jusqu'à 87-92 % dans les dernières semaines, puis une semaine
+      de décharge avant la compétition."
+  - question: Quels sont les critères d'un squat valide ?
+    answer: Une profondeur complète, avec le pli de hanche sous le haut du genou,
+      les pieds à plat et une remontée contrôlée. Consultez le standard officiel
+      de votre édition.
+  - question: Pourquoi s'entraîner en pourcentage de son 1RM ?
+    answer: Pour que chaque séance soit assez lourde pour progresser sans vous
+      épuiser. Deux athlètes aux maximums différents ne peuvent pas suivre les
+      mêmes charges.
 ---
-
 La Strength Zone de l'ATHX tourne autour de mouvements polyarticulaires comme le **squat arrière** et le **développé militaire strict**. Deux exercices classiques, mais qui posent problème à beaucoup d'athlètes orientés endurance ou fonctionnel.
 
 > **Mise à jour saison 2027** : la Strength zone passe à un 1RM shoulder-to-overhead (impulsion des jambes autorisée), un 2RM squat arrière et un 3RM soulevé de terre. Détails dans [la Strength zone ATHX 2027 expliquée](/workouts-athx-2027/strength-zone). Les principes de progression ci-dessous restent valables.
@@ -33,13 +43,15 @@ Consultez le standard de mouvement de votre édition : c'est lui qui fait foi.
 
 Sur une préparation de 12 semaines, une approche simple et efficace consiste à travailler en **pourcentage de votre 1RM** (votre charge maximale sur une répétition) :
 
+
 | Semaines | Intensité | Séries × répétitions |
-| --- | --- | --- |
+| -------- | --------- | ----------------------------- |
 | 1–3 | 65–72 % | 5 × 5 |
 | 4–6 | 72–80 % | 5 × 3 à 5 |
 | 7–9 | 80–87 % | 4 × 3 |
 | 10–11 | 87–92 % | 3 × 2, puis quelques singles |
 | 12 | 60–70 % | décharge avant la compétition |
+
 
 L'idée : monter progressivement l'intensité, puis réduire le volume la dernière semaine pour arriver frais. Pas besoin de tester un nouveau record le jour J.
 
