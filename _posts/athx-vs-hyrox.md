@@ -1,5 +1,6 @@
 ---
 title: "ATHX vs Hyrox : quelles différences et laquelle choisir ?"
+seoTitle: "ATHX vs Hyrox : différences et lequel choisir"
 slug: athx-vs-hyrox
 excerpt: "Hyrox est un marathon du fitness, l'ATHX un décathlon. Format, place de la force, récupération : les vraies différences pour bien choisir sa compétition."
 tag: Format

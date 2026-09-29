@@ -139,7 +139,7 @@ export default function Index() {
               {home.personas.items.map((persona) => (
                 <a href="#cta" className="persona" key={persona.title}>
                   {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img src={persona.image} alt="" loading="lazy" width={800} height={1067} />
+                  <img src={persona.image} alt={persona.imageAlt ?? ""} loading="lazy" width={800} height={1067} />
                   <div className="persona-body">
                     <div className="post-tag">{persona.label}</div>
                     <h3>{persona.title}</h3>
@@ -276,7 +276,7 @@ export default function Index() {
       <section className={`last${home.finalImage ? " final-band" : ""}`}>
         {home.finalImage && (
           // eslint-disable-next-line @next/next/no-img-element
-          <img className="final-bg" src={home.finalImage} alt="" loading="lazy" />
+          <img className="final-bg" src={home.finalImage} alt={home.finalImageAlt ?? ""} loading="lazy" />
         )}
         <div className="wrap center">
           <h2 className="h-sec">{home.finalCta}</h2>

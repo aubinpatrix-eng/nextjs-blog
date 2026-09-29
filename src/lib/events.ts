@@ -6,6 +6,7 @@ import { join } from "path";
 export type AthxEvent = {
   slug: string;
   title: string;
+  seoTitle?: string;
   heading?: string;
   menuLabel: string;
   city: string;
@@ -19,6 +20,7 @@ export type AthxEvent = {
   heroImage?: string;
   heroImageAlt?: string;
   ctaImage?: string;
+  ctaImageAlt?: string;
   faq?: { question: string; answer: string }[];
   updated?: string;
   content: string;

@@ -1,5 +1,6 @@
 ---
 title: "Mouvements ATHX : technique et standards de chaque exercice (2027)"
+seoTitle: "Mouvements ATHX 2027 : technique et standards"
 heading: Les mouvements de l'ATHX
 menuLabel: Mouvements ATHX
 order: 3

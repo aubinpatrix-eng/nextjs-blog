@@ -1,5 +1,6 @@
 ---
 title: "Metcon X ATHX 2027 : le workout, les répétitions et les charges par catégorie"
+seoTitle: "Metcon X ATHX 2027 : workout et charges"
 heading: Metcon X ATHX 2027
 menuLabel: Metcon X
 parent: workouts-athx-2027

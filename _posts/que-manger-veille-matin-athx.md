@@ -1,5 +1,6 @@
 ---
 title: "Que manger la veille et le matin d'un ATHX"
+seoTitle: "Que manger la veille et le matin d'un ATHX"
 slug: que-manger-veille-matin-athx
 excerpt: "Timing des repas, hydratation, et ce qu'il faut absolument éviter de tester pour la première fois le jour de l'ATHX."
 tag: Nutrition

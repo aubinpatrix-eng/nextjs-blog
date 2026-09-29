@@ -1,5 +1,6 @@
 ---
 title: "ATHX Pro : charges, standards et niveau requis (2027)"
+seoTitle: "ATHX Pro : charges et niveau requis (2027)"
 heading: ATHX Pro
 menuLabel: ATHX Pro
 parent: categories-athx

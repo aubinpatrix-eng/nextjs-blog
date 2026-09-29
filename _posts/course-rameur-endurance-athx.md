@@ -1,5 +1,6 @@
 ---
 title: "Course et rameur enchaînés : construire un moteur qui tient 2h30"
+seoTitle: "Course et rameur : l'endurance pour l'ATHX"
 slug: course-rameur-endurance-athx
 excerpt: "La différence entre s'entraîner à être rapide et s'entraîner à tenir un effort continu sur toute une compétition ATHX."
 tag: Endurance

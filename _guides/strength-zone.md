@@ -1,5 +1,6 @@
 ---
 title: "Strength zone ATHX 2027 : shoulder-to-overhead, squat et soulevé de terre expliqués"
+seoTitle: "Strength zone ATHX 2027 : épreuves et stratégie"
 heading: Strength zone ATHX 2027
 menuLabel: Strength zone
 parent: workouts-athx-2027

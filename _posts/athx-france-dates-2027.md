@@ -1,5 +1,6 @@
 ---
 title: "ATHX en France : les dates 2027 (Paris, Montpellier, Marseille)"
+seoTitle: "ATHX en France : dates 2027 et villes"
 slug: athx-france-dates-2027
 excerpt: "Paris en février, Montpellier en mai, Marseille en septembre : le calendrier des compétitions ATHX en France pour la saison 2027, et quand commencer sa préparation."
 tag: Format

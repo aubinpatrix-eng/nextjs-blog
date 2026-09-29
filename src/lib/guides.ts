@@ -9,6 +9,7 @@ export type Guide = {
   parent?: string;
   order?: number;
   title: string;
+  seoTitle?: string;
   heading?: string;
   menuLabel: string;
   kicker?: string;

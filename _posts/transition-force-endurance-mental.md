@@ -1,5 +1,6 @@
 ---
 title: "Gérer la transition force → endurance sans s'effondrer"
+seoTitle: "Transition force → endurance : tenir mentalement"
 slug: transition-force-endurance-mental
 excerpt: "Le vrai piège de l'ATHX n'est pas une zone isolée, c'est l'enchaînement. Comment préparer la tête (et le corps) à ces transitions."
 tag: Mental

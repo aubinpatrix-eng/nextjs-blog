@@ -1,5 +1,6 @@
 ---
 title: "Que manger pendant la Refuel Zone ?"
+seoTitle: "Que manger pendant la Refuel Zone ATHX ?"
 slug: que-manger-refuel-zone
 excerpt: "Cette fenêtre de récupération active de l'ATHX est souvent sous-exploitée. Ce qu'il faut avoir prévu, et à quel moment le prendre."
 tag: Nutrition

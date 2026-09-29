@@ -5,11 +5,13 @@ import { join } from "path";
 export type Post = {
   slug: string;
   title: string;
+  seoTitle?: string;
   excerpt: string;
   date: string;
   updated?: string;
   tag: string;
   coverImage?: string;
+  coverImageAlt?: string;
   author?: string;
   summary?: string;
   faq?: { question: string; answer: string }[];

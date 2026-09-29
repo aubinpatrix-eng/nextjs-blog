@@ -1,5 +1,6 @@
 ---
 title: "Rameur : technique et stratégie pour le Metcon X de l'ATHX"
+seoTitle: "Rameur : technique pour le Metcon X ATHX"
 heading: Rameur
 menuLabel: Rameur
 parent: mouvements-athx

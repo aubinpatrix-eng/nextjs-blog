@@ -1,5 +1,6 @@
 ---
 title: "SkiErg : technique, allures et entraînement pour l'Endurance zone ATHX"
+seoTitle: "SkiErg : technique et allures pour l'ATHX"
 heading: SkiErg
 menuLabel: SkiErg
 parent: mouvements-athx

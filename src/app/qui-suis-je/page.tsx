@@ -8,7 +8,7 @@ import Link from "next/link";
 export function generateMetadata(): Metadata {
   const about = getAbout();
   return {
-    title: `Qui suis-je ? ${about.name}, ${about.headline.toLowerCase()}`,
+    title: `${about.name} : mon parcours ATHX`,
     description: `${about.intro} ${about.headline}. Découvrez l'athlète derrière le programme ATHX PREP.`,
     alternates: { canonical: "/qui-suis-je" },
     openGraph: { type: "profile", images: [about.photo] },

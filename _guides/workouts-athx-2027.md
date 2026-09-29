@@ -1,5 +1,6 @@
 ---
 title: "Workouts ATHX 2027 : les 6 zones, les épreuves et le scoring expliqués"
+seoTitle: "Workouts ATHX 2027 : les 6 zones expliquées"
 heading: Workouts ATHX 2027
 menuLabel: Workouts ATHX 2027
 order: 1

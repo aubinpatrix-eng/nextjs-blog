@@ -1,5 +1,6 @@
 ---
 title: "Shoulder-to-overhead : technique, standard ATHX et comment soulever plus lourd"
+seoTitle: "Shoulder-to-overhead : technique ATHX"
 heading: Shoulder-to-overhead
 menuLabel: Shoulder-to-overhead
 parent: mouvements-athx

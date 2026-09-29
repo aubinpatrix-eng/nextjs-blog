@@ -1,5 +1,6 @@
 ---
 title: "Ground-to-overhead aux haltères : technique et standard du Metcon X ATHX"
+seoTitle: "Ground-to-overhead haltères : standard ATHX"
 heading: Ground-to-overhead aux haltères
 menuLabel: Ground-to-overhead haltères
 parent: mouvements-athx

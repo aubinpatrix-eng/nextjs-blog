@@ -1,5 +1,6 @@
 ---
 title: "Lite, ATHX ou Pro : quelle catégorie choisir pour sa première compétition"
+seoTitle: "Lite, ATHX ou Pro : quelle catégorie choisir ?"
 slug: choisir-categorie-lite-athx-pro
 excerpt: "Un même format, trois niveaux d'exigence. Comment évaluer honnêtement où vous en êtes avant de vous inscrire à l'ATHX."
 tag: Format

@@ -29,7 +29,7 @@ export function generateMetadata({ params }: Params): Metadata {
     return {};
   }
   return {
-    title: post.title,
+    title: post.seoTitle || post.title,
     description: post.excerpt,
     alternates: { canonical: `/blog/${post.slug}` },
     openGraph: {
@@ -38,7 +38,6 @@ export function generateMetadata({ params }: Params): Metadata {
       description: post.excerpt,
       publishedTime: post.date,
       modifiedTime: post.updated ?? post.date,
-      ...(post.coverImage && { images: [post.coverImage] }),
     },
   };
 }
@@ -126,7 +125,7 @@ export default async function Article({ params }: Params) {
             </div>
             {post.coverImage && (
               // eslint-disable-next-line @next/next/no-img-element
-              <img src={post.coverImage} alt="" className="article-cover" />
+              <img src={post.coverImage} alt={post.coverImageAlt ?? ""} className="article-cover" />
             )}
           </div>
         </header>
