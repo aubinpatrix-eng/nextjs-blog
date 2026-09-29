@@ -1,10 +1,13 @@
+import ConsentBanner from "@/app/_components/consent-banner";
 import Footer from "@/app/_components/footer";
+import { CONSENT_KEY } from "@/lib/consent";
 import Nav from "@/app/_components/nav";
 import { getAllEvents } from "@/lib/events";
 import { getHubs, guidePath } from "@/lib/guides";
 import { formatPrice, getSite } from "@/lib/site";
 import type { Metadata, Viewport } from "next";
 import { Big_Shoulders_Display, Work_Sans } from "next/font/google";
+import Script from "next/script";
 
 import "./globals.css";
 
@@ -23,7 +26,6 @@ export function generateMetadata(): Metadata {
     metadataBase: new URL(site.url),
     title: { default: `${site.name} — ${site.title}`, template: `%s | ${site.name}` },
     description: site.description,
-    alternates: { canonical: "/" },
     openGraph: { type: "website", locale: "fr_FR", siteName: site.name },
     twitter: { card: "summary_large_image" },
   };
@@ -43,19 +45,15 @@ export default function RootLayout({
 
   return (
     <html lang="fr" className={`${display.variable} ${body.variable}`}>
-      <head>
-        {/* Google tag (gtag.js) */}
-        <script async src={`https://www.googletagmanager.com/gtag/js?id=${GA_ID}`} />
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `window.dataLayer = window.dataLayer || [];
-function gtag(){dataLayer.push(arguments);}
-gtag('js', new Date());
-gtag('config', '${GA_ID}');`,
-          }}
-        />
-      </head>
       <body>
+        {/* Google tag (gtag.js), loaded after hydration. Analytics storage stays denied until the visitor accepts. */}
+        <Script src={`https://www.googletagmanager.com/gtag/js?id=${GA_ID}`} strategy="afterInteractive" />
+        <Script id="ga" strategy="afterInteractive">
+          {`window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}
+var c=null;try{c=localStorage.getItem('${CONSENT_KEY}');}catch(e){}
+gtag('consent','default',{analytics_storage:c==='granted'?'granted':'denied',ad_storage:'denied',ad_user_data:'denied',ad_personalization:'denied'});
+gtag('js',new Date());gtag('config','${GA_ID}');`}
+        </Script>
         <Nav
           priceLabel={formatPrice(site.price)}
           menus={[
@@ -79,6 +77,7 @@ gtag('config', '${GA_ID}');`,
         />
         {children}
         <Footer />
+        <ConsentBanner />
       </body>
     </html>
   );

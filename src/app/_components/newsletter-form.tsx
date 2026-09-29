@@ -89,7 +89,7 @@ export default function NewsletterForm({
           </label>
           {state.result && !done && (
             <p className="nl-message nl-error" role="alert">
-              {MESSAGES[state.result] ?? MESSAGES.error}
+              Erreur : {MESSAGES[state.result] ?? MESSAGES.error}
             </p>
           )}
         </form>

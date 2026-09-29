@@ -4,7 +4,7 @@ import Link from "next/link";
 // Use this page as the Stripe Payment Link confirmation URL: https://preparation-athx.fr/merci
 export const metadata: Metadata = {
   title: "Merci pour votre achat",
-  robots: { index: false },
+  robots: { index: false, follow: true },
 };
 
 export default function ThankYou() {

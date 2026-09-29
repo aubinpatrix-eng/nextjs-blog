@@ -5,34 +5,21 @@ import { getSite } from "@/lib/site";
 import { TAGS } from "@/lib/tags";
 import type { MetadataRoute } from "next";
 
+// Google ignores priority and changeFrequency: only real modification dates are listed.
 export default function sitemap(): MetadataRoute.Sitemap {
   const { url } = getSite();
   const posts = getAllPosts();
   const lastPost = posts[0] ? new Date(posts[0].updated ?? posts[0].date) : new Date();
 
   return [
-    { url, lastModified: new Date(), changeFrequency: "weekly", priority: 1 },
-    { url: `${url}/calculateur-1rm`, changeFrequency: "monthly", priority: 0.9 },
-    { url: `${url}/qui-suis-je`, changeFrequency: "monthly", priority: 0.6 },
-    { url: `${url}/blog`, lastModified: lastPost, changeFrequency: "weekly", priority: 0.8 },
-    ...TAGS.map((tag) => ({ url: `${url}/blog/categorie/${tag.slug}`, lastModified: lastPost, priority: 0.5 })),
-    ...posts.map((post) => ({
-      url: `${url}/blog/${post.slug}`,
-      lastModified: new Date(post.updated ?? post.date),
-      priority: 0.7,
-    })),
-    ...getAllEvents().map((event) => ({
-      url: `${url}/${event.slug}`,
-      lastModified: new Date(event.updated ?? "2026-09-26"),
-      changeFrequency: "monthly" as const,
-      priority: 0.8,
-    })),
-    ...getAllGuides().map((guide) => ({
-      url: `${url}${guidePath(guide)}`,
-      lastModified: new Date(guide.updated ?? "2026-09-27"),
-      changeFrequency: "monthly" as const,
-      priority: guide.parent ? 0.7 : 0.8,
-    })),
-    ...getAllPages().map((page) => ({ url: `${url}/${page.slug}`, priority: 0.2 })),
+    { url, lastModified: lastPost },
+    { url: `${url}/calculateur-1rm` },
+    { url: `${url}/qui-suis-je` },
+    { url: `${url}/blog`, lastModified: lastPost },
+    ...TAGS.map((tag) => ({ url: `${url}/blog/categorie/${tag.slug}`, lastModified: lastPost })),
+    ...posts.map((post) => ({ url: `${url}/blog/${post.slug}`, lastModified: new Date(post.updated ?? post.date) })),
+    ...getAllEvents().map((event) => ({ url: `${url}/${event.slug}`, lastModified: new Date(event.updated ?? "2026-09-26") })),
+    ...getAllGuides().map((guide) => ({ url: `${url}${guidePath(guide)}`, lastModified: new Date(guide.updated ?? "2026-09-27") })),
+    ...getAllPages().map((page) => ({ url: `${url}/${page.slug}` })),
   ];
 }

@@ -1,3 +1,4 @@
+import { ConsentSettingsButton } from "@/app/_components/consent-banner";
 import { getAllPages } from "@/lib/api";
 import { getAllEvents } from "@/lib/events";
 import { getHubs, guidePath } from "@/lib/guides";
@@ -62,6 +63,7 @@ export default function Footer() {
                   {page.title}
                 </Link>
               ))}
+              <ConsentSettingsButton />
             </div>
           </div>
         )}

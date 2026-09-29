@@ -5,6 +5,7 @@ import { getChildren, getHub, guidePath, type Guide } from "@/lib/guides";
 import { markdownToHtmlWithToc, splitAtMiddleHeading } from "@/lib/markdownToHtml";
 import { breadcrumbSchema, faqSchema, organizationId, personId, personSchema } from "@/lib/schema";
 import { formatPrice, getAbout, getSite } from "@/lib/site";
+import Image from "next/image";
 import Link from "next/link";
 
 export default async function GuideLanding({ guide }: { guide: Guide }) {
@@ -67,8 +68,9 @@ export default async function GuideLanding({ guide }: { guide: Guide }) {
 
       <section className={`hero${guide.heroImage ? " hero-photo" : ""}`}>
         {guide.heroImage && (
-          // eslint-disable-next-line @next/next/no-img-element
-          <img className="hero-bg" src={guide.heroImage} alt={guide.heroImageAlt ?? ""} fetchPriority="high" />
+          <div className="hero-bg">
+            <Image src={guide.heroImage} alt={guide.heroImageAlt ?? ""} fill priority sizes="(max-width: 860px) 100vw, 52vw" />
+          </div>
         )}
         <div className="wrap hero-grid">
           <div>
