@@ -6,6 +6,7 @@ import { getAllEvents, type AthxEvent } from "@/lib/events";
 import { markdownToHtmlWithToc, splitAtMiddleHeading } from "@/lib/markdownToHtml";
 import { breadcrumbSchema, faqSchema, organizationId, personId, personSchema } from "@/lib/schema";
 import { formatPrice, getAbout, getHome, getSite } from "@/lib/site";
+import Image from "next/image";
 import Link from "next/link";
 
 function formatDay(iso: string) {
@@ -55,8 +56,9 @@ export default async function EventLanding({ event }: { event: AthxEvent }) {
 
       <section className={`hero${event.heroImage ? " hero-photo" : ""}`}>
         {event.heroImage && (
-          // eslint-disable-next-line @next/next/no-img-element
-          <img className="hero-bg" src={event.heroImage} alt={event.heroImageAlt ?? ""} fetchPriority="high" />
+          <div className="hero-bg">
+            <Image src={event.heroImage} alt={event.heroImageAlt ?? ""} fill priority sizes="(max-width: 860px) 100vw, 52vw" />
+          </div>
         )}
         <div className="wrap hero-grid">
           <div>
@@ -114,8 +116,7 @@ export default async function EventLanding({ event }: { event: AthxEvent }) {
             <>
               <aside className={`event-cta${event.ctaImage ? " event-cta-photo" : ""}`}>
                 {event.ctaImage && (
-                  // eslint-disable-next-line @next/next/no-img-element
-                  <img src={event.ctaImage} alt={event.ctaImageAlt ?? ""} loading="lazy" />
+                  <Image src={event.ctaImage} alt={event.ctaImageAlt ?? ""} fill sizes="(max-width: 760px) 100vw, 720px" />
                 )}
                 <div className="event-cta-body">
                   <div className="kicker">Objectif ATHX {event.city}</div>

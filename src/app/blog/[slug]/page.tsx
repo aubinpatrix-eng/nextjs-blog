@@ -8,6 +8,7 @@ import { breadcrumbSchema, faqSchema, organizationId, personId, personSchema } f
 import { formatPrice, getAbout, getSite } from "@/lib/site";
 import { getTag } from "@/lib/tags";
 import { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 
@@ -124,8 +125,14 @@ export default async function Article({ params }: Params) {
               </span>
             </div>
             {post.coverImage && (
-              // eslint-disable-next-line @next/next/no-img-element
-              <img src={post.coverImage} alt={post.coverImageAlt ?? ""} className="article-cover" />
+              <Image
+                src={post.coverImage}
+                alt={post.coverImageAlt ?? ""}
+                width={1600}
+                height={900}
+                sizes="(max-width: 1120px) 100vw, 1064px"
+                className="article-cover"
+              />
             )}
           </div>
         </header>

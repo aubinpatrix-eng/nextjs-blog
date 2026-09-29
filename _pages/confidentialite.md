@@ -21,4 +21,4 @@ Vous pouvez demander l'accès, la rectification ou la suppression de vos donnée
 
 Ce site n'utilise pas de cookies publicitaires.
 
-Nous utilisons Google Analytics (Google Ireland Ltd.) pour mesurer l'audience du site : pages vues, durée de visite, provenance des visiteurs. Ces données sont statistiques et ne servent pas à la publicité. Vous pouvez vous y opposer en bloquant les cookies dans votre navigateur ou avec le [module de désactivation de Google Analytics](https://tools.google.com/dlpage/gaoptout).
+Nous utilisons Google Analytics (Google Ireland Ltd.) pour mesurer l'audience du site : pages vues, durée de visite, provenance des visiteurs. Ces données sont statistiques et ne servent pas à la publicité. Ces cookies ne sont déposés qu'avec votre accord, donné via le bandeau affiché lors de votre première visite. Tant que vous n'avez pas accepté, Google Analytics ne dépose aucun cookie. Vous pouvez changer d'avis à tout moment avec le lien « Gérer les cookies » en bas de chaque page.

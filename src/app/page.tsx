@@ -6,7 +6,11 @@ import { getAllPosts } from "@/lib/api";
 import { getAllEvents } from "@/lib/events";
 import { organizationId, faqSchema, personId, personSchema } from "@/lib/schema";
 import { formatPrice, getAbout, getHome, getSite } from "@/lib/site";
+import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
+
+export const metadata: Metadata = { alternates: { canonical: "/" } };
 
 export default function Index() {
   const site = getSite();
@@ -86,8 +90,9 @@ export default function Index() {
 
       <section className={`hero${home.hero.image ? " hero-photo" : ""}`} id="home">
         {home.hero.image && (
-          // eslint-disable-next-line @next/next/no-img-element
-          <img className="hero-bg" src={home.hero.image} alt={home.hero.imageAlt ?? ""} fetchPriority="high" />
+          <div className="hero-bg">
+            <Image src={home.hero.image} alt={home.hero.imageAlt ?? ""} fill priority sizes="(max-width: 860px) 100vw, 52vw" />
+          </div>
         )}
         <div className="wrap hero-grid">
           <div>
@@ -275,8 +280,7 @@ export default function Index() {
 
       <section className={`last${home.finalImage ? " final-band" : ""}`}>
         {home.finalImage && (
-          // eslint-disable-next-line @next/next/no-img-element
-          <img className="final-bg" src={home.finalImage} alt={home.finalImageAlt ?? ""} loading="lazy" />
+          <Image className="final-bg" src={home.finalImage} alt={home.finalImageAlt ?? ""} fill sizes="100vw" />
         )}
         <div className="wrap center">
           <h2 className="h-sec">{home.finalCta}</h2>
