@@ -25,7 +25,7 @@ const faq = [
   {
     question: "Quel est le score moyen à l'ATHX ?",
     answer:
-      "En 2026, en France (catégories ATHX et Pro), une femme au milieu du classement totalisait environ 220 kg en Strength zone et 3,9 km en Endurance zone. Chez les hommes, le milieu du classement se situait autour de 345 kg en Strength zone. Les tableaux de cette page donnent tous les paliers.",
+      "En 2026, en France (catégorie ATHX), une femme au milieu du classement totalisait environ 220 kg en Strength zone et 3,9 km en Endurance zone. Chez les hommes, le milieu du classement se situait autour de 345 kg en Strength zone. Les tableaux de cette page donnent tous les paliers.",
   },
   {
     question: "Comment est calculé le classement de l'ATHX ?",
@@ -40,7 +40,7 @@ const faq = [
   {
     question: "D'où viennent ces données ?",
     answer:
-      "Du classement public d'ATHX Games pour les étapes de Paris et de Marseille 2026, en individuel, catégories ATHX et Pro. Aucun nom d'athlète n'est repris : seuls les scores et les places servent au calcul.",
+      "Du classement public d'ATHX Games pour les étapes de Paris et de Marseille 2026, en individuel, catégorie ATHX. Aucun nom d'athlète n'est repris : seuls les scores et les places servent au calcul.",
   },
 ];
 
@@ -85,7 +85,7 @@ export default function ScoresPage() {
           {tables.map((table) => (
             <div className="stat" key={table.id}>
               <div className="num">{table.athletes}</div>
-              <p>{table.label.toLowerCase()} classés en individuel (ATHX et Pro)</p>
+              <p>{table.label.toLowerCase()} classés en individuel (catégorie ATHX)</p>
             </div>
           ))}
           <div className="stat">
@@ -106,7 +106,7 @@ export default function ScoresPage() {
               <h2 className="h-sec">Scores ATHX 2026 : {table.label.toLowerCase()}</h2>
               <p className="lede">
                 Ce qu&apos;il fallait réaliser dans chaque zone pour se classer à chaque palier, sur {table.athletes}{" "}
-                {table.label.toLowerCase()} en individuel, catégories ATHX et Pro, à Paris et à Marseille.
+                {table.label.toLowerCase()} en individuel, catégorie ATHX, à Paris et à Marseille.
               </p>
             </div>
             <div className="prose">
@@ -176,6 +176,12 @@ export default function ScoresPage() {
             force bien construit : estimez vos charges avec le <Link href="/calculateur-1rm">calculateur 1RM</Link> et
             lisez notre guide de <Link href="/workouts-athx-2027/strength-zone">la Strength zone</Link>.
           </p>
+          <p>
+            Pour situer : <Link href="/qui-suis-je">Aubin Patrix</Link>, l&apos;auteur de ce site, a totalisé{" "}
+            <strong>490 kg</strong> en 2026 (70 kg au développé strict, 200 kg au 3RM squat, 220 kg au 5RM soulevé de
+            terre) : 3<sup>e</sup> total des deux étapes françaises chez les hommes, et 1<sup>er</sup> de la Strength zone
+            à Paris.
+          </p>
           <h3>Le Metcon X sépare les niveaux</h3>
           <p>
             Les meilleurs bouclent le Metcon X en un peu plus de 9 minutes, quand la fin du classement dépasse les 20
@@ -206,7 +212,7 @@ export default function ScoresPage() {
           <h2>Méthode</h2>
           <p>
             Les données viennent du classement public d&apos;ATHX Games (athxgames.com) pour les étapes de Paris et de
-            Marseille 2026, en individuel, catégories ATHX et Pro réunies. Chaque résultat donne une place et un score
+            Marseille 2026, en individuel, catégorie ATHX (les catégories Lite et Pro ont leur propre classement). Chaque résultat donne une place et un score
             dans chaque zone : les paliers sont calculés à partir de ces couples place-score, par interpolation entre les
             places connues. Les charges sont arrondies à 5 kg, les distances à 10 m et les temps à 5 secondes. Aucun nom
             d&apos;athlète n&apos;est repris sur cette page.
