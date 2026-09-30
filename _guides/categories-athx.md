@@ -37,7 +37,7 @@ C'est dans le Metcon X que l'écart entre catégories est le plus net : de **30 
 
 ## Et dans la Strength zone ?
 
-Pas de charge imposée : **chacun choisit ses tentatives** et le score est le total soulevé. Vous êtes ensuite classé au sein de votre catégorie et de votre division. Voir [la Strength zone ATHX 2027](/workouts-athx-2027/strength-zone).
+Pas de charge imposée : **chacun choisit ses tentatives** et le score est le total soulevé. Vous êtes ensuite classé au sein de votre catégorie et de votre division. Voir [la Strength zone ATHX 2027](/workouts-athx-2027/strength-zone), et les [scores moyens ATHX](/scores-athx) pour savoir quel total viser.
 
 ## Quelle catégorie choisir ?
 

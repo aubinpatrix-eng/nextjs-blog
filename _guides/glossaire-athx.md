@@ -30,7 +30,7 @@ faq:
 - **Metcon X** : le dernier bloc noté, un circuit au rameur, aux haltères, au sac de sable et en burpees, en 25 minutes maximum. Voir [le Metcon X 2027](/workouts-athx-2027/metcon-x).
 - **Time cap** : la limite de temps d'une épreuve. Si vous ne finissez pas avant, votre score est ce que vous avez réalisé à ce moment-là.
 - **Vague** (*wave*) : le créneau horaire de départ attribué à chaque athlète ou binôme.
-- **Scoring** : la façon dont les zones notées sont évaluées : total des charges en Strength zone, distance en Endurance zone, temps au Metcon X. Voir [les workouts ATHX 2027](/workouts-athx-2027).
+- **Scoring** : la façon dont les zones notées sont évaluées : total des charges en Strength zone, distance en Endurance zone, temps au Metcon X. Chaque athlète reçoit une place dans chaque zone, et le classement général additionne ces trois places : le plus petit total gagne. Voir [les scores ATHX par niveau](/scores-athx).
 
 ## Les catégories
 
