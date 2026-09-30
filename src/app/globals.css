@@ -276,14 +276,30 @@ footer { padding: 48px 0; }
 .prose .table-wrap { overflow-x: auto; margin: 0 0 24px; border: 1px solid var(--line); background: var(--ink-2); }
 .prose table { border-collapse: collapse; width: 100%; margin: 0; font-size: 15px; line-height: 1.5; }
 .prose th, .prose td { padding: 12px 16px; text-align: left; vertical-align: top; border-bottom: 1px solid var(--line); }
-.prose th { font-size: 12.5px; font-weight: 600; color: var(--paper); text-transform: uppercase; letter-spacing: 0.04em; background: rgba(243,240,232,0.05); white-space: nowrap; }
+.prose th { font-size: 12.5px; font-weight: 600; color: var(--paper); text-transform: uppercase; letter-spacing: 0.04em; background: rgba(243,240,232,0.05); }
 .prose tbody tr:last-child td { border-bottom: none; }
 .prose tbody tr:nth-child(even) td { background: rgba(243,240,232,0.025); }
 .prose td:first-child { color: var(--paper); }
+/* Short values ("30 min", "10:45") stay on one line; long text still wraps. */
+.prose td.nowrap { white-space: nowrap; }
 .prose td { color: var(--paper-2); }
 /* Key/value tables written with an empty header row ("| | |"): hide the empty header. */
 .prose thead:not(:has(th:not(:empty))) { display: none; }
 .prose thead:not(:has(th:not(:empty))) + tbody td:first-child { width: 38%; color: var(--mute); }
+/* Mobile: tables with 3+ columns become stacked cards (one per row, each cell labelled by its header). */
+@media (max-width: 767px) {
+  .table-stack { overflow-x: visible; }
+  .table-stack table, .table-stack tbody, .table-stack tr, .table-stack td { display: block; width: 100%; }
+  .table-stack thead { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+  .table-stack tr { padding: 14px 16px; border-bottom: 1px solid var(--line); }
+  .table-stack tr:last-child { border-bottom: none; }
+  .table-stack td { display: grid; grid-template-columns: minmax(0, 42%) minmax(0, 1fr); gap: 12px; padding: 5px 0; border: none; white-space: normal; }
+  .table-stack td::before { content: attr(data-label); font-size: 11.5px; font-weight: 600; color: var(--mute); text-transform: uppercase; letter-spacing: 0.04em; padding-top: 2px; }
+  .table-stack td:first-child { display: block; padding: 0 0 8px; font-weight: 600; color: var(--paper); }
+  .table-stack td:first-child::before { content: none; }
+  .table-stack td:empty { display: none; }
+  .prose .table-stack td.nowrap { white-space: normal; }
+}
 .article-cta { margin-top: 56px; border: 1px solid var(--line); background: var(--ink-2); padding: 30px; max-width: 68ch; }
 .article-cta h2 { font-size: 28px; margin-bottom: 10px; }
 .article-cta p { color: var(--mute); margin: 0 0 20px; }
@@ -451,7 +467,6 @@ footer { padding: 48px 0; }
   .nav-dropdown-menu { position: static; box-shadow: none; border: none; border-top: 1px solid var(--line); min-width: 0; padding: 4px 0 8px; background: var(--ink-2); }
   .nav-links .nav-dropdown-menu a { padding: 10px 32px; }
 }
-@media (min-width: 700px) { .prose td:not(:last-child) { white-space: nowrap; } }
 @media (min-width: 900px) { .events-home { grid-template-columns: repeat(3, 1fr); } }
 .event-venue { font-size: 13px; color: var(--mute); }
 .guide-intro h2 { margin-top: 0; font-size: clamp(30px, 4.4vw, 48px); }

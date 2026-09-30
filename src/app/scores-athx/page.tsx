@@ -110,7 +110,7 @@ export default function ScoresPage() {
               </p>
             </div>
             <div className="prose">
-              <div className="table-wrap">
+              <div className="table-wrap table-stack">
                 <table>
                   <thead>
                     <tr>
@@ -125,22 +125,26 @@ export default function ScoresPage() {
                   <tbody>
                     {table.levels.map((level) => (
                       <tr key={level.id}>
-                        <td>
+                        <td data-label="Palier">
                           <strong>{level.label}</strong> (≈ {level.rank}
                           <sup>e</sup> place)
                         </td>
                         {ZONES.map((z) => (
-                          <td key={z.zone}>{formatScore(z.zone, level.values[z.zone])}</td>
+                          <td key={z.zone} data-label={z.label}>
+                            {formatScore(z.zone, level.values[z.zone])}
+                          </td>
                         ))}
                       </tr>
                     ))}
                     {Object.values(table.best).some((value) => value !== null) && (
                       <tr>
-                        <td>
+                        <td data-label="Palier">
                           <strong>Meilleure performance</strong>
                         </td>
                         {ZONES.map((z) => (
-                          <td key={z.zone}>{formatScore(z.zone, table.best[z.zone], true)}</td>
+                          <td key={z.zone} data-label={z.label}>
+                            {formatScore(z.zone, table.best[z.zone], true)}
+                          </td>
                         ))}
                       </tr>
                     )}
