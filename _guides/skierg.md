@@ -21,6 +21,8 @@ faq:
 
 Dans l'[Endurance zone 2027](/workouts-athx-2027/endurance-zone), on court une distance fixe puis on accumule **le maximum de mètres au SkiErg** jusqu'à la limite de 24 minutes. Chaque mètre compte pour le score.
 
+Combien de mètres pouvez-vous espérer ? Entrez votre allure de course et votre allure au 500 m dans le [calculateur de mètres SkiErg](/calculateur-endurance-zone-athx).
+
 ## La technique pas à pas
 
 1. **Position de départ** : debout, bras tendus en haut, poignées légèrement devant la tête.

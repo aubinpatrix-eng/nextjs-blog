@@ -14,6 +14,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   return [
     { url, lastModified: lastPost },
     { url: `${url}/calculateur-1rm` },
+    { url: `${url}/calculateur-endurance-zone-athx` },
     { url: `${url}/qui-suis-je` },
     { url: `${url}/blog`, lastModified: lastPost },
     ...TAGS.map((tag) => ({ url: `${url}/blog/categorie/${tag.slug}`, lastModified: lastPost })),

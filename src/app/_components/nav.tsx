@@ -87,9 +87,6 @@ export default function Nav({ priceLabel, menus }: Props) {
                 onNavigate={close}
               />
             ))}
-          <Link href="/calculateur-1rm" onClick={close} className={pathname === "/calculateur-1rm" ? "active" : undefined}>
-            Calculateur 1RM
-          </Link>
           <Link href="/blog" onClick={close} className={pathname.startsWith("/blog") ? "active" : undefined}>
             Blog
           </Link>

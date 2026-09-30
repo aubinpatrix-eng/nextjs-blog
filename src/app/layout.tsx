@@ -73,6 +73,15 @@ gtag('js',new Date());gtag('config','${GA_ID}');`}
                 hint: event.dates,
               })),
             },
+            {
+              id: "calculateurs",
+              label: "Calculateurs",
+              title: "Outils gratuits",
+              items: [
+                { href: "/calculateur-1rm", label: "Calculateur 1RM", hint: "Strength zone : 1RM, 2RM, 3RM" },
+                { href: "/calculateur-endurance-zone-athx", label: "Calculateur Endurance zone", hint: "Mètres de SkiErg après 3 km" },
+              ],
+            },
           ]}
         />
         {children}

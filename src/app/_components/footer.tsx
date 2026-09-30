@@ -19,6 +19,7 @@ export default function Footer() {
             <Link href="/">Accueil</Link>
             <Link href="/#programme">Programme</Link>
             <Link href="/calculateur-1rm">Calculateur 1RM</Link>
+            <Link href="/calculateur-endurance-zone-athx">Calculateur Endurance zone</Link>
             <Link href="/blog">Blog</Link>
             <Link href="/qui-suis-je">Qui suis-je</Link>
             {site.instagram && (
