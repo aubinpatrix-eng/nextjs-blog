@@ -96,7 +96,7 @@ export default function EnduranceCalculatorPage() {
             </p>
           </div>
           <div className="prose">
-            <div className="table-wrap">
+            <div className="table-wrap table-stack">
               <table>
                 <thead>
                   <tr>
@@ -109,11 +109,11 @@ export default function EnduranceCalculatorPage() {
                 <tbody>
                   {RUN_PACES.map((run) => (
                     <tr key={run}>
-                      <td>
+                      <td data-label="Course (3 km)">
                         <strong>{formatTime(run)}/km</strong> ({formatTime(run * 3)})
                       </td>
                       {SKI_PACES.map((ski) => (
-                        <td key={ski}>
+                        <td key={ski} data-label={`SkiErg ${formatTime(ski)}/500 m`}>
                           {formatMetres(endurancePlan({ runKm: 3, runPace: run, transition: TRANSITION, skiPace: ski }).skiMetres)}
                         </td>
                       ))}

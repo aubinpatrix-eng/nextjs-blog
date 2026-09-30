@@ -12,8 +12,29 @@ export default async function markdownToHtml(markdown: string) {
   // Pages CMS rich-text fields can contain raw HTML (tables, embeds): keep it.
   // remark-gfm adds tables, strikethrough and autolinks (GitHub-flavoured Markdown).
   const result = await remark().use(remarkGfm).use(html, { sanitize: false }).process(markdown);
-  // Wrap tables so wide ones scroll horizontally on mobile instead of breaking the layout.
-  return result.toString().replace(/<table>[\s\S]*?<\/table>/g, (table) => `<div class="table-wrap">${table}</div>`);
+  return result.toString().replace(/<table>[\s\S]*?<\/table>/g, wrapTable);
+}
+
+// Wraps a table so it can scroll if needed. Tables with 3+ named columns also get their header as a
+// data-label on every cell: on mobile they are shown as stacked cards instead of a wide grid (see globals.css).
+function wrapTable(html: string) {
+  // Short values ("30 min", "10:45") get a class that keeps them on one line.
+  const table = html.replace(/<td([^>]*)>([\s\S]*?)<\/td>/g, (cell, attributes: string, inner: string) =>
+    stripTags(inner).length <= 10 ? `<td${attributes} class="nowrap">${inner}</td>` : cell,
+  );
+  const headers = Array.from(table.match(/<thead>[\s\S]*?<\/thead>/)?.[0].matchAll(/<th[^>]*>([\s\S]*?)<\/th>/g) ?? [], (match) =>
+    stripTags(match[1]),
+  );
+  if (headers.length < 3 || headers.every((header) => !header)) return `<div class="table-wrap">${table}</div>`;
+  const labelled = table.replace(/<tr>([\s\S]*?)<\/tr>/g, (row, cells: string) => {
+    let column = 0;
+    const withLabels = cells.replace(/<td([^>]*)>/g, (_, attributes: string) => {
+      const label = (headers[column++] ?? "").replace(/"/g, "&quot;");
+      return `<td${attributes} data-label="${label}">`;
+    });
+    return `<tr>${withLabels}</tr>`;
+  });
+  return `<div class="table-wrap table-stack">${labelled}</div>`;
 }
 
 function slugify(text: string) {
