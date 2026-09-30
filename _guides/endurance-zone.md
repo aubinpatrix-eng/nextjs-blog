@@ -46,6 +46,8 @@ Repérez votre SkiErg avant le départ, réglez la résistance à l'avance si c'
 
 Choisissez une allure au 500 m que vous pouvez tenir, puis accélérez sur les dernières minutes. La technique compte : ce sont les hanches et le gainage qui produisent la puissance, pas seulement les bras. Voir [la technique du SkiErg](/mouvements-athx/skierg).
 
+Pour savoir combien de mètres vous ferez selon vos allures, utilisez notre [calculateur d'allure Endurance zone](/calculateur-endurance-zone-athx) : il montre aussi ce que vous gagnez en courant 10 ou 20 secondes plus vite au kilomètre.
+
 ## Comment s'y entraîner
 
 - **Deux séances de course par semaine** : une sortie d'endurance fondamentale et une séance au seuil (par exemple 3 × 1 km à allure course de compétition).
