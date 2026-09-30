@@ -165,8 +165,9 @@ export default function ScoresPage() {
           <p>
             Le classement additionne vos places dans les trois zones notées : le plus petit total gagne. Résultat, les
             spécialistes ne gagnent pas. Chez les femmes, la meilleure charge de la Strength zone (326 kg) finit{" "}
-            <strong>33<sup>e</sup></strong> au général, car elle est 76<sup>e</sup> en endurance. Chez les hommes, le
-            meilleur en endurance termine <strong>13<sup>e</sup></strong>. Les vainqueurs, eux, sont dans le top 15 des
+            <strong>33<sup>e</sup></strong> au général, car elle est 76<sup>e</sup> en endurance. Chez les hommes, c&apos;est encore
+            plus net : le meilleur total en force (520 kg) termine <strong>157<sup>e</sup></strong>, et le meilleur en
+            endurance <strong>13<sup>e</sup></strong>. Les vainqueurs, eux, sont dans le top 15 des
             trois zones.
           </p>
           <h3>La force fait la différence… à condition de tenir le reste</h3>
