@@ -147,9 +147,14 @@ export default async function Article({ params }: Params) {
             <aside className="article-cta">
               <h2>Préparez l&apos;ATHX avec un plan calculé sur vos PR</h2>
               <p>12 semaines de force, d&apos;endurance et de simulation Metcon X. Paiement unique de {formatPrice(site.price)}.</p>
-              <Link href="/#cta" className="btn btn-signal">
-                Obtenir mon programme
-              </Link>
+              <div className="hero-ctas">
+                <Link href="/#cta" className="btn btn-signal">
+                  Obtenir mon programme
+                </Link>
+                <Link href="/semaine-athx-gratuite" className="btn btn-ghost">
+                  Tester 1 semaine gratuite
+                </Link>
+              </div>
             </aside>
             {isSiteAuthor && <AuthorBox about={about} />}
           </div>

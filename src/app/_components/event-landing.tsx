@@ -128,6 +128,9 @@ export default async function EventLanding({ event }: { event: AthxEvent }) {
                   <a href="#cta" className="btn btn-signal">
                     Accéder à mon programme — {priceLabel}
                   </a>
+                  <p className="free-link">
+                    Pas encore décidé ? <Link href="/semaine-athx-gratuite">Testez une semaine gratuite en PDF</Link>
+                  </p>
                 </div>
               </aside>
               <div className="prose" dangerouslySetInnerHTML={{ __html: secondHalf }} />

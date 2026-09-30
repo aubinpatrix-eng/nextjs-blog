@@ -143,6 +143,9 @@ export default async function GuideLanding({ guide }: { guide: Guide }) {
                     <Link href="/#cta" className="btn btn-signal">
                       Accéder à mon programme — {priceLabel}
                     </Link>
+                    <p className="free-link">
+                      Pas encore décidé ? <Link href="/semaine-athx-gratuite">Testez une semaine gratuite en PDF</Link>
+                    </p>
                   </div>
                 </aside>
               )}

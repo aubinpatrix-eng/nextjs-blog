@@ -108,9 +108,9 @@ export default function Index() {
               <a href="#cta" className="btn btn-signal">
                 Obtenir mon programme
               </a>
-              <a href="#format" className="btn btn-ghost">
-                Voir le format ATHX
-              </a>
+              <Link href="/semaine-athx-gratuite" className="btn btn-ghost">
+                Tester 1 semaine gratuite
+              </Link>
             </div>
           </div>
           <div className="hero-card price-badge">
@@ -128,6 +128,33 @@ export default function Index() {
               <p>{stat.label}</p>
             </div>
           ))}
+        </div>
+      </section>
+
+      <section className="free-band" aria-labelledby="semaine-gratuite">
+        <div className="wrap free-band-grid">
+          <div>
+            <div className="kicker">Gratuit · PDF imprimable</div>
+            <h2 className="h-sec" id="semaine-gratuite">
+              Testez une semaine
+              <br />
+              du programme
+            </h2>
+            <p className="lede">
+              5 séances extraites de la semaine 1 : 4 séances de force avec finishers au SkiErg et au rameur, et un
+              Metcon ATHX. Charges en % de vos PR, à faire dès cette semaine.
+            </p>
+          </div>
+          <div className="free-band-cta">
+            <ul>
+              <li>Le PDF de 8 pages, prêt à imprimer</li>
+              <li>Séries, repos et consignes pour chaque séance</li>
+              <li>Sans engagement, désinscription en un clic</li>
+            </ul>
+            <Link href="/semaine-athx-gratuite" className="btn btn-signal">
+              Recevoir la semaine gratuite
+            </Link>
+          </div>
         </div>
       </section>
 
