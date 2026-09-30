@@ -43,6 +43,8 @@ function zonePoints(rows: Record<string, string>[], zone: Zone): Point[] {
   const column = { strength: "strength_kg", endurance: "endurance_km", metcon: "metcon_time" }[zone];
   const seen = new Map<number, number>();
   for (const row of rows) {
+    // Partial rows (e.g. a strength-only leaderboard) leave the other zones empty.
+    if (!row[`${zone}_rank`] || !row[column]) continue;
     const value = zone === "metcon" ? toSeconds(row[column]) : parseFloat(row[column]);
     seen.set(parseInt(row[`${zone}_rank`], 10), value);
   }
@@ -61,11 +63,10 @@ function valueAtRank(points: Point[], rank: number, maxGap: number) {
 
 export function getScoreTable(set: ScoreSet) {
   const rows = readRows(set.file);
-  const maxGap = Math.round(set.athletes * 0.15);
+  const maxGap = Math.round(set.athletes * 0.16);
   const zones = (["strength", "endurance", "metcon"] as Zone[]).map((zone) => ({ zone, points: zonePoints(rows, zone) }));
   return {
     ...set,
-    sample: rows.length,
     // Best score of each zone, only when rank 1 is in the data.
     best: Object.fromEntries(
       zones.map(({ zone, points }) => [zone, points[0]?.rank === 1 ? points[0].value : null]),
