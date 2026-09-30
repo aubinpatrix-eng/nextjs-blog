@@ -87,6 +87,13 @@ export default function Nav({ priceLabel, menus }: Props) {
                 onNavigate={close}
               />
             ))}
+          <Link
+            href="/semaine-athx-gratuite"
+            onClick={close}
+            className={`nav-free${pathname === "/semaine-athx-gratuite" ? " active" : ""}`}
+          >
+            Semaine gratuite <span className="nav-badge">PDF</span>
+          </Link>
           <Link href="/blog" onClick={close} className={pathname.startsWith("/blog") ? "active" : undefined}>
             Blog
           </Link>

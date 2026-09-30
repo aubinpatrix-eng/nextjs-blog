@@ -18,6 +18,7 @@ export default function Footer() {
           <div>
             <Link href="/">Accueil</Link>
             <Link href="/#programme">Programme</Link>
+            <Link href="/semaine-athx-gratuite">Semaine gratuite</Link>
             <Link href="/calculateur-1rm">Calculateur 1RM</Link>
             <Link href="/calculateur-endurance-zone-athx">Calculateur Endurance zone</Link>
             <Link href="/scores-athx">Scores ATHX</Link>
