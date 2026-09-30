@@ -45,6 +45,8 @@ En 2026, on testait un 1RM développé strict, un 3RM squat et un 5RM soulevé d
 
 L'enchaînement course et rameur disparaît. En 2027, on court une **distance fixe (3 km en ATHX et Pro)**, puis on accumule **le maximum de mètres au SkiErg** dans le temps restant, avec une limite de 24 minutes. La gestion d'allure et la transition deviennent décisives.
 
+Pour situer votre niveau par rapport aux participants de la saison 2026, consultez les [scores ATHX 2026 par palier](/scores-athx).
+
 ## Zone par zone
 
 ### Warm-up, Refuel et Recovery : les zones non notées

@@ -33,6 +33,8 @@ Les 20 minutes sont découpées en **fenêtres chronométrées**, une par mouvem
 
 **Le score de la zone est le total des charges** des trois mouvements. Chaque kilo compte, sur chacun des trois exercices.
 
+Quel total viser ? En 2026, en France, il fallait environ 280 kg chez les femmes et 430 kg chez les hommes pour entrer dans le top 10 % de la Strength zone (format 2026). Tous les paliers sont sur notre page [scores ATHX](/scores-athx).
+
 > Les durées exactes de chaque fenêtre et le nombre de tentatives sont précisés dans les workouts officiels de la saison.
 
 ## Choisir ses tentatives
