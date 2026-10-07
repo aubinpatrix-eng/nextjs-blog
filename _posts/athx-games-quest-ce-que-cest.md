@@ -70,7 +70,7 @@ Pour choisir la vôtre : [Lite, ATHX ou Pro : quelle catégorie choisir](/blog/c
 
 ## Solo ou binôme ?
 
-On peut participer **seul** ou **à deux** (deux hommes, deux femmes ou en mixte). Le binôme est une bonne option pour une première participation : on partage l'expérience, et la motivation est plus facile à trouver pendant la préparation.
+On peut participer **seul** ou **à deux** (deux hommes, deux femmes ou en mixte). Le binôme est une bonne option pour une première participation : on partage l'expérience, et la motivation est plus facile à trouver pendant la préparation. Format, répartition et entraînement à deux : tout est dans notre guide [préparer l'ATHX en binôme](/blog/preparer-athx-en-binome).
 
 ## Combien ça coûte ?
 
