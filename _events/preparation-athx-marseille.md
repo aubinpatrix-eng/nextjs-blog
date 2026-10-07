@@ -78,5 +78,5 @@ Juillet et août à Marseille, c'est souvent plus de 30 °C. Entraînez-vous **t
 
 - **La rentrée** tombe la semaine de la compétition : anticipez l'organisation (travail, enfants) pour que la décharge soit vraiment reposante.
 - **Strength zone** : ouvrez prudemment, puis montez. Mes repères de tentatives sont dans [la Strength zone ATHX 2027 expliquée](/workouts-athx-2027/strength-zone).
-- **En binôme ?** Marseille est une étape conviviale : préparez les séances d'endurance et de Metcon X à deux, c'est plus facile de tenir tout l'été.
+- **En binôme ?** Marseille est une étape conviviale : préparez les séances d'endurance et de Metcon X à deux, c'est plus facile de tenir tout l'été. Voir [préparer l'ATHX en binôme](/blog/preparer-athx-en-binome).
 - **Metcon X** : entraînez-vous à enchaîner fatigué. Voir [le Metcon X expliqué](/blog/metcon-x-explique).

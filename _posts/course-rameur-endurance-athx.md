@@ -38,6 +38,6 @@ Beaucoup d'athlètes s'entraînent avec des intervalles courts et intenses. C'es
 
 ## En pratique
 
-Avec 3 séances d'endurance par semaine en plus de votre force, vous construisez en 12 semaines un moteur nettement plus solide. Pour le dernier bloc de la compétition, lisez aussi [le Metcon X expliqué](/blog/metcon-x-explique). Pour voir comment le cardio s'articule avec la force sur une semaine, téléchargez le [programme ATHX gratuit](/semaine-athx-gratuite) : il inclut du SkiErg et du rameur.
+Avec 3 séances d'endurance par semaine en plus de votre force, vous construisez en 12 semaines un moteur nettement plus solide, sans perdre vos charges si vous suivez quelques règles : voir [combiner musculation et course sans perdre de force](/blog/combiner-musculation-et-course). Pour le dernier bloc de la compétition, lisez aussi [le Metcon X expliqué](/blog/metcon-x-explique). Pour voir comment le cardio s'articule avec la force sur une semaine, téléchargez le [programme ATHX gratuit](/semaine-athx-gratuite) : il inclut du SkiErg et du rameur.
 
 Vous préparez l'étape de septembre ? Notre [prépa ATHX Marseille](/preparation-athx-marseille) explique comment tenir vos séances d'endurance malgré la chaleur de l'été.
