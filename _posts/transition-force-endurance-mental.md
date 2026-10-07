@@ -29,7 +29,7 @@ Après un travail lourd, votre fréquence cardiaque est élevée, vos jambes son
 
 ## S'entraîner aux transitions
 
-Le mental se prépare aussi à l'entraînement. Une fois par semaine ou toutes les deux semaines, enchaînez une séance de force et un bloc de course ou de rameur **sans pause**. Vous apprendrez à connaître ces sensations, et elles vous feront beaucoup moins peur le jour J.
+Le mental se prépare aussi à l'entraînement. Une fois par semaine ou toutes les deux semaines, enchaînez une séance de force et un bloc de course ou de rameur **sans pause**. Vous apprendrez à connaître ces sensations, et elles vous feront beaucoup moins peur le jour J. C'est la leçon que j'ai tirée de mon premier ATHX : lire [mon retour d'expérience à Paris](/blog/retour-experience-athx-paris-2026).
 
 Pour un premier exemple de ce type d'enchaînement, suivez le [programme ATHX gratuit](/semaine-athx-gratuite) : sa séance Metcon vous met en situation dès la première semaine.
 
