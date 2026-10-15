@@ -87,4 +87,4 @@ Soit 5 à 6 séances. Si vous n'en avez que 4, fusionnez la séance mixte avec u
 
 Le plus simple : faites dès maintenant la **semaine 1 du programme**. [Testez le programme gratuit ATHX](/semaine-athx-gratuite) : 5 séances en pourcentage de vos PR, avec force, SkiErg, rameur et un Metcon. Le [programme ATHX PREP complet](/#cta) prend ensuite le relais, avec des charges calculées sur vos PR.
 
-Pour savoir quels scores viser selon votre niveau, consultez les [scores ATHX 2026](/scores-athx), et pour vos allures en Endurance zone, le [calculateur Endurance zone](/calculateur-endurance-zone-athx).
+Pour savoir quels scores viser selon votre niveau, consultez les [résultats ATHX Paris et Marseille 2026](/scores-athx), et pour vos allures en Endurance zone, le [calculateur Endurance zone](/calculateur-endurance-zone-athx).

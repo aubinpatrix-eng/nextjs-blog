@@ -7,10 +7,10 @@ import Link from "next/link";
 
 const path = "/scores-athx";
 const description =
-  "Scores ATHX 2026 en France (Paris et Marseille) : charges, distances et temps à viser pour finir dans le top 10 %, le top 25 % ou la première moitié, chez les femmes et les hommes.";
+  "Résultats ATHX 2026 à Paris et Marseille : charges, distances et temps du top 10 %, du top 25 % et du milieu du classement, chez les femmes et les hommes.";
 
 export const metadata: Metadata = {
-  title: "Scores ATHX 2026 : les repères par niveau",
+  title: "Résultats ATHX 2026 : scores et classement",
   description,
   alternates: { canonical: path },
 };
@@ -38,6 +38,11 @@ const faq = [
       "Pas directement : en 2027, la Strength zone passe à 1RM shoulder-to-overhead, 2RM squat et 3RM soulevé de terre, et l'Endurance zone devient 3 km de course puis le maximum de SkiErg en 24 minutes. Les paliers 2026 donnent un ordre de grandeur du niveau des participants.",
   },
   {
+    question: "Où voir le classement complet de l'ATHX Paris ou Marseille 2026 ?",
+    answer:
+      "Sur le site officiel d'ATHX Games, dans la rubrique Leaderboard : choisissez l'année 2026, le pays France, puis l'étape (Paris ou Marseille), la division et la catégorie. Cette page en résume les scores par niveau.",
+  },
+  {
     question: "D'où viennent ces données ?",
     answer:
       "Du classement public d'ATHX Games pour les étapes de Paris et de Marseille 2026, en individuel, catégorie ATHX. Aucun nom d'athlète n'est repris : seuls les scores et les places servent au calcul.",
@@ -56,7 +61,7 @@ export default function ScoresPage() {
           "@graph": [
             {
               "@type": "Dataset",
-              name: "Scores ATHX 2026 en France par niveau",
+              name: "Résultats ATHX 2026 en France (Paris et Marseille) par niveau",
               description,
               url: `${site.url}${path}`,
               inLanguage: "fr-FR",
@@ -75,7 +80,7 @@ export default function ScoresPage() {
       <section className="page-hero" style={{ borderBottom: "none" }}>
         <div className="wrap">
           <div className="kicker">Données · Saison 2026 · France</div>
-          <h1 className="h-page">Scores ATHX : les repères pour situer votre niveau</h1>
+          <h1 className="h-page">Résultats ATHX 2026 : les scores par niveau</h1>
           <p className="lede">{description}</p>
         </div>
       </section>
@@ -212,6 +217,22 @@ export default function ScoresPage() {
             Ces paliers restent le meilleur repère disponible sur le niveau des participants en France. Tous les détails
             du format 2027 sont dans notre guide des <Link href="/workouts-athx-2027">workouts ATHX 2027</Link>, et les
             charges par catégorie dans <Link href="/categories-athx">les catégories ATHX</Link>.
+          </p>
+
+          <h2>Le classement complet de Paris et Marseille 2026</h2>
+          <p>
+            L&apos;ATHX Paris 2026 s&apos;est tenu le 25 avril au Paris Event Center, et l&apos;ATHX Marseille 2026 en
+            septembre au Parc Chanot. Le classement officiel de chaque étape, athlète par athlète, est publié sur le{" "}
+            <a href="https://athxgames.com/individual-leaderboards" rel="noopener" target="_blank">
+              leaderboard d&apos;ATHX Games
+            </a>{" "}
+            : choisissez l&apos;année 2026, le pays France, puis l&apos;étape, la division et la catégorie. Les tableaux
+            ci-dessus résument ce classement par niveau, pour savoir quel score viser.
+          </p>
+          <p>
+            Prochaine étape : l&apos;ATHX Paris les 13 et 14 février 2027. Voir notre{" "}
+            <Link href="/preparation-athx-paris">guide de préparation ATHX Paris 2027</Link> et{" "}
+            <Link href="/blog/athx-france-dates-2027">toutes les dates ATHX 2027 en France</Link>.
           </p>
 
           <h2>Méthode</h2>
