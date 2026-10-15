@@ -89,4 +89,4 @@ Le [programme ATHX PREP](/#cta) fonctionne en binôme : chacun reçoit des charg
 - **S'attendre pendant la course**, alors que le premier arrivé lance le SkiErg.
 - **S'entraîner séparément jusqu'au bout** sans jamais tester les relais.
 
-Pour comparer avec le format individuel et tous les repères chiffrés, consultez les [scores ATHX 2026](/scores-athx). Et pour les dates, voir [les étapes ATHX 2027 en France](/blog/athx-france-dates-2027).
+Pour comparer avec le format individuel et tous les repères chiffrés, consultez les [résultats ATHX 2026 par niveau](/scores-athx). Et pour les dates, voir [les étapes ATHX 2027 en France](/blog/athx-france-dates-2027).

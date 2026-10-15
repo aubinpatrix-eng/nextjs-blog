@@ -1,6 +1,6 @@
 ---
 title: "Préparation ATHX Marseille 2027 : épreuves, dates et plan sur 12 semaines"
-seoTitle: "Préparation ATHX Marseille 2027 : plan 12 sem."
+seoTitle: "ATHX Marseille 2027 : dates, lieu et préparation"
 heading: Préparation ATHX Marseille 2027
 menuLabel: Préparation ATHX Marseille
 city: Marseille

@@ -1,6 +1,6 @@
 ---
 title: "Préparation ATHX Paris 2027 : épreuves, dates et plan sur 12 semaines"
-seoTitle: "Préparation ATHX Paris 2027 : plan 12 semaines"
+seoTitle: "ATHX Paris 2027 : dates, lieu et préparation"
 heading: Préparation ATHX Paris 2027
 menuLabel: Préparation ATHX Paris
 city: Paris

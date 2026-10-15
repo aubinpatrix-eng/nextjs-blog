@@ -1,6 +1,6 @@
 ---
 title: "ATHX en France : les dates 2027 (Paris, Montpellier, Marseille)"
-seoTitle: "ATHX en France : dates 2027 et villes"
+seoTitle: "ATHX 2027 en France : dates, villes et prix"
 slug: athx-france-dates-2027
 excerpt: "Paris en février, Montpellier en mai, Marseille en septembre : le calendrier des compétitions ATHX en France pour la saison 2027, et quand commencer sa préparation."
 tag: Format
@@ -12,6 +12,8 @@ faq:
   answer: Les 13 et 14 février 2027 au Paris Event Center. Vérifiez toujours les dates et horaires sur le site officiel avant de réserver.
 - question: Quand commencer sa préparation pour l'ATHX ?
   answer: 'Comptez 12 semaines avant la compétition : mi-novembre 2026 pour Paris, début mars 2027 pour Montpellier et mi-juin 2027 pour Marseille.'
+- question: Combien coûte l'inscription à l'ATHX ?
+  answer: "À titre indicatif, l'inscription à Paris tournait autour de 110 € en solo et 220 € en binôme. Le prix varie selon l'étape, la catégorie et la date d'inscription : vérifiez-le sur le site officiel."
 - question: Combien y a-t-il d'étapes ATHX en France en 2027 ?
   answer: 'Trois : Paris en février, Montpellier en mai et Marseille en septembre, chacune avec les catégories Lite, ATHX et Pro en solo ou en binôme.'
 ---
@@ -40,6 +42,12 @@ Comptez **12 semaines** avant la compétition pour une préparation complète :
 - **Semaine 12** : décharge pour arriver frais.
 
 Avant de démarrer, faites le point sur vos charges avec notre [calculateur 1RM gratuit](/calculateur-1rm).
+
+## Combien coûte l'ATHX ?
+
+À titre indicatif, l'inscription à l'ATHX Paris tournait autour de **110 € en solo** et **220 € en binôme**. Le tarif varie selon l'étape, la catégorie et la date à laquelle vous vous inscrivez : les premières places partent souvent à un prix plus bas. Le site officiel d'ATHX Games fait foi.
+
+Ajoutez à votre budget le déplacement, l'hébergement si vous venez de loin, et votre préparation. Pour vous entraîner sans dépenser, commencez par notre [semaine d'entraînement gratuite](/semaine-athx-gratuite). En binôme, lisez aussi [préparer l'ATHX à deux](/blog/preparer-athx-en-binome).
 
 ## Préparer le déplacement
 

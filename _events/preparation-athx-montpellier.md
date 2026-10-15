@@ -1,6 +1,6 @@
 ---
 title: "Préparation ATHX Montpellier 2027 : épreuves, dates et plan sur 12 semaines"
-seoTitle: "Préparation ATHX Montpellier 2027"
+seoTitle: "ATHX Montpellier 2027 : dates et préparation"
 heading: Préparation ATHX Montpellier 2027
 menuLabel: Préparation ATHX Montpellier
 city: Montpellier
