@@ -59,7 +59,7 @@ Aujourd'hui, j'arriverais avec **un plan d'échauffement écrit qui ne dépend d
 - des **développés et des push press légers** avec une barre prise au sol, pour réveiller les épaules ;
 - quelques répétitions explosives (sauts, lancers de médecine-ball) pour activer le système nerveux.
 
-Et je repérerais la zone d'échauffement dès mon arrivée, pour savoir tout de suite si mon plan A est possible.
+Et je repérerais la zone d'échauffement dès mon arrivée, pour savoir tout de suite si mon plan A est possible. Le protocole complet, minute par minute, est dans [l'échauffement avant un 1RM](/blog/echauffement-avant-1rm).
 
 ### 2. Réduire la montée en charge au strict minimum
 

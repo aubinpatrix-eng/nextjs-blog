@@ -41,6 +41,6 @@ Vous venez de loin pour l'[ATHX Paris](/preparation-athx-paris) ? Arrivez la vei
 
 ## La règle d'or
 
-**Rien de nouveau le jour J.** Testez votre petit-déjeuner de compétition avant l'une de vos grosses séances d'entraînement. Et pour le ravitaillement pendant l'épreuve, lisez [que manger pendant la Refuel Zone](/blog/que-manger-refuel-zone).
+**Rien de nouveau le jour J.** Testez votre petit-déjeuner de compétition avant l'une de vos grosses séances d'entraînement. Et pour le ravitaillement pendant l'épreuve, lisez [que manger pendant la Refuel Zone](/blog/que-manger-refuel-zone). Tout le déroulé des derniers jours est dans [la semaine avant l'ATHX](/blog/semaine-avant-athx), et la suite dans [récupérer après l'ATHX](/blog/recuperer-apres-athx).
 
 Pour tester votre petit-déjeuner sur une vraie séance, prenez la séance Metcon du [programme ATHX gratuit](/semaine-athx-gratuite).
