@@ -1,7 +1,8 @@
 import fs from "fs";
 import { join } from "path";
+import { LANG_TAG, LOCALE, SITE_URLS } from "./i18n";
 
-// Both files are edited from Pages CMS ("Réglages du site" / "Page d'accueil").
+// Edited from Pages CMS ("Réglages du site", "Page d'accueil", "Qui suis-je", and their English versions).
 
 export type Site = {
   name: string;
@@ -66,13 +67,24 @@ export type About = {
   photos: { image: string; caption: string }[];
 };
 
+// French data lives in _data/*.json; the English site reads _data/en/*.json when it exists.
+// _data/en/site.json only overrides the texts (and optionally the Stripe link): price and settings stay shared.
+function readJson<T>(path: string): T | null {
+  const fullPath = join(process.cwd(), "_data", path);
+  return fs.existsSync(fullPath) ? (JSON.parse(fs.readFileSync(fullPath, "utf8")) as T) : null;
+}
+
 function readData<T>(file: string): T {
-  return JSON.parse(fs.readFileSync(join(process.cwd(), "_data", file), "utf8"));
+  const translated = LOCALE === "fr" ? null : readJson<T>(`${LOCALE}/${file}`);
+  return translated ?? (readJson<T>(file) as T);
 }
 
 export function getSite(): Site {
-  const site = readData<Site>("site.json");
-  return { ...site, url: site.url.replace(/\/$/, "") };
+  const site = readJson<Site>("site.json") as Site;
+  const overrides = LOCALE === "fr" ? null : readJson<Partial<Site>>(`${LOCALE}/site.json`);
+  // A field left empty in Pages CMS keeps the French value (e.g. the Stripe link).
+  const filled = Object.fromEntries(Object.entries(overrides ?? {}).filter(([, value]) => value !== "" && value != null));
+  return { ...site, ...filled, url: SITE_URLS[LOCALE] };
 }
 
 export function getHome(): Home {
@@ -84,5 +96,5 @@ export function getAbout(): About {
 }
 
 export function formatPrice(price: number) {
-  return new Intl.NumberFormat("fr-FR", { style: "currency", currency: "EUR" }).format(price);
+  return new Intl.NumberFormat(LANG_TAG[LOCALE], { style: "currency", currency: "EUR" }).format(price);
 }

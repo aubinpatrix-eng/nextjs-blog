@@ -1,5 +1,6 @@
 import BlogList from "@/app/_components/blog-list";
 import { getAllPosts } from "@/lib/api";
+import { isEn, languageAlternates, TAG_SLUGS } from "@/lib/i18n";
 import { getTag, TAGS } from "@/lib/tags";
 import { Metadata } from "next";
 import { notFound } from "next/navigation";
@@ -21,10 +22,11 @@ export function generateMetadata({ params }: Params): Metadata {
   if (!tag) {
     return {};
   }
+  const frSlug = isEn ? (Object.keys(TAG_SLUGS).find((fr) => TAG_SLUGS[fr] === tag.slug) ?? tag.slug) : tag.slug;
   return {
-    title: `${tag.label} — Préparer l'ATHX`,
+    title: isEn ? `${tag.label} — Prepare for ATHX` : `${tag.label} — Préparer l'ATHX`,
     description: tag.description,
-    alternates: { canonical: `/blog/categorie/${tag.slug}` },
+    alternates: languageAlternates({ fr: `/blog/categorie/${frSlug}`, en: `/blog/category/${TAG_SLUGS[frSlug] ?? frSlug}` }),
   };
 }
 

@@ -4,13 +4,59 @@ import PrCalculator from "@/app/_components/pr-calculator";
 import Proof from "@/app/_components/proof";
 import { getAllPosts } from "@/lib/api";
 import { getAllEvents } from "@/lib/events";
+import { isEn, languageAlternates, UI } from "@/lib/i18n";
+import { localPath } from "@/lib/paths";
 import { organizationId, faqSchema, personId, personSchema } from "@/lib/schema";
 import { formatPrice, getAbout, getHome, getSite } from "@/lib/site";
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 
-export const metadata: Metadata = { alternates: { canonical: "/" } };
+export const metadata: Metadata = { alternates: languageAlternates({ fr: "/", en: "/" }) };
+
+const COPY = isEn
+  ? {
+      courseName: "ATHX training program — 12 weeks",
+      level: "All levels (Lite, ATHX and Pro categories)",
+      about: ["ATHX Games", "Strength and conditioning", "Strength training", "Hybrid fitness"],
+      getProgram: "Get my program",
+      tryFree: "Try 1 free week",
+      statsLabel: "ATHX in numbers",
+      freeKicker: "Free · Printable PDF",
+      freeTitle: ["Try one week", "of the program"],
+      freeLede:
+        "5 sessions taken from week 1: 4 strength sessions with SkiErg and rowing finishers, and an ATHX Metcon. Loads as a % of your PRs, ready to start this week.",
+      freeItems: ["The 8-page PDF, ready to print", "Sets, rest and coaching cues for every session", "No commitment, unsubscribe in one click"],
+      freeButton: "Get the free week",
+      seeProgram: "See my program →",
+      zonesMore: ["Reps, loads by category and scoring: see the guide to the", "ATHX 2027 workouts", "the", "ATHX categories", "and the", "free training week"],
+      nextTitle: ["Upcoming", "competitions"],
+      nextLede: "Three ATHX events in France in 2027. For each one: the workouts, the dates and a week-by-week training plan.",
+      prep: (city: string) => `ATHX ${city} prep →`,
+      latest: "Latest articles",
+      allPosts: "All articles",
+    }
+  : {
+      courseName: "Programme de préparation ATHX — 12 semaines",
+      level: "Tous niveaux (catégories Lite, ATHX et Pro)",
+      about: ["ATHX Games", "Préparation physique", "Musculation", "Fitness hybride"],
+      getProgram: "Obtenir mon programme",
+      tryFree: "Tester 1 semaine gratuite",
+      statsLabel: "L'ATHX en chiffres",
+      freeKicker: "Gratuit · PDF imprimable",
+      freeTitle: ["Testez une semaine", "du programme"],
+      freeLede:
+        "5 séances extraites de la semaine 1 : 4 séances de force avec finishers au SkiErg et au rameur, et un Metcon ATHX. Charges en % de vos PR, à faire dès cette semaine.",
+      freeItems: ["Le PDF de 8 pages, prêt à imprimer", "Séries, repos et consignes pour chaque séance", "Sans engagement, désinscription en un clic"],
+      freeButton: "Recevoir la semaine gratuite",
+      seeProgram: "Voir mon programme →",
+      zonesMore: ["Répétitions, charges par catégorie et scoring : voir le guide", "des workouts ATHX 2027", "les", "catégories ATHX", "et la", "semaine d'entraînement gratuite"],
+      nextTitle: ["Prochaines", "compétitions"],
+      nextLede: "Trois étapes ATHX en France en 2027. Pour chacune : les épreuves, les dates et un plan de préparation semaine par semaine.",
+      prep: (city: string) => `Prépa ATHX ${city} →`,
+      latest: "Derniers articles",
+      allPosts: "Tous les articles",
+    };
 
 export default function Index() {
   const site = getSite();
@@ -21,6 +67,7 @@ export default function Index() {
   const latestPosts = getAllPosts().slice(0, 3);
   const events = getAllEvents();
   const priceLabel = formatPrice(site.price);
+  const freeWeek = localPath("/semaine-athx-gratuite");
 
   return (
     <main>
@@ -42,21 +89,22 @@ export default function Index() {
               "@type": "WebSite",
               name: site.name,
               url: site.url,
-              inLanguage: "fr-FR",
+              inLanguage: UI.inLanguage,
               publisher: { "@id": organizationId(site) },
             },
             {
               "@type": "Course",
               "@id": `${site.url}/#course`,
-              name: "Programme de préparation ATHX — 12 semaines",
+              name: COPY.courseName,
               description: `${home.hero.lede} ${home.program.lede}`,
               url: site.url,
+              // The program itself is written in French, on both sites.
               inLanguage: "fr-FR",
               provider: { "@id": organizationId(site) },
               creator: { "@id": personId(site) },
-              educationalLevel: "Tous niveaux (catégories Lite, ATHX et Pro)",
+              educationalLevel: COPY.level,
               teaches: home.program.blocks.map((block) => block.title),
-              about: ["ATHX Games", "Préparation physique", "Musculation", "Fitness hybride"],
+              about: COPY.about,
               image: `${site.url}${about.photo}`,
               offers: {
                 "@type": "Offer",
@@ -106,10 +154,10 @@ export default function Index() {
             </ul>
             <div className="hero-ctas">
               <a href="#cta" className="btn btn-signal">
-                Obtenir mon programme
+                {COPY.getProgram}
               </a>
-              <Link href="/semaine-athx-gratuite" className="btn btn-ghost">
-                Tester 1 semaine gratuite
+              <Link href={freeWeek} className="btn btn-ghost">
+                {COPY.tryFree}
               </Link>
             </div>
           </div>
@@ -120,7 +168,7 @@ export default function Index() {
         </div>
       </section>
 
-      <section className="stat-strip" aria-label="L'ATHX en chiffres">
+      <section className="stat-strip" aria-label={COPY.statsLabel}>
         <div className="wrap">
           {home.stats.map((stat) => (
             <div className="stat" key={stat.label}>
@@ -134,25 +182,22 @@ export default function Index() {
       <section className="free-band" aria-labelledby="semaine-gratuite">
         <div className="wrap free-band-grid">
           <div>
-            <div className="kicker">Gratuit · PDF imprimable</div>
+            <div className="kicker">{COPY.freeKicker}</div>
             <h2 className="h-sec" id="semaine-gratuite">
-              Testez une semaine
+              {COPY.freeTitle[0]}
               <br />
-              du programme
+              {COPY.freeTitle[1]}
             </h2>
-            <p className="lede">
-              5 séances extraites de la semaine 1 : 4 séances de force avec finishers au SkiErg et au rameur, et un
-              Metcon ATHX. Charges en % de vos PR, à faire dès cette semaine.
-            </p>
+            <p className="lede">{COPY.freeLede}</p>
           </div>
           <div className="free-band-cta">
             <ul>
-              <li>Le PDF de 8 pages, prêt à imprimer</li>
-              <li>Séries, repos et consignes pour chaque séance</li>
-              <li>Sans engagement, désinscription en un clic</li>
+              {COPY.freeItems.map((item) => (
+                <li key={item}>{item}</li>
+              ))}
             </ul>
-            <Link href="/semaine-athx-gratuite" className="btn btn-signal">
-              Recevoir la semaine gratuite
+            <Link href={freeWeek} className="btn btn-signal">
+              {COPY.freeButton}
             </Link>
           </div>
         </div>
@@ -176,7 +221,7 @@ export default function Index() {
                     <div className="post-tag">{persona.label}</div>
                     <h3>{persona.title}</h3>
                     <p>{persona.text}</p>
-                    <span className="persona-cta">Voir mon programme →</span>
+                    <span className="persona-cta">{COPY.seeProgram}</span>
                   </div>
                 </a>
               ))}
@@ -206,10 +251,9 @@ export default function Index() {
             ))}
           </ol>
           <p className="zones-more">
-            Répétitions, charges par catégorie et scoring : voir le guide{" "}
-            <Link href="/workouts-athx-2027">des workouts ATHX 2027</Link>, les{" "}
-            <Link href="/categories-athx">catégories ATHX</Link> et la{" "}
-            <Link href="/semaine-athx-gratuite">semaine d&apos;entraînement gratuite</Link>.
+            {COPY.zonesMore[0]} <Link href={localPath("/workouts-athx-2027")}>{COPY.zonesMore[1]}</Link>,{" "}
+            {COPY.zonesMore[2]} <Link href={localPath("/categories-athx")}>{COPY.zonesMore[3]}</Link>{" "}
+            {COPY.zonesMore[4]} <Link href={freeWeek}>{COPY.zonesMore[5]}</Link>.
           </p>
         </div>
       </section>
@@ -219,14 +263,11 @@ export default function Index() {
           <div className="wrap">
             <div className="sec-head">
               <h2 className="h-sec">
-                Prochaines
+                {COPY.nextTitle[0]}
                 <br />
-                compétitions
+                {COPY.nextTitle[1]}
               </h2>
-              <p className="lede">
-                Trois étapes ATHX en France en 2027. Pour chacune : les épreuves, les dates et un plan de préparation
-                semaine par semaine.
-              </p>
+              <p className="lede">{COPY.nextLede}</p>
             </div>
             <div className="event-others-grid events-home">
               {events.map((event) => (
@@ -234,7 +275,7 @@ export default function Index() {
                   <span className="post-tag">{event.dates}</span>
                   <strong>ATHX {event.city}</strong>
                   <span className="event-venue">{event.venue}</span>
-                  <span className="post-read">Prépa ATHX {event.city} →</span>
+                  <span className="post-read">{COPY.prep(event.city)}</span>
                 </Link>
               ))}
             </div>
@@ -276,7 +317,7 @@ export default function Index() {
       <section id="faq">
         <div className="wrap">
           <h2 className="h-sec" style={{ marginBottom: 40 }}>
-            Questions fréquentes
+            {UI.faq}
           </h2>
           {home.faq.map((item, index) => (
             <details className="faq-item" key={item.question} open={index === 0}>
@@ -291,9 +332,9 @@ export default function Index() {
         <section>
           <div className="wrap">
             <div className="sec-head">
-              <h2 className="h-sec">Derniers articles</h2>
+              <h2 className="h-sec">{COPY.latest}</h2>
               <Link href="/blog" className="post-read">
-                Tous les articles
+                {COPY.allPosts}
               </Link>
             </div>
             <div className="blog-grid">
@@ -312,7 +353,7 @@ export default function Index() {
         <div className="wrap center">
           <h2 className="h-sec">{home.finalCta}</h2>
           <a href="#cta" className="btn btn-signal">
-            Obtenir mon programme — {priceLabel}
+            {COPY.getProgram} — {priceLabel}
           </a>
         </div>
       </section>

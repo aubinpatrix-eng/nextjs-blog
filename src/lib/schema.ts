@@ -1,7 +1,8 @@
+import { href, isEn } from "@/lib/i18n";
 import type { About, Site } from "@/lib/site";
 
 // Stable identifiers so every page refers to the same author and organization entities.
-export const personId = (site: Site) => `${site.url}/qui-suis-je#person`;
+export const personId = (site: Site) => `${site.url}${href("/qui-suis-je")}#person`;
 export const organizationId = (site: Site) => `${site.url}/#organization`;
 
 export function personSchema(site: Site, about: About) {
@@ -9,11 +10,13 @@ export function personSchema(site: Site, about: About) {
     "@type": "Person",
     "@id": personId(site),
     name: about.name,
-    url: `${site.url}/qui-suis-je`,
+    url: `${site.url}${href("/qui-suis-je")}`,
     image: `${site.url}${about.avatar || about.photo}`,
     description: about.bio,
-    jobTitle: "Coach et athlète ATHX",
-    knowsAbout: ["ATHX Games", "Musculation", "Préparation physique", "Fitness hybride"],
+    jobTitle: isEn ? "ATHX coach and athlete" : "Coach et athlète ATHX",
+    knowsAbout: isEn
+      ? ["ATHX Games", "Strength training", "Strength and conditioning", "Hybrid fitness"]
+      : ["ATHX Games", "Musculation", "Préparation physique", "Fitness hybride"],
     ...(site.instagram && { sameAs: [site.instagram] }),
   };
 }

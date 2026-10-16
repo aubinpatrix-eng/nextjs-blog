@@ -1,3 +1,4 @@
+import { href, isEn } from "@/lib/i18n";
 import type { TocEntry } from "@/lib/markdownToHtml";
 import type { About } from "@/lib/site";
 import Link from "next/link";
@@ -5,7 +6,7 @@ import Link from "next/link";
 export function KeyTakeaways({ summary }: { summary: string }) {
   return (
     <aside className="article-box takeaway">
-      <h2>Ce qu&apos;il faut retenir</h2>
+      <h2>{isEn ? "Key takeaways" : "Ce qu'il faut retenir"}</h2>
       <p>{summary}</p>
     </aside>
   );
@@ -14,8 +15,8 @@ export function KeyTakeaways({ summary }: { summary: string }) {
 export function TableOfContents({ toc, headingLevel = 2 }: { toc: TocEntry[]; headingLevel?: 2 | 3 }) {
   const Heading = headingLevel === 3 ? "h3" : "h2";
   return (
-    <nav className="article-box toc" aria-label="Sommaire">
-      <Heading>Sommaire</Heading>
+    <nav className="article-box toc" aria-label={isEn ? "Contents" : "Sommaire"}>
+      <Heading>{isEn ? "Contents" : "Sommaire"}</Heading>
       <ol>
         {toc.map((entry) => (
           <li key={entry.id} className={`toc-h${entry.level}`}>
@@ -30,7 +31,7 @@ export function TableOfContents({ toc, headingLevel = 2 }: { toc: TocEntry[]; he
 export function ArticleFaq({ faq }: { faq: { question: string; answer: string }[] }) {
   return (
     <section className="article-faq" aria-labelledby="faq">
-      <h2 id="faq">Questions fréquentes</h2>
+      <h2 id="faq">{isEn ? "Frequently asked questions" : "Questions fréquentes"}</h2>
       {faq.map((item, index) => (
         <details className="faq-item" key={item.question} open={index === 0}>
           <summary>{item.question}</summary>
@@ -43,17 +44,17 @@ export function ArticleFaq({ faq }: { faq: { question: string; answer: string }[
 
 export function AuthorBox({ about }: { about: About }) {
   return (
-    <aside className="author-box" aria-label="Auteur">
+    <aside className="author-box" aria-label={isEn ? "Author" : "Auteur"}>
       {/* eslint-disable-next-line @next/next/no-img-element */}
       <img src={about.avatar || about.photo} alt={about.name} width={160} height={160} loading="lazy" />
       <div>
-        <div className="author-label">Auteur</div>
-        <Link href="/qui-suis-je" className="author-name">
+        <div className="author-label">{isEn ? "Author" : "Auteur"}</div>
+        <Link href={href("/qui-suis-je")} className="author-name">
           {about.name}
         </Link>
         <p>{about.bio}</p>
-        <Link href="/qui-suis-je" className="post-read">
-          En savoir plus sur l&apos;auteur
+        <Link href={href("/qui-suis-je")} className="post-read">
+          {isEn ? "More about the author" : "En savoir plus sur l'auteur"}
         </Link>
       </div>
     </aside>

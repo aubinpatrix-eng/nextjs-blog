@@ -41,6 +41,32 @@ Le formulaire (fin des articles, guides, pages villes, blog) envoie les inscript
 
 Tant que ces variables sont absentes, le formulaire affiche « L'inscription ouvre très bientôt ».
 
+## Version anglaise (en.preparation-athx.fr)
+
+Le même dépôt est déployé deux fois : le site français (par défaut) et le site anglais, construit avec la variable `NEXT_PUBLIC_SITE_LOCALE=en`. Le site anglais vend le même programme (rédigé en français, c'est indiqué près des boutons d'achat).
+
+| Contenu | Français | Anglais |
+| --- | --- | --- |
+| Articles, guides, pages villes, pages légales | `_posts`, `_guides`, `_events`, `_pages` | `_posts_en`, `_guides_en`, `_events_en`, `_pages_en` |
+| Accueil, Qui suis-je, guide 1RM | `_data/home.json`… | `_data/en/home.json`… |
+| Réglages | `_data/site.json` | `_data/en/site.json` (textes seulement ; prix et réglages communs) |
+| Adresses des pages fixes et des catégories | `/calculateur-1rm`, `/blog/categorie/force`… | `/1rm-calculator`, `/blog/category/strength`… (`src/lib/routes.json`) |
+
+- **Adresses anglaises** : chaque page anglaise a son propre champ `slug` (ex. `metcon-x-explained`). Elle est reliée à sa version française par son nom de fichier (celui du fichier français) ou, pour une page créée dans Pages CMS, par le champ « Adresse de la version française » (`translationOf`).
+- **hreflang** : chaque page qui existe dans les deux langues déclare `fr`, `en` et `x-default` (→ version anglaise), dans le `<head>` et dans les deux `sitemap.xml`. Une page sans traduction n'a que sa canonical.
+- **Bouton FR / EN** dans le menu : il renvoie vers la même page dans l'autre langue (ou vers l'accueil si elle n'existe pas).
+- Sur le site anglais, les anciennes adresses françaises des pages fixes (`/calculateur-1rm`…) redirigent vers l'adresse anglaise.
+
+### Mise en ligne du site anglais
+
+1. **Vercel** → *Add New → Project* → importez **le même dépôt** une deuxième fois (ex. projet `athx-prep-en`).
+2. Dans ce projet → *Settings → Environment Variables* : `NEXT_PUBLIC_SITE_LOCALE` = `en`, plus `BREVO_API_KEY` et, pour des e-mails en anglais, une **liste** et un **modèle de double opt-in anglais** (`BREVO_LIST_ID`, `BREVO_DOI_TEMPLATE_ID`). Le projet français ne change pas.
+3. *Settings → Domains* : ajoutez `en.preparation-athx.fr`. Vercel affiche l'enregistrement à créer.
+4. **OVH** → *Noms de domaine → preparation-athx.fr → Zone DNS → Ajouter une entrée* : type **CNAME**, sous-domaine `en`, cible `cname.vercel-dns.com.` (ou la valeur affichée par Vercel). Comptez quelques minutes à quelques heures.
+5. **Stripe** (recommandé) : créez un second Payment Link qui redirige vers `https://en.preparation-athx.fr/thank-you` et collez-le dans **Réglages du site (anglais) → Lien de paiement Stripe**. Vide, le site anglais utilise le lien français (qui renvoie sur `/merci`, en français).
+6. **Google Search Console** : ajoutez la propriété `https://en.preparation-athx.fr` (ou utilisez la propriété *Domaine*, qui couvre les sous-domaines) et soumettez `https://en.preparation-athx.fr/sitemap.xml`.
+7. **Pages pour les deux sites** : chaque enregistrement dans Pages CMS redéploie les deux projets Vercel.
+
 ## Écrire un article
 
 Dans Pages CMS → **Articles de blog** → *Add an entry* : titre, adresse (ex. `hyrox-vs-athx`, sans accents), résumé (~155 caractères, c'est le texte affiché par Google), catégorie, date. Un article daté dans le futur n'apparaît qu'au prochain déploiement après cette date.

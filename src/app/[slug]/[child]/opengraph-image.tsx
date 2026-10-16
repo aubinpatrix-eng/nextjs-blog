@@ -1,7 +1,8 @@
+import { isEn } from "@/lib/i18n";
 import { getChild, getHub } from "@/lib/guides";
 import { ogSize, renderOgImage } from "@/lib/og-image";
 
-export const alt = "Guide ATHX PREP";
+export const alt = isEn ? "ATHX PREP guide" : "Guide ATHX PREP";
 export const size = ogSize;
 export const contentType = "image/png";
 

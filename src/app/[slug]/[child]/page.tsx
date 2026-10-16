@@ -1,5 +1,5 @@
 import GuideLanding from "@/app/_components/guide-landing";
-import { getAllGuides, getChild, guidePath } from "@/lib/guides";
+import { getAllGuides, getChild, guideAlternates } from "@/lib/guides";
 import { Metadata } from "next";
 import { notFound } from "next/navigation";
 
@@ -25,7 +25,7 @@ export function generateMetadata({ params }: Params): Metadata {
   return {
     title: guide.seoTitle || guide.title,
     description: guide.excerpt,
-    alternates: { canonical: guidePath(guide) },
+    alternates: guideAlternates(guide),
     openGraph: { type: "article", title: guide.title, description: guide.excerpt },
   };
 }

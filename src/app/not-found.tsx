@@ -1,8 +1,29 @@
 import PostCard from "@/app/_components/post-card";
 import PrCalculator from "@/app/_components/pr-calculator";
 import { getAllPosts } from "@/lib/api";
+import { isEn } from "@/lib/i18n";
 import { formatPrice, getHome, getSite } from "@/lib/site";
 import Link from "next/link";
+
+const COPY = isEn
+  ? {
+      kicker: "Error 404",
+      title: ["Zone", "not found."],
+      lede: "This page doesn't exist or has moved. No panic: here is what you need to get back to your training.",
+      home: "Back to home",
+      program: "Get my program",
+      blog: "On the blog",
+      allPosts: "All articles",
+    }
+  : {
+      kicker: "Erreur 404",
+      title: ["Zone", "introuvable."],
+      lede: "Cette page n'existe pas ou a été déplacée. Pas de panique : voici de quoi reprendre votre préparation.",
+      home: "Retour à l'accueil",
+      program: "Obtenir mon programme",
+      blog: "À lire sur le blog",
+      allPosts: "Tous les articles",
+    };
 
 export default function NotFound() {
   const site = getSite();
@@ -13,21 +34,19 @@ export default function NotFound() {
     <main>
       <section className="hero">
         <div className="wrap">
-          <div className="kicker">Erreur 404</div>
+          <div className="kicker">{COPY.kicker}</div>
           <h1 className="h-hero">
-            Zone
+            {COPY.title[0]}
             <br />
-            introuvable.
+            {COPY.title[1]}
           </h1>
-          <p className="lede">
-            Cette page n&apos;existe pas ou a été déplacée. Pas de panique : voici de quoi reprendre votre préparation.
-          </p>
+          <p className="lede">{COPY.lede}</p>
           <div className="hero-ctas">
             <Link href="/" className="btn btn-signal">
-              Retour à l&apos;accueil
+              {COPY.home}
             </Link>
             <a href="#cta" className="btn btn-ghost">
-              Obtenir mon programme
+              {COPY.program}
             </a>
           </div>
         </div>
@@ -37,9 +56,9 @@ export default function NotFound() {
         <section>
           <div className="wrap">
             <div className="sec-head">
-              <h2 className="h-sec h-small">À lire sur le blog</h2>
+              <h2 className="h-sec h-small">{COPY.blog}</h2>
               <Link href="/blog" className="post-read">
-                Tous les articles
+                {COPY.allPosts}
               </Link>
             </div>
             <div className="blog-grid blog-grid-4">

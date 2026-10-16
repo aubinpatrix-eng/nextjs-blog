@@ -1,9 +1,9 @@
-import fs from "fs";
-import matter from "gray-matter";
-import { join } from "path";
+import { entryAlternates, findBySlug, readCollection, toIso, type Entry } from "./content";
+import { LOCALE, type Locale } from "./i18n";
 
 // City landing pages ("Préparation ATHX Paris"…), edited in Pages CMS.
 export type AthxEvent = {
+  key: string;
   slug: string;
   title: string;
   seoTitle?: string;
@@ -26,33 +26,30 @@ export type AthxEvent = {
   content: string;
 };
 
-const eventsDirectory = join(process.cwd(), "_events");
-
-function toIso(value: unknown) {
-  return value instanceof Date ? value.toISOString().slice(0, 10) : String(value ?? "");
-}
-
-export function getEventBySlug(slug: string): AthxEvent | null {
-  const fullPath = join(eventsDirectory, `${slug}.md`);
-  if (!fs.existsSync(fullPath)) {
-    return null;
-  }
-  const { data, content } = matter(fs.readFileSync(fullPath, "utf8"));
+function toEvent(entry: Entry): AthxEvent {
+  const data = entry.data;
   return {
-    ...(data as Omit<AthxEvent, "slug" | "content">),
-    startDate: toIso(data.startDate),
-    prepStart: toIso(data.prepStart),
-    updated: data.updated ? toIso(data.updated) : undefined,
-    slug,
-    content,
+    ...(data as Omit<AthxEvent, "key" | "slug" | "content">),
+    startDate: toIso(data.startDate) ?? "",
+    prepStart: toIso(data.prepStart) ?? "",
+    updated: toIso(data.updated),
+    key: entry.key,
+    slug: entry.slug,
+    content: entry.content,
   };
 }
 
-export function getAllEvents(): AthxEvent[] {
-  if (!fs.existsSync(eventsDirectory)) return [];
-  return fs
-    .readdirSync(eventsDirectory)
-    .filter((file) => file.endsWith(".md"))
-    .map((file) => getEventBySlug(file.replace(/\.md$/, "")) as AthxEvent)
+export function getEventBySlug(slug: string, locale: Locale = LOCALE): AthxEvent | null {
+  const entry = findBySlug("events", slug, locale);
+  return entry ? toEvent(entry) : null;
+}
+
+export function getAllEvents(locale: Locale = LOCALE): AthxEvent[] {
+  return readCollection("events", locale)
+    .map(toEvent)
     .sort((a, b) => (a.startDate < b.startDate ? -1 : 1));
+}
+
+export function eventAlternates(event: AthxEvent) {
+  return entryAlternates("events", event.key, (entry) => `/${entry.slug}`);
 }

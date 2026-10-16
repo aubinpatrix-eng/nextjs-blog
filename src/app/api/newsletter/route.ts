@@ -1,10 +1,12 @@
+import { href } from "@/lib/i18n";
 import { NextResponse } from "next/server";
 
 // Newsletter sign-up, sent to Brevo. Configure in Vercel (Settings → Environment Variables):
 //   BREVO_API_KEY            Brevo API key (never exposed to the browser)
 //   BREVO_LIST_ID            id of the Brevo contact list
 //   BREVO_DOI_TEMPLATE_ID    optional: id of a double opt-in template (recommended, GDPR)
-// Works with a plain HTML form (redirects to /newsletter/merci) and with fetch (JSON response).
+// Works with a plain HTML form (redirects to the thank-you page) and with fetch (JSON response).
+// The English site is a separate Vercel project: give it its own list and template ids for English emails.
 
 const EMAIL = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
 const BREVO_API = process.env.BREVO_API_URL ?? "https://api.brevo.com/v3";
@@ -26,7 +28,7 @@ async function subscribe(email: string, origin: string): Promise<Result> {
           email,
           includeListIds: [listId],
           templateId,
-          redirectionUrl: `${origin}/newsletter/merci?statut=confirme`,
+          redirectionUrl: `${origin}${href("/newsletter/merci")}?statut=confirme`,
         }),
       })
     : await fetch(`${BREVO_API}/contacts`, {
@@ -62,5 +64,5 @@ export async function POST(request: Request) {
     const status = result === "ok" || result === "confirm" ? 200 : result === "unavailable" ? 503 : 400;
     return NextResponse.json({ result }, { status });
   }
-  return NextResponse.redirect(`${origin}/newsletter/merci?statut=${result}`, 303);
+  return NextResponse.redirect(`${origin}${href("/newsletter/merci")}?statut=${result}`, 303);
 }

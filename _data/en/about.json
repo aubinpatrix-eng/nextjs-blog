@@ -1,0 +1,29 @@
+{
+  "name": "Aubin Patrix",
+  "kicker": "The coach behind ATHX PREP",
+  "title": "About me",
+  "headline": "1st in the Strength zone at ATHX Paris 2026",
+  "bio": "A strength athlete for several years, Aubin Patrix finished 1st in the Strength zone, across all categories, at his first ATHX in Paris in 2026 (70 kg strict press, 200 kg squat, 220 kg deadlift). He created ATHX PREP to help every athlete prepare for ATHX with a program built on their own PRs.",
+  "intro": "My name is Aubin. I've been training for several years now, especially in the weight room.",
+  "paragraphs": [
+    "Strength has always been my playground: squat, deadlift, overhead press. Years of building solid foundations, session after session, tracking my loads and progressing in cycles.",
+    "In April 2026, I took part in my very first ATHX, in Paris. Result: 1st in the Strength zone, across all categories, with a 70 kg strict press (1RM), a 200 kg back squat (3RM) and a 220 kg deadlift (5RM).",
+    "Above all, that first competition taught me one thing: at ATHX, you train strength with everything that comes after it in mind. You have to lift heavy, then go through the endurance and Metcon X without blowing up.",
+    "That's why I created ATHX PREP: a 12-week program that starts from your own PRs, so every load fits your level and you arrive on race day ready for all six zones. The program is written in French."
+  ],
+  "results": [
+    { "value": "70 kg", "label": "1RM strict press" },
+    { "value": "200 kg", "label": "3RM back squat" },
+    { "value": "220 kg", "label": "5RM deadlift" }
+  ],
+  "proofImage": "/assets/images/athx/classement-force-athx-paris-2026.webp",
+  "proofCaption": "Official Strength zone leaderboard, ATHX Paris 2026.",
+  "photo": "/assets/images/athx/aubin-patrix-strength-zone-athx.webp",
+  "avatar": "/assets/images/athx/aubin-patrix-avatar.webp",
+  "photos": [
+    { "image": "/assets/images/athx/aubin-patrix-strength-zone-athx.webp", "caption": "Strength zone, ATHX Paris 2026" },
+    { "image": "/assets/images/athx/aubin-patrix-athx-paris-2026.webp", "caption": "Between two zones at ATHX Paris 2026" },
+    { "image": "/assets/images/athx/strength-zone-athx-paris-2026.webp", "caption": "The Strength zone racks before the start" },
+    { "image": "/assets/images/athx/endurance-zone-athx-paris-2026.webp", "caption": "Endurance zone: the rower and the live leaderboard" }
+  ]
+}

@@ -1,3 +1,5 @@
+import { decimal } from "./i18n";
+
 // Average of the Epley and Brzycki formulas, reliable up to about 10 reps.
 export function estimateOneRm(weight: number, reps: number) {
   if (reps === 1) return weight;
@@ -17,5 +19,5 @@ export function roundLoad(value: number) {
 }
 
 export function formatLoad(value: number, unit: string) {
-  return `${roundLoad(value).toFixed(1).replace(/\.0$/, "").replace(".", ",")} ${unit}`;
+  return `${decimal(roundLoad(value))} ${unit}`;
 }

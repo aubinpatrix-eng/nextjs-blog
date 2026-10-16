@@ -1,0 +1,84 @@
+{
+  "hero": {
+    "kicker": "Get through all 6 zones. No surprises.",
+    "title": "ATHX training program",
+    "lede": "A strength and conditioning program built for the ATHX format: 12 weeks built around your PRs, so you arrive on race day with the right numbers on the bar and fuel in the tank.",
+    "offerNote": "One-off payment, lifetime access. Program written in French.",
+    "features": [
+      "12 weeks, adapted to your PRs (squat, overhead press, deadlift)",
+      "Strength block + endurance block + Metcon X simulation",
+      "Sessions in PDF format, printable or on mobile",
+      "Refuel zone guide (nutrition, timing)"
+    ],
+    "image": "/assets/images/athx/athx-endurance-course.webp",
+    "imageAlt": "Two athletes running in the ATHX Endurance zone"
+  },
+  "stats": [
+    { "value": "2h30", "label": "Total competition time, from warm-up to Metcon X" },
+    { "value": "6", "label": "Zones in a row, with no going back" },
+    { "value": "3", "label": "Categories: Lite, ATHX, Pro. One format, three levels" },
+    { "value": "12 wks", "label": "Program length to be ready on race day" }
+  ],
+  "personas": {
+    "title": "A program for\nevery profile",
+    "lede": "Men, women, first competition or chasing a podium: your loads are calculated from your PRs, not someone else's.",
+    "items": [
+      {
+        "image": "/assets/images/athx/athx-rameur.webp",
+        "imageAlt": "Athlete on the rower during the ATHX Metcon X",
+        "label": "First competition",
+        "title": "You're aiming for your first ATHX",
+        "text": "Lite or ATHX category: we start from your current loads, with a week 0 to test your PRs if needed. On race day, you know exactly what to do in each zone."
+      },
+      {
+        "image": "/assets/images/athx/athx-metcon-halteres.webp",
+        "imageAlt": "Athlete holding a dumbbell overhead in the ATHX Metcon X",
+        "label": "Strength profile",
+        "title": "You come from the weight room",
+        "text": "You're comfortable under the bar. The program maintains your strength and builds the engine you need for the Endurance zone and Metcon X."
+      },
+      {
+        "image": "/assets/images/athx/athx-binome-relais.webp",
+        "imageAlt": "Athlete running in front of the big screen at an ATHX competition",
+        "label": "As a pair",
+        "title": "You're preparing for ATHX as a duo",
+        "text": "Individual loads for each of you, and endurance and Metcon X sessions to do together. Share the motivation, and the kilos."
+      }
+    ]
+  },
+  "format": {
+    "title": "The format,\nzone by zone",
+    "lede": "ATHX runs continuously, with no break off the clock. Each zone tests a different physical quality, which is why general preparation matters as much as specific preparation.",
+    "zones": [
+      { "name": "Warm-up zone", "description": "Guided warm-up, mobility and activation before the official clock starts.", "duration": "≈ 30 min" },
+      { "name": "Strength zone", "description": "2027 season: 1RM shoulder-to-overhead, 2RM back squat and 3RM deadlift. The score is the total load lifted.", "duration": "≈ 20 min" },
+      { "name": "Refuel zone", "description": "Active recovery window: hydration, breathing, mental preparation for the next block.", "duration": "≈ 10 min" },
+      { "name": "Endurance zone", "description": "2027 season: a fixed-distance run, then as many SkiErg metres as possible, all within a 24-minute cap. You need to manage your pace without blowing up before the last block.", "duration": "≈ 30 min" },
+      { "name": "Recovery zone", "description": "Recovery before the toughest part of the competition. Only the Strength, Endurance and Metcon X zones count towards the ranking.", "duration": "≈ 30 min" },
+      { "name": "Metcon X", "description": "High-intensity finale: rower, dumbbells, bench press, sandbag squats, burpees. This is often where the ranking is decided.", "duration": "≈ 30 min" }
+    ]
+  },
+  "program": {
+    "title": "A program that\nadapts to your PRs",
+    "lede": "No generic loads. Your working percentages are calculated from your current squat, overhead press and deadlift.",
+    "blocks": [
+      { "title": "Strength block", "description": "3 cycles of 4 weeks building load on the back squat, deadlift and overhead work, with steps calculated from your PRs so you arrive sharp without being burnt out." },
+      { "title": "Endurance & conditioning block", "description": "Running, SkiErg, rower and linked circuits to build the capacity to hold 2h30 of continuous effort, not just an isolated effort." },
+      { "title": "Metcon X simulation", "description": "Race-like sessions reproducing the fatigue-strength-functional sequence of the last block, so you don't discover it on race day." }
+    ]
+  },
+  "cta": {
+    "title": "Enter your PRs,\nget your program",
+    "lede": "Enter your current loads for a preview of your strength block steps. The full program, calculated from your PRs and written in French, is sent after purchase."
+  },
+  "faq": [
+    { "question": "Is the program suitable if I've never done ATHX?", "answer": "Yes. The strength block starts from your current PRs whatever your level, and the endurance block is progressive. The Lite category is designed for a first participation." },
+    { "question": "What if I haven't tested my PRs recently?", "answer": "The program includes a week 0 of guided tests to set up-to-date PRs before calculating your training steps." },
+    { "question": "Does the program work for training as a pair?", "answer": "Loads are individual, but the endurance block and Metcon X simulation sessions can be done together." },
+    { "question": "Which language is the program in?", "answer": "The program is written in French. The sessions mostly use numbers, loads and exercise names (many of them in English), so they stay easy to follow with basic French or a translation tool." },
+    { "question": "In what format do I get the program?", "answer": "A PDF organised by week, readable on mobile or printable, sent to the email address given at purchase." }
+  ],
+  "finalCta": "Six zones. One chance to link them well.",
+  "finalImage": "/assets/images/athx/athx-skierg.webp",
+  "finalImageAlt": "Athlete on the SkiErg in the ATHX Endurance zone"
+}
