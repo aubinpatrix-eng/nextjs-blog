@@ -69,7 +69,7 @@ Pour choisir, lisez [Lite, ATHX ou Pro : quelle catégorie choisir](/blog/choisi
 ## L'entraînement
 
 - **RPE** (*rating of perceived exertion*) : l'effort ressenti, noté de 1 à 10. Un RPE 8 signifie qu'il vous reste environ deux répétitions en réserve.
-- **Décharge** (*deload*) : une semaine plus légère pour récupérer et arriver frais, souvent juste avant la compétition.
+- **Décharge** (*deload*) : une semaine plus légère pour récupérer et arriver frais, souvent juste avant la compétition. Voir [la semaine avant l'ATHX](/blog/semaine-avant-athx).
 - **Finisher** : un court bloc intense en fin de séance, par exemple au SkiErg ou au rameur.
 - **EMOM** (*every minute on the minute*) : un exercice à faire au début de chaque minute, en récupérant le reste de la minute.
 - **AMRAP** (*as many rounds as possible*) : le maximum de tours ou de répétitions dans un temps donné.

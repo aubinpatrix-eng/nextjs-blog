@@ -67,7 +67,7 @@ Montez une dernière fois vers vos charges de compétition, sur peu de répétit
 
 ### Semaine 8 : décharger
 
-Divisez le volume par deux, gardez un peu d'intensité pour rester vif, dormez, et préparez votre ravitaillement : voir [que manger la veille et le matin d'un ATHX](/blog/que-manger-veille-matin-athx).
+Divisez le volume par deux, gardez un peu d'intensité pour rester vif, dormez, et préparez votre ravitaillement : voir [la semaine avant l'ATHX, jour par jour](/blog/semaine-avant-athx) et [que manger la veille et le matin d'un ATHX](/blog/que-manger-veille-matin-athx).
 
 ## Une semaine type
 

@@ -43,7 +43,7 @@ C'est la plus grosse différence.
 | Polyvalent, vous aimez varier les efforts | ATHX |
 | Vous voulez un format identique pour comparer vos chronos | Hyrox |
 
-Rien n'empêche de faire les deux ! La base est la même : un bon moteur cardio et des jambes solides. Mais pour l'ATHX, il faut en plus **un vrai travail de force lourde**, souvent négligé par les athlètes qui viennent du Hyrox.
+Rien n'empêche de faire les deux ! La base est la même : un bon moteur cardio et des jambes solides. Mais pour l'ATHX, il faut en plus **un vrai travail de force lourde**, souvent négligé par les athlètes qui viennent du Hyrox ou de la course à pied. Voir [préparer l'ATHX quand on est coureur](/blog/athx-pour-coureurs).
 
 ## Se préparer à l'ATHX
 

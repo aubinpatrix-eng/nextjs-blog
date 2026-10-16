@@ -39,7 +39,7 @@ Quel total viser ? En 2026, en France, il fallait environ 280 kg chez les femmes
 
 ## Choisir ses tentatives
 
-L'erreur classique : partir trop lourd et rater. Une tentative ratée ne rapporte rien. Une stratégie simple :
+L'erreur classique : partir trop lourd et rater. Une tentative ratée ne rapporte rien. Tout commence par un bon échauffement : voir [l'échauffement avant un 1RM](/blog/echauffement-avant-1rm), et [l'équipement autorisé](/blog/equipement-athx) (ceinture, genouillères, magnésie). Ensuite, une stratégie simple :
 
 - **1ʳᵉ tentative** : environ 90 % de votre maximum estimé, une charge que vous êtes sûr de réussir, même stressé ;
 - **2ᵉ tentative** : votre maximum actuel ;
