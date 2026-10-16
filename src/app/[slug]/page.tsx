@@ -1,8 +1,8 @@
 import EventLanding from "@/app/_components/event-landing";
 import GuideLanding from "@/app/_components/guide-landing";
-import { getAllPages, getPageBySlug } from "@/lib/api";
-import { getAllEvents, getEventBySlug } from "@/lib/events";
-import { getHub, getHubs } from "@/lib/guides";
+import { getAllPages, getPageBySlug, pageAlternates } from "@/lib/api";
+import { eventAlternates, getAllEvents, getEventBySlug } from "@/lib/events";
+import { getHub, getHubs, guideAlternates } from "@/lib/guides";
 import markdownToHtml from "@/lib/markdownToHtml";
 import { Metadata } from "next";
 import { notFound } from "next/navigation";
@@ -26,7 +26,7 @@ export function generateMetadata({ params }: Params): Metadata {
     return {
       title: hub.seoTitle || hub.title,
       description: hub.excerpt,
-      alternates: { canonical: `/${hub.slug}` },
+      alternates: guideAlternates(hub),
       openGraph: { type: "article", title: hub.title, description: hub.excerpt },
     };
   }
@@ -35,7 +35,7 @@ export function generateMetadata({ params }: Params): Metadata {
     return {
       title: event.seoTitle || event.title,
       description: event.excerpt,
-      alternates: { canonical: `/${event.slug}` },
+      alternates: eventAlternates(event),
       openGraph: {
         type: "article",
         title: event.title,
@@ -50,7 +50,7 @@ export function generateMetadata({ params }: Params): Metadata {
   return {
     title: page.title,
     description: page.description,
-    alternates: { canonical: `/${page.slug}` },
+    alternates: pageAlternates(page),
   };
 }
 

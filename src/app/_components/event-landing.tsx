@@ -3,15 +3,73 @@ import JsonLd from "@/app/_components/json-ld";
 import NewsletterForm from "@/app/_components/newsletter-form";
 import PrCalculator from "@/app/_components/pr-calculator";
 import { getAllEvents, type AthxEvent } from "@/lib/events";
+import { isEn, LANG_TAG, LOCALE, UI } from "@/lib/i18n";
 import { markdownToHtmlWithToc, splitAtMiddleHeading } from "@/lib/markdownToHtml";
+import { localPath } from "@/lib/paths";
 import { breadcrumbSchema, faqSchema, organizationId, personId, personSchema } from "@/lib/schema";
 import { formatPrice, getAbout, getHome, getSite } from "@/lib/site";
 import Image from "next/image";
 import Link from "next/link";
 
 function formatDay(iso: string) {
-  return new Date(`${iso}T12:00:00Z`).toLocaleDateString("fr-FR", { day: "numeric", month: "long", year: "numeric" });
+  return new Date(`${iso}T12:00:00Z`).toLocaleDateString(LANG_TAG[LOCALE], { day: "numeric", month: "long", year: "numeric" });
 }
+
+const COPY = isEn
+  ? {
+      breadcrumb: "Breadcrumb",
+      dates: "Dates",
+      venue: "Venue",
+      prepStart: "Suggested prep start",
+      categories: "Categories",
+      categoriesValue: "Lite, ATHX, Pro · solo or pairs",
+      getProgram: "Get my program",
+      readGuide: "Read the guide",
+      note: "12 weeks · built on your PRs",
+      goal: (city: string) => `Goal: ATHX ${city}`,
+      ready: (city: string) => `Arrive ready for ATHX ${city}.`,
+      ctaText: (start: string) =>
+        `12 weeks of strength, endurance and Metcon X simulations, with loads based on your PRs. Suggested start: ${start}. Program written in French.`,
+      access: "Get my program",
+      notDecided: "Not sure yet?",
+      tryFree: "Try a free week as a PDF",
+      nlTitle: (city: string) => `Prepare for ATHX ${city} with us`,
+      nlText: (city: string) =>
+        `One email a week until race day: sessions, tips and date reminders for ATHX ${city}. Unsubscribe in one click.`,
+      seeProgram: "See my program →",
+      enterPrs: "Enter your PRs,",
+      prepare: (city: string) => `prepare for ATHX ${city}`,
+      othersLabel: "Other ATHX events in France",
+      othersTitle: "The other events in France",
+      seeGuide: "See the guide",
+    }
+  : {
+      breadcrumb: "Fil d'Ariane",
+      dates: "Dates",
+      venue: "Lieu",
+      prepStart: "Début de prépa conseillé",
+      categories: "Catégories",
+      categoriesValue: "Lite, ATHX, Pro · solo ou binôme",
+      getProgram: "Obtenir mon programme",
+      readGuide: "Lire le guide",
+      note: "12 semaines · calculé sur vos PR",
+      goal: (city: string) => `Objectif ATHX ${city}`,
+      ready: (city: string) => `Arrivez prêt pour ATHX ${city}.`,
+      ctaText: (start: string) =>
+        `12 semaines de force, d'endurance et de simulations Metcon X, avec des charges calculées sur vos PR. Démarrage conseillé le ${start}.`,
+      access: "Accéder à mon programme",
+      notDecided: "Pas encore décidé ?",
+      tryFree: "Testez une semaine gratuite en PDF",
+      nlTitle: (city: string) => `Préparez l'ATHX ${city} avec nous`,
+      nlText: (city: string) =>
+        `Un e-mail par semaine jusqu'au jour J : séances, conseils et rappels de dates pour l'ATHX ${city}. Désinscription en un clic.`,
+      seeProgram: "Voir mon programme →",
+      enterPrs: "Entrez vos PR,",
+      prepare: (city: string) => `préparez ATHX ${city}`,
+      othersLabel: "Autres étapes ATHX en France",
+      othersTitle: "Les autres étapes en France",
+      seeGuide: "Voir le guide",
+    };
 
 export default async function EventLanding({ event }: { event: AthxEvent }) {
   const site = getSite();
@@ -21,7 +79,7 @@ export default async function EventLanding({ event }: { event: AthxEvent }) {
   const { content, toc } = await markdownToHtmlWithToc(event.content);
   const [firstHalf, secondHalf] = splitAtMiddleHeading(content);
   const faq = event.faq ?? [];
-  if (faq.length > 0) toc.push({ id: "faq", text: "Questions fréquentes", level: 2 });
+  if (faq.length > 0) toc.push({ id: "faq", text: UI.faq, level: 2 });
   const others = getAllEvents().filter((other) => other.slug !== event.slug);
   const url = `${site.url}/${event.slug}`;
 
@@ -39,7 +97,7 @@ export default async function EventLanding({ event }: { event: AthxEvent }) {
               ...(event.summary && { abstract: event.summary }),
               datePublished: "2026-09-26",
               dateModified: event.updated ?? "2026-09-26",
-              inLanguage: "fr-FR",
+              inLanguage: UI.inLanguage,
               mainEntityOfPage: url,
               image: `${site.url}${event.heroImage ?? about.photo}`,
               about: { "@type": "Thing", name: `ATHX ${event.city} ${event.startDate.slice(0, 4)}` },
@@ -49,7 +107,7 @@ export default async function EventLanding({ event }: { event: AthxEvent }) {
             },
             personSchema(site, about),
             ...(faq.length > 0 ? [faqSchema(faq)] : []),
-            breadcrumbSchema(site, [{ name: "Accueil", path: "" }, { name: event.menuLabel }]),
+            breadcrumbSchema(site, [{ name: UI.home, path: "" }, { name: event.menuLabel }]),
           ],
         }}
       />
@@ -62,10 +120,10 @@ export default async function EventLanding({ event }: { event: AthxEvent }) {
         )}
         <div className="wrap hero-grid">
           <div>
-            <nav className="breadcrumb" aria-label="Fil d'Ariane">
+            <nav className="breadcrumb" aria-label={COPY.breadcrumb}>
               <ol>
                 <li>
-                  <Link href="/">Accueil</Link>
+                  <Link href="/">{UI.home}</Link>
                 </li>
                 <li>{event.menuLabel}</li>
               </ol>
@@ -75,34 +133,34 @@ export default async function EventLanding({ event }: { event: AthxEvent }) {
             <p className="lede">{event.excerpt}</p>
             <dl className="event-facts">
               <div>
-                <dt>Dates</dt>
+                <dt>{COPY.dates}</dt>
                 <dd>{event.dates}</dd>
               </div>
               <div>
-                <dt>Lieu</dt>
+                <dt>{COPY.venue}</dt>
                 <dd>{event.venue}</dd>
               </div>
               <div>
-                <dt>Début de prépa conseillé</dt>
+                <dt>{COPY.prepStart}</dt>
                 <dd>{formatDay(event.prepStart)}</dd>
               </div>
               <div>
-                <dt>Catégories</dt>
-                <dd>Lite, ATHX, Pro · solo ou binôme</dd>
+                <dt>{COPY.categories}</dt>
+                <dd>{COPY.categoriesValue}</dd>
               </div>
             </dl>
             <div className="hero-ctas">
               <a href="#cta" className="btn btn-signal">
-                Obtenir mon programme
+                {COPY.getProgram}
               </a>
               <a href={toc[0] ? `#${toc[0].id}` : "#contenu"} className="btn btn-ghost">
-                Lire le guide
+                {COPY.readGuide}
               </a>
             </div>
           </div>
           <div className="hero-card price-badge">
             <div className="price">{priceLabel}</div>
-            <p className="note">12 semaines · calculé sur vos PR</p>
+            <p className="note">{COPY.note}</p>
           </div>
         </div>
       </section>
@@ -119,17 +177,14 @@ export default async function EventLanding({ event }: { event: AthxEvent }) {
                   <Image src={event.ctaImage} alt={event.ctaImageAlt ?? ""} fill sizes="(max-width: 760px) 100vw, 720px" />
                 )}
                 <div className="event-cta-body">
-                  <div className="kicker">Objectif ATHX {event.city}</div>
-                  <h2>Arrivez prêt pour ATHX {event.city}.</h2>
-                  <p>
-                    12 semaines de force, d&apos;endurance et de simulations Metcon X, avec des charges calculées sur
-                    vos PR. Démarrage conseillé le {formatDay(event.prepStart)}.
-                  </p>
+                  <div className="kicker">{COPY.goal(event.city)}</div>
+                  <h2>{COPY.ready(event.city)}</h2>
+                  <p>{COPY.ctaText(formatDay(event.prepStart))}</p>
                   <a href="#cta" className="btn btn-signal">
-                    Accéder à mon programme — {priceLabel}
+                    {COPY.access} — {priceLabel}
                   </a>
                   <p className="free-link">
-                    Pas encore décidé ? <Link href="/semaine-athx-gratuite">Testez une semaine gratuite en PDF</Link>
+                    {COPY.notDecided} <Link href={localPath("/semaine-athx-gratuite")}>{COPY.tryFree}</Link>
                   </p>
                 </div>
               </aside>
@@ -139,8 +194,8 @@ export default async function EventLanding({ event }: { event: AthxEvent }) {
           {faq.length > 0 && <ArticleFaq faq={faq} />}
           <NewsletterForm
             source={event.slug}
-            title={`Préparez l'ATHX ${event.city} avec nous`}
-            text={`Un e-mail par semaine jusqu'au jour J : séances, conseils et rappels de dates pour l'ATHX ${event.city}. Désinscription en un clic.`}
+            title={COPY.nlTitle(event.city)}
+            text={COPY.nlText(event.city)}
           />
         </div>
       </section>
@@ -161,7 +216,7 @@ export default async function EventLanding({ event }: { event: AthxEvent }) {
                     <div className="post-tag">{persona.label}</div>
                     <h3>{persona.title}</h3>
                     <p>{persona.text}</p>
-                    <span className="persona-cta">Voir mon programme →</span>
+                    <span className="persona-cta">{COPY.seeProgram}</span>
                   </div>
                 </a>
               ))}
@@ -174,9 +229,9 @@ export default async function EventLanding({ event }: { event: AthxEvent }) {
         <div className="wrap">
           <div className="sec-head">
             <h2 className="h-sec">
-              Entrez vos PR,
+              {COPY.enterPrs}
               <br />
-              préparez ATHX {event.city}
+              {COPY.prepare(event.city)}
             </h2>
             <p className="lede">{home.cta.lede}</p>
           </div>
@@ -192,14 +247,14 @@ export default async function EventLanding({ event }: { event: AthxEvent }) {
         <div className="wrap">
           <AuthorBox about={about} />
           {others.length > 0 && (
-            <nav className="event-others" aria-label="Autres étapes ATHX en France">
-              <h2 className="h-sec h-small">Les autres étapes en France</h2>
+            <nav className="event-others" aria-label={COPY.othersLabel}>
+              <h2 className="h-sec h-small">{COPY.othersTitle}</h2>
               <div className="event-others-grid">
                 {others.map((other) => (
                   <Link key={other.slug} href={`/${other.slug}`} className="event-other">
                     <span className="post-tag">{other.dates}</span>
                     <strong>{other.menuLabel}</strong>
-                    <span className="post-read">Voir le guide</span>
+                    <span className="post-read">{COPY.seeGuide}</span>
                   </Link>
                 ))}
               </div>

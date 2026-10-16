@@ -1,16 +1,42 @@
 import JsonLd from "@/app/_components/json-ld";
 import PhotoSlider from "@/app/_components/photo-slider";
+import { href, isEn, staticAlternates, UI } from "@/lib/i18n";
 import { breadcrumbSchema, personId, personSchema } from "@/lib/schema";
 import { formatPrice, getAbout, getSite } from "@/lib/site";
 import { Metadata } from "next";
 import Link from "next/link";
 
+const COPY = isEn
+  ? {
+      title: (name: string) => `${name}: my ATHX journey`,
+      description: (intro: string, headline: string) => `${intro} ${headline}. Meet the athlete behind the ATHX PREP program.`,
+      crumb: "About",
+      photoAlt: (name: string) => `${name} at ATHX Paris 2026`,
+      statsLabel: "Strength zone results, ATHX Paris 2026",
+      gallery: "My first ATHX in pictures",
+      ctaTitle: "Prepare for your ATHX with my program.",
+      ctaText: (price: string) => `12 weeks built on your PRs. One-off payment of ${price}. Program written in French.`,
+      cta: "Get my program",
+    }
+  : {
+      title: (name: string) => `${name} : mon parcours ATHX`,
+      description: (intro: string, headline: string) =>
+        `${intro} ${headline}. Découvrez l'athlète derrière le programme ATHX PREP.`,
+      crumb: "Qui suis-je",
+      photoAlt: (name: string) => `${name} à l'ATHX Paris 2026`,
+      statsLabel: "Résultats Strength zone ATHX Paris 2026",
+      gallery: "Mon premier ATHX en images",
+      ctaTitle: "Préparez votre ATHX avec mon programme.",
+      ctaText: (price: string) => `12 semaines calculées sur vos PR. Paiement unique de ${price}.`,
+      cta: "Obtenir mon programme",
+    };
+
 export function generateMetadata(): Metadata {
   const about = getAbout();
   return {
-    title: `${about.name} : mon parcours ATHX`,
-    description: `${about.intro} ${about.headline}. Découvrez l'athlète derrière le programme ATHX PREP.`,
-    alternates: { canonical: "/qui-suis-je" },
+    title: COPY.title(about.name),
+    description: COPY.description(about.intro, about.headline),
+    alternates: staticAlternates("/qui-suis-je"),
     openGraph: { type: "profile", images: [about.photo] },
   };
 }
@@ -27,11 +53,11 @@ export default function About() {
           "@graph": [
             {
               "@type": "ProfilePage",
-              url: `${site.url}/qui-suis-je`,
+              url: `${site.url}${href("/qui-suis-je")}`,
               mainEntity: { "@id": personId(site) },
             },
             personSchema(site, about),
-            breadcrumbSchema(site, [{ name: "Accueil", path: "" }, { name: "Qui suis-je" }]),
+            breadcrumbSchema(site, [{ name: UI.home, path: "" }, { name: COPY.crumb }]),
           ],
         }}
       />
@@ -45,11 +71,11 @@ export default function About() {
             <p className="about-headline">{about.headline}</p>
           </div>
           {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img className="proof-photo" src={about.photo} alt={`${about.name} à l'ATHX Paris 2026`} width={1000} height={1333} />
+          <img className="proof-photo" src={about.photo} alt={COPY.photoAlt(about.name)} width={1000} height={1333} />
         </div>
       </section>
 
-      <section className="stat-strip" aria-label="Résultats Strength zone ATHX Paris 2026">
+      <section className="stat-strip" aria-label={COPY.statsLabel}>
         <div className="wrap about-stats">
           {about.results.map((result) => (
             <div className="stat" key={result.label}>
@@ -78,7 +104,7 @@ export default function About() {
       <section>
         <div className="wrap">
           <h2 className="h-sec h-small" style={{ marginBottom: 32 }}>
-            Mon premier ATHX en images
+            {COPY.gallery}
           </h2>
           <PhotoSlider photos={about.photos} />
         </div>
@@ -86,12 +112,12 @@ export default function About() {
 
       <section className="last">
         <div className="wrap center">
-          <h2 className="h-sec">Préparez votre ATHX avec mon programme.</h2>
+          <h2 className="h-sec">{COPY.ctaTitle}</h2>
           <p className="mute" style={{ margin: "14px auto 0" }}>
-            12 semaines calculées sur vos PR. Paiement unique de {formatPrice(site.price)}.
+            {COPY.ctaText(formatPrice(site.price))}
           </p>
           <Link href="/#cta" className="btn btn-signal">
-            Obtenir mon programme
+            {COPY.cta}
           </Link>
         </div>
       </section>

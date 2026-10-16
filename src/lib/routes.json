@@ -1,0 +1,17 @@
+{
+  "staticRoutes": {
+    "/calculateur-1rm": "/1rm-calculator",
+    "/calculateur-endurance-zone-athx": "/athx-endurance-zone-calculator",
+    "/scores-athx": "/athx-results",
+    "/qui-suis-je": "/about",
+    "/merci": "/thank-you",
+    "/newsletter/merci": "/newsletter/thank-you"
+  },
+  "tagSlugs": {
+    "force": "strength",
+    "endurance": "endurance",
+    "nutrition": "nutrition",
+    "format": "format",
+    "mental": "mindset"
+  }
+}

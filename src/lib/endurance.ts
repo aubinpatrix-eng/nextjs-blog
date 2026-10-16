@@ -1,3 +1,5 @@
+import { LANG_TAG, LOCALE } from "./i18n";
+
 // Endurance zone ATHX 2027: a fixed-distance run, then max SkiErg metres, all within a 24-minute cap.
 export const ENDURANCE_CAP_SECONDS = 24 * 60;
 
@@ -20,7 +22,7 @@ export function formatTime(totalSeconds: number) {
 }
 
 export function formatMetres(metres: number) {
-  return `${new Intl.NumberFormat("fr-FR").format(Math.floor(metres))} m`;
+  return `${new Intl.NumberFormat(LANG_TAG[LOCALE]).format(Math.floor(metres))} m`;
 }
 
 type Plan = {

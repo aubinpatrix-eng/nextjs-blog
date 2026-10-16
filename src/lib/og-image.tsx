@@ -1,6 +1,7 @@
 import fs from "fs";
 import { ImageResponse } from "next/og";
 import { join } from "path";
+import { LOCALE, SITE_URLS } from "./i18n";
 
 export const ogSize = { width: 1200, height: 630 };
 
@@ -55,7 +56,7 @@ export function renderOgImage({ kicker, title }: { kicker?: string; title: strin
             {title}
           </div>
         </div>
-        <div style={{ fontSize: 26, color: "#A9A69C" }}>preparation-athx.fr</div>
+        <div style={{ fontSize: 26, color: "#A9A69C" }}>{SITE_URLS[LOCALE].replace("https://", "")}</div>
       </div>
     ),
     {

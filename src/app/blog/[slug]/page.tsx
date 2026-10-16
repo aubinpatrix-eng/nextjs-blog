@@ -2,7 +2,9 @@ import { ArticleFaq, AuthorBox, KeyTakeaways, TableOfContents } from "@/app/_com
 import JsonLd from "@/app/_components/json-ld";
 import NewsletterForm from "@/app/_components/newsletter-form";
 import PostCard, { DateLabel } from "@/app/_components/post-card";
-import { getAllPosts, getPostBySlug } from "@/lib/api";
+import { getAllPosts, getPostBySlug, postAlternates } from "@/lib/api";
+import { href, isEn, UI } from "@/lib/i18n";
+import { localPath } from "@/lib/paths";
 import { markdownToHtmlWithToc } from "@/lib/markdownToHtml";
 import { breadcrumbSchema, faqSchema, organizationId, personId, personSchema } from "@/lib/schema";
 import { formatPrice, getAbout, getSite } from "@/lib/site";
@@ -32,7 +34,7 @@ export function generateMetadata({ params }: Params): Metadata {
   return {
     title: post.seoTitle || post.title,
     description: post.excerpt,
-    alternates: { canonical: `/blog/${post.slug}` },
+    alternates: postAlternates(post),
     openGraph: {
       type: "article",
       title: post.title,
@@ -53,7 +55,7 @@ export default async function Article({ params }: Params) {
   const about = getAbout();
   const { content, toc } = await markdownToHtmlWithToc(post.content);
   const faq = post.faq ?? [];
-  if (faq.length > 0) toc.push({ id: "faq", text: "Questions fréquentes", level: 2 });
+  if (faq.length > 0) toc.push({ id: "faq", text: UI.faq, level: 2 });
   // Articles are signed by the site author unless another author is set in Pages CMS.
   const authorName = post.author || about.name;
   const isSiteAuthor = authorName === about.name;
@@ -62,6 +64,7 @@ export default async function Article({ params }: Params) {
     .sort((a, b) => Number(b.tag === post.tag) - Number(a.tag === post.tag))
     .slice(0, 3);
   const url = `${site.url}/blog/${post.slug}`;
+  const categoryPath = tag ? (isEn ? `/blog/category/${tag.slug}` : `/blog/categorie/${tag.slug}`) : "/blog";
 
   return (
     <main>
@@ -77,7 +80,7 @@ export default async function Article({ params }: Params) {
               ...(post.summary && { abstract: post.summary }),
               datePublished: post.date,
               dateModified: post.updated ?? post.date,
-              inLanguage: "fr-FR",
+              inLanguage: UI.inLanguage,
               mainEntityOfPage: url,
               image: `${site.url}${post.coverImage ?? about.photo}`,
               ...(tag && { articleSection: tag.label }),
@@ -88,9 +91,9 @@ export default async function Article({ params }: Params) {
             ...(isSiteAuthor ? [personSchema(site, about)] : []),
             ...(faq.length > 0 ? [faqSchema(faq)] : []),
             breadcrumbSchema(site, [
-              { name: "Accueil", path: "" },
+              { name: UI.home, path: "" },
               { name: "Blog", path: "/blog" },
-              ...(tag ? [{ name: tag.label, path: `/blog/categorie/${tag.slug}` }] : []),
+              ...(tag ? [{ name: tag.label, path: categoryPath }] : []),
               { name: post.title },
             ]),
           ],
@@ -100,17 +103,17 @@ export default async function Article({ params }: Params) {
       <article>
         <header className="page-hero">
           <div className="wrap">
-            <nav className="breadcrumb" aria-label="Fil d'Ariane">
+            <nav className="breadcrumb" aria-label={isEn ? "Breadcrumb" : "Fil d'Ariane"}>
               <ol>
                 <li>
-                  <Link href="/">Accueil</Link>
+                  <Link href="/">{UI.home}</Link>
                 </li>
                 <li>
                   <Link href="/blog">Blog</Link>
                 </li>
                 {tag && (
                   <li>
-                    <Link href={`/blog/categorie/${tag.slug}`}>{tag.label}</Link>
+                    <Link href={categoryPath}>{tag.label}</Link>
                   </li>
                 )}
               </ol>
@@ -119,9 +122,11 @@ export default async function Article({ params }: Params) {
             <p className="lede">{post.excerpt}</p>
             <div className="article-meta">
               <DateLabel date={post.date} />
-              <span>{post.readingTime} min de lecture</span>
               <span>
-                Par {isSiteAuthor ? <Link href="/qui-suis-je">{authorName}</Link> : authorName}
+                {post.readingTime} {isEn ? "min read" : "min de lecture"}
+              </span>
+              <span>
+                {isEn ? "By" : "Par"} {isSiteAuthor ? <Link href={href("/qui-suis-je")}>{authorName}</Link> : authorName}
               </span>
             </div>
             {post.coverImage && (
@@ -145,14 +150,18 @@ export default async function Article({ params }: Params) {
             {faq.length > 0 && <ArticleFaq faq={faq} />}
             <NewsletterForm source={post.slug} />
             <aside className="article-cta">
-              <h2>Préparez l&apos;ATHX avec un plan calculé sur vos PR</h2>
-              <p>12 semaines de force, d&apos;endurance et de simulation Metcon X. Paiement unique de {formatPrice(site.price)}.</p>
+              <h2>{isEn ? "Prepare for ATHX with a plan built on your PRs" : "Préparez l'ATHX avec un plan calculé sur vos PR"}</h2>
+              <p>
+                {isEn
+                  ? `12 weeks of strength, endurance and Metcon X simulations. One-off payment of ${formatPrice(site.price)}. Program written in French.`
+                  : `12 semaines de force, d'endurance et de simulation Metcon X. Paiement unique de ${formatPrice(site.price)}.`}
+              </p>
               <div className="hero-ctas">
                 <Link href="/#cta" className="btn btn-signal">
-                  Obtenir mon programme
+                  {isEn ? "Get my program" : "Obtenir mon programme"}
                 </Link>
-                <Link href="/semaine-athx-gratuite" className="btn btn-ghost">
-                  Tester 1 semaine gratuite
+                <Link href={localPath("/semaine-athx-gratuite")} className="btn btn-ghost">
+                  {isEn ? "Try 1 free week" : "Tester 1 semaine gratuite"}
                 </Link>
               </div>
             </aside>
@@ -164,7 +173,7 @@ export default async function Article({ params }: Params) {
       {related.length > 0 && (
         <section className="related">
           <div className="wrap">
-            <h2 className="h-sec h-small">À lire aussi</h2>
+            <h2 className="h-sec h-small">{isEn ? "Read next" : "À lire aussi"}</h2>
             <div className="blog-grid">
               {related.map((other) => (
                 <PostCard key={other.slug} post={other} />

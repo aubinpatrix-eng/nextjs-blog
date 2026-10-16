@@ -2,8 +2,34 @@ import { ConsentSettingsButton } from "@/app/_components/consent-banner";
 import { getAllPages } from "@/lib/api";
 import { getAllEvents } from "@/lib/events";
 import { getHubs, guidePath } from "@/lib/guides";
+import { href, isEn } from "@/lib/i18n";
+import { localPath } from "@/lib/paths";
 import { getSite } from "@/lib/site";
 import Link from "next/link";
+
+const COPY = isEn
+  ? {
+      home: "Home",
+      program: "Program",
+      freeWeek: "Free week",
+      oneRm: "1RM calculator",
+      endurance: "Endurance zone calculator",
+      results: "ATHX 2026 results",
+      about: "About",
+      rights: "All rights reserved",
+      events: "Upcoming ATHX in France",
+    }
+  : {
+      home: "Accueil",
+      program: "Programme",
+      freeWeek: "Semaine gratuite",
+      oneRm: "Calculateur 1RM",
+      endurance: "Calculateur Endurance zone",
+      results: "Résultats ATHX 2026",
+      about: "Qui suis-je",
+      rights: "Tous droits réservés",
+      events: "Prochains ATHX en France",
+    };
 
 export default function Footer() {
   const site = getSite();
@@ -16,14 +42,14 @@ export default function Footer() {
       <div className="wrap">
         <div className="foot-row">
           <div>
-            <Link href="/">Accueil</Link>
-            <Link href="/#programme">Programme</Link>
-            <Link href="/semaine-athx-gratuite">Semaine gratuite</Link>
-            <Link href="/calculateur-1rm">Calculateur 1RM</Link>
-            <Link href="/calculateur-endurance-zone-athx">Calculateur Endurance zone</Link>
-            <Link href="/scores-athx">Résultats ATHX 2026</Link>
+            <Link href="/">{COPY.home}</Link>
+            <Link href="/#programme">{COPY.program}</Link>
+            <Link href={localPath("/semaine-athx-gratuite")}>{COPY.freeWeek}</Link>
+            <Link href={href("/calculateur-1rm")}>{COPY.oneRm}</Link>
+            <Link href={href("/calculateur-endurance-zone-athx")}>{COPY.endurance}</Link>
+            <Link href={href("/scores-athx")}>{COPY.results}</Link>
             <Link href="/blog">Blog</Link>
-            <Link href="/qui-suis-je">Qui suis-je</Link>
+            <Link href={href("/qui-suis-je")}>{COPY.about}</Link>
             {site.instagram && (
               <a href={site.instagram} rel="me noopener" target="_blank">
                 Instagram
@@ -31,13 +57,13 @@ export default function Footer() {
             )}
           </div>
           <div>
-            © {new Date().getFullYear()} {site.name} — Tous droits réservés
+            © {new Date().getFullYear()} {site.name} — {COPY.rights}
           </div>
         </div>
         {events.length > 0 && (
           <div className="foot-row foot-events">
             <div>
-              <span>Prochains ATHX en France</span>
+              <span>{COPY.events}</span>
               {events.map((event) => (
                 <Link key={event.slug} href={`/${event.slug}`}>
                   {event.menuLabel}

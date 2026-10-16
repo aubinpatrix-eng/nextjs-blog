@@ -1,9 +1,10 @@
+import { isEn } from "@/lib/i18n";
 import { getPageBySlug } from "@/lib/api";
 import { getEventBySlug } from "@/lib/events";
 import { getHub } from "@/lib/guides";
 import { ogSize, renderOgImage } from "@/lib/og-image";
 
-export const alt = "ATHX PREP — préparation ATHX";
+export const alt = isEn ? "ATHX PREP — ATHX training" : "ATHX PREP — préparation ATHX";
 export const size = ogSize;
 export const contentType = "image/png";
 

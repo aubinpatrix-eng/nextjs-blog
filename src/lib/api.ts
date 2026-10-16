@@ -1,8 +1,8 @@
-import fs from "fs";
-import matter from "gray-matter";
-import { join } from "path";
+import { entryAlternates, findBySlug, readCollection, type Entry } from "./content";
+import { LOCALE, type Locale } from "./i18n";
 
 export type Post = {
+  key: string;
   slug: string;
   title: string;
   seoTitle?: string;
@@ -20,62 +20,58 @@ export type Post = {
 };
 
 export type Page = {
+  key: string;
   slug: string;
   title: string;
   description?: string;
   content: string;
 };
 
-const postsDirectory = join(process.cwd(), "_posts");
-const pagesDirectory = join(process.cwd(), "_pages");
-
-function listMarkdown(directory: string) {
-  return fs
-    .readdirSync(directory)
-    .filter((file) => file.endsWith(".md"))
-    .map((file) => file.replace(/\.md$/, ""));
-}
-
-function readMarkdown(directory: string, slug: string) {
-  const fullPath = join(directory, `${slug}.md`);
-  if (!fs.existsSync(fullPath)) {
-    return null;
-  }
-  return matter(fs.readFileSync(fullPath, "utf8"));
-}
-
-export function getPostBySlug(slug: string): Post | null {
-  const file = readMarkdown(postsDirectory, slug);
-  if (!file) {
-    return null;
-  }
-  const words = file.content.split(/\s+/).filter(Boolean).length;
+function toPost(entry: Entry): Post {
+  const words = entry.content.split(/\s+/).filter(Boolean).length;
   return {
-    ...(file.data as Omit<Post, "slug" | "content" | "readingTime">),
-    slug,
-    content: file.content,
+    ...(entry.data as Omit<Post, "key" | "slug" | "content" | "readingTime">),
+    key: entry.key,
+    slug: entry.slug,
+    content: entry.content,
     readingTime: Math.max(1, Math.ceil(words / 180)),
   };
 }
 
-export function getAllPosts(): Post[] {
+export function getPostBySlug(slug: string, locale: Locale = LOCALE): Post | null {
+  const entry = findBySlug("posts", slug, locale);
+  return entry ? toPost(entry) : null;
+}
+
+export function getAllPosts(locale: Locale = LOCALE): Post[] {
   return (
-    listMarkdown(postsDirectory)
-      .map((slug) => getPostBySlug(slug) as Post)
+    readCollection("posts", locale)
+      .map(toPost)
       // Posts dated in the future stay unpublished until the next build after that date.
       .filter((post) => new Date(post.date) <= new Date())
       .sort((post1, post2) => (post1.date > post2.date ? -1 : 1))
   );
 }
 
-export function getPageBySlug(slug: string): Page | null {
-  const file = readMarkdown(pagesDirectory, slug);
-  if (!file) {
-    return null;
-  }
-  return { ...(file.data as Omit<Page, "slug" | "content">), slug, content: file.content };
+export function postAlternates(post: Post) {
+  return entryAlternates("posts", post.key, (entry) =>
+    new Date(String(entry.data.date)) <= new Date() ? `/blog/${entry.slug}` : null,
+  );
 }
 
-export function getAllPages(): Page[] {
-  return listMarkdown(pagesDirectory).map((slug) => getPageBySlug(slug) as Page);
+function toPage(entry: Entry): Page {
+  return { ...(entry.data as Omit<Page, "key" | "slug" | "content">), key: entry.key, slug: entry.slug, content: entry.content };
+}
+
+export function getPageBySlug(slug: string, locale: Locale = LOCALE): Page | null {
+  const entry = findBySlug("pages", slug, locale);
+  return entry ? toPage(entry) : null;
+}
+
+export function getAllPages(locale: Locale = LOCALE): Page[] {
+  return readCollection("pages", locale).map(toPage);
+}
+
+export function pageAlternates(page: Page) {
+  return entryAlternates("pages", page.key, (entry) => `/${entry.slug}`);
 }

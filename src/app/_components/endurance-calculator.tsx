@@ -1,9 +1,46 @@
 "use client";
 
 import { endurancePlan, formatMetres, formatTime, parseTime, skiPaceForTarget } from "@/lib/endurance";
+import { isEn } from "@/lib/i18n";
 import { useState } from "react";
 
 const PACE_STEPS = [-20, -10, 0, 10, 20];
+
+const COPY = isEn
+  ? {
+      distance: "Run distance (km)",
+      runPace: "Running pace (min/km)",
+      skiPace: "SkiErg pace (min/500 m)",
+      transition: "Run → SkiErg transition (s)",
+      target: "SkiErg target (m, optional)",
+      example: "e.g.",
+      fine: "3 km in the ATHX and Pro categories (individual), 24-minute cap. In Lite, the distance is shorter: enter your event's distance. Type paces as minutes:seconds. The calculation assumes a steady SkiErg pace: allow 5 to 10 seconds per 500 m slower than your fresh pace.",
+      title: "Your SkiErg distance",
+      runTime: "Running time",
+      skiTime: "Time left on the SkiErg",
+      paceFor: "SkiErg pace for",
+      tooSlow: "The run alone takes longer than 24 minutes.",
+      whatIf: "What if you ran faster or slower?",
+      yourPace: " (your pace)",
+      empty: "Enter a distance and both paces (e.g. 5:00 and 2:15).",
+    }
+  : {
+      distance: "Distance de course (km)",
+      runPace: "Allure de course (min/km)",
+      skiPace: "Allure SkiErg (min/500 m)",
+      transition: "Transition course → SkiErg (s)",
+      target: "Objectif au SkiErg (m, optionnel)",
+      example: "ex.",
+      fine: "3 km en catégories ATHX et Pro (individuel), limite de 24 minutes. En Lite, la distance est réduite : saisissez celle de votre étape. Écrivez les allures au format minutes:secondes. Le calcul suppose une allure SkiErg constante : comptez 5 à 10 secondes de plus au 500 m que votre allure à frais.",
+      title: "Votre distance au SkiErg",
+      runTime: "Temps de course",
+      skiTime: "Temps restant au SkiErg",
+      paceFor: "Allure SkiErg pour",
+      tooSlow: "La course seule dépasse les 24 minutes.",
+      whatIf: "Et si vous couriez plus vite ou plus lentement ?",
+      yourPace: " (votre allure)",
+      empty: "Entrez une distance et vos deux allures (ex. 5:00 et 2:15).",
+    };
 
 export default function EnduranceCalculator() {
   const [distance, setDistance] = useState("3");
@@ -31,7 +68,7 @@ export default function EnduranceCalculator() {
         <form onSubmit={(event) => event.preventDefault()}>
           <div className="field-row">
             <div className="field">
-              <label htmlFor="run-distance">Distance de course (km)</label>
+              <label htmlFor="run-distance">{COPY.distance}</label>
               <input
                 type="number"
                 id="run-distance"
@@ -44,12 +81,12 @@ export default function EnduranceCalculator() {
               />
             </div>
             <div className="field">
-              <label htmlFor="run-pace">Allure de course (min/km)</label>
+              <label htmlFor="run-pace">{COPY.runPace}</label>
               <input
                 type="text"
                 id="run-pace"
                 inputMode="numeric"
-                placeholder="ex. 5:00"
+                placeholder={`${COPY.example} 5:00`}
                 value={runPace}
                 onChange={(event) => setRunPace(event.target.value)}
               />
@@ -57,18 +94,18 @@ export default function EnduranceCalculator() {
           </div>
           <div className="field-row">
             <div className="field">
-              <label htmlFor="ski-pace">Allure SkiErg (min/500 m)</label>
+              <label htmlFor="ski-pace">{COPY.skiPace}</label>
               <input
                 type="text"
                 id="ski-pace"
                 inputMode="numeric"
-                placeholder="ex. 2:15"
+                placeholder={`${COPY.example} 2:15`}
                 value={skiPace}
                 onChange={(event) => setSkiPace(event.target.value)}
               />
             </div>
             <div className="field">
-              <label htmlFor="transition">Transition course → SkiErg (s)</label>
+              <label htmlFor="transition">{COPY.transition}</label>
               <input
                 type="number"
                 id="transition"
@@ -82,60 +119,58 @@ export default function EnduranceCalculator() {
             </div>
           </div>
           <div className="field">
-            <label htmlFor="target">Objectif au SkiErg (m, optionnel)</label>
+            <label htmlFor="target">{COPY.target}</label>
             <input
               type="number"
               id="target"
               min="0"
               step="50"
               inputMode="numeric"
-              placeholder="ex. 2500"
+              placeholder={`${COPY.example} 2500`}
               value={target}
               onChange={(event) => setTarget(event.target.value)}
             />
           </div>
         </form>
-        <p className="fine">
-          3 km en catégories ATHX et Pro (individuel), limite de 24 minutes. En Lite, la distance est réduite : saisissez
-          celle de votre étape. Écrivez les allures au format minutes:secondes. Le calcul suppose une allure SkiErg
-          constante : comptez 5 à 10 secondes de plus au 500 m que votre allure à frais.
-        </p>
+        <p className="fine">{COPY.fine}</p>
       </div>
 
       <div className="preview-card" aria-live="polite">
-        <h2 className="h-card">Votre distance au SkiErg</h2>
+        <h2 className="h-card">{COPY.title}</h2>
         <div className="big-num">{plan ? formatMetres(plan.skiMetres) : "—"}</div>
         {plan ? (
           <>
             <div className="preview-row">
-              <span className="lift">Temps de course</span>
+              <span className="lift">{COPY.runTime}</span>
               <span className="val">{formatTime(plan.runTime)}</span>
             </div>
             <div className="preview-row">
-              <span className="lift">Temps restant au SkiErg</span>
+              <span className="lift">{COPY.skiTime}</span>
               <span className="val">{formatTime(plan.skiTime)}</span>
             </div>
             {neededPace && (
               <div className="preview-row">
-                <span className="lift">Allure SkiErg pour {formatMetres(targetMetres)}</span>
+                <span className="lift">
+                  {COPY.paceFor} {formatMetres(targetMetres)}
+                </span>
                 <span className="val">{formatTime(neededPace)}/500 m</span>
               </div>
             )}
-            {plan.skiTime === 0 && <div className="preview-empty">La course seule dépasse les 24 minutes.</div>}
+            {plan.skiTime === 0 && <div className="preview-empty">{COPY.tooSlow}</div>}
             <div className="preview-sub" style={{ marginTop: 22 }}>
-              Et si vous couriez plus vite ou plus lentement ?
+              {COPY.whatIf}
             </div>
             {variants.map((variant) => (
               <div className="preview-row" key={variant.step}>
                 <span className="lift">
-                  {formatTime(variant.pace)}/km{variant.step === 0 ? " (votre allure)" : ""}
+                  {formatTime(variant.pace)}/km{variant.step === 0 ? COPY.yourPace : ""}
                 </span>
                 <span className="val">{formatMetres(variant.skiMetres)}</span>
               </div>
             ))}
           </>
         ) : (
-          <div className="preview-empty">Entrez une distance et vos deux allures (ex. 5:00 et 2:15).</div>
+          <div className="preview-empty">{COPY.empty}</div>
         )}
       </div>
     </div>

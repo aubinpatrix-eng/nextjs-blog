@@ -1,8 +1,9 @@
 import { getPostBySlug } from "@/lib/api";
 import { ogSize, renderOgImage } from "@/lib/og-image";
+import { isEn } from "@/lib/i18n";
 import { getTag } from "@/lib/tags";
 
-export const alt = "Article du blog ATHX PREP";
+export const alt = isEn ? "ATHX PREP blog article" : "Article du blog ATHX PREP";
 export const size = ogSize;
 export const contentType = "image/png";
 

@@ -1,14 +1,15 @@
-import { getSite } from "@/lib/site";
+import { isEn } from "@/lib/i18n";
+import { formatPrice, getSite } from "@/lib/site";
 import { ImageResponse } from "next/og";
 
-export const alt = "ATHX PREP — Programme de préparation pour l'ATHX";
+export const alt = isEn ? "ATHX PREP — ATHX training program" : "ATHX PREP — Programme de préparation pour l'ATHX";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
 // Default share image for every page without its own cover image.
 export default function OpengraphImage() {
   const site = getSite();
-  const price = new Intl.NumberFormat("fr-FR", { style: "currency", currency: "EUR" }).format(site.price);
+  const price = formatPrice(site.price);
 
   return new ImageResponse(
     (
@@ -35,13 +36,13 @@ export default function OpengraphImage() {
         </div>
         <div style={{ display: "flex", flexDirection: "column" }}>
           <div style={{ fontSize: 84, fontWeight: 700, lineHeight: 1, textTransform: "uppercase" }}>
-            Préparez l&apos;ATHX
+            {isEn ? "Prepare for ATHX" : "Préparez l'ATHX"}
           </div>
           <div style={{ fontSize: 84, fontWeight: 700, lineHeight: 1, textTransform: "uppercase", color: "#FF4A23" }}>
-            sur vos PR.
+            {isEn ? "on your PRs." : "sur vos PR."}
           </div>
         </div>
-        <div style={{ fontSize: 32, color: "#A9A69C" }}>{`12 semaines · force + endurance + Metcon X · ${price}`}</div>
+        <div style={{ fontSize: 32, color: "#A9A69C" }}>{isEn ? `12 weeks · strength + endurance + Metcon X · ${price}` : `12 semaines · force + endurance + Metcon X · ${price}`}</div>
       </div>
     ),
     size,

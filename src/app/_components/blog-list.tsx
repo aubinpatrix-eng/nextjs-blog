@@ -2,6 +2,7 @@ import JsonLd from "@/app/_components/json-ld";
 import Newsletter from "@/app/_components/newsletter";
 import PostCard from "@/app/_components/post-card";
 import type { Post } from "@/lib/api";
+import { isEn, LANG_TAG, LOCALE } from "@/lib/i18n";
 import { breadcrumbSchema } from "@/lib/schema";
 import { getSite } from "@/lib/site";
 import { getTag, TAGS } from "@/lib/tags";
@@ -17,7 +18,8 @@ type Props = {
 export default function BlogList({ title, lede, posts, activeTag }: Props) {
   const site = getSite();
   const tag = activeTag ? getTag(activeTag) : undefined;
-  const path = tag ? `/blog/categorie/${tag.slug}` : "/blog";
+  const categoryPath = (slug: string) => (isEn ? `/blog/category/${slug}` : `/blog/categorie/${slug}`);
+  const path = tag ? categoryPath(tag.slug) : "/blog";
 
   return (
     <main>
@@ -30,7 +32,7 @@ export default function BlogList({ title, lede, posts, activeTag }: Props) {
               name: tag ? `ATHX : ${tag.label}` : "Blog ATHX PREP",
               description: lede,
               url: `${site.url}${path}`,
-              inLanguage: "fr-FR",
+              inLanguage: LANG_TAG[LOCALE],
               mainEntity: {
                 "@type": "ItemList",
                 itemListElement: posts.map((post, index) => ({
@@ -41,7 +43,7 @@ export default function BlogList({ title, lede, posts, activeTag }: Props) {
               },
             },
             breadcrumbSchema(site, [
-              { name: "Accueil", path: "" },
+              { name: isEn ? "Home" : "Accueil", path: "" },
               ...(tag ? [{ name: "Blog", path: "/blog" }, { name: tag.label }] : [{ name: "Blog" }]),
             ]),
           ],
@@ -52,14 +54,14 @@ export default function BlogList({ title, lede, posts, activeTag }: Props) {
           <div className="kicker">Blog ATHX PREP</div>
           <h1 className="h-page">{title}</h1>
           <p className="lede">{lede}</p>
-          <nav className="blog-filters" aria-label="Catégories">
+          <nav className="blog-filters" aria-label={isEn ? "Categories" : "Catégories"}>
             <Link href="/blog" className={`tag-btn${activeTag ? "" : " active"}`}>
-              Tous
+              {isEn ? "All" : "Tous"}
             </Link>
             {TAGS.map((tag) => (
               <Link
                 key={tag.slug}
-                href={`/blog/categorie/${tag.slug}`}
+                href={categoryPath(tag.slug)}
                 className={`tag-btn${activeTag === tag.slug ? " active" : ""}`}
               >
                 {tag.label}
@@ -78,7 +80,7 @@ export default function BlogList({ title, lede, posts, activeTag }: Props) {
               ))}
             </div>
           ) : (
-            <p className="empty">Aucun article pour le moment.</p>
+            <p className="empty">{isEn ? "No articles yet." : "Aucun article pour le moment."}</p>
           )}
         </div>
       </section>

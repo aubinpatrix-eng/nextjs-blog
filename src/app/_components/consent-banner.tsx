@@ -1,8 +1,27 @@
 "use client";
 
 import { CONSENT_KEY } from "@/lib/consent";
+import { isEn, PRIVACY_PATH } from "@/lib/i18n";
 import Link from "next/link";
 import { useEffect, useState } from "react";
+
+const COPY = isEn
+  ? {
+      label: "Audience measurement cookies",
+      text: "We would like to measure the site's audience with Google Analytics (anonymous statistics, no advertising).",
+      more: "Learn more",
+      refuse: "Decline",
+      accept: "Accept",
+      settings: "Cookie settings",
+    }
+  : {
+      label: "Cookies de mesure d'audience",
+      text: "Nous aimerions mesurer l'audience du site avec Google Analytics (statistiques anonymes, pas de publicité).",
+      more: "En savoir plus",
+      refuse: "Refuser",
+      accept: "Accepter",
+      settings: "Gérer les cookies",
+    };
 
 // Google Analytics runs in consent mode, denied by default (CNIL): this banner records the visitor's choice.
 const OPEN_EVENT = "athx-consent-open";
@@ -52,17 +71,16 @@ export default function ConsentBanner() {
   };
 
   return (
-    <div className="consent" role="dialog" aria-live="polite" aria-label="Cookies de mesure d'audience">
+    <div className="consent" role="dialog" aria-live="polite" aria-label={COPY.label}>
       <p>
-        Nous aimerions mesurer l&apos;audience du site avec Google Analytics (statistiques anonymes, pas de publicité).{" "}
-        <Link href="/confidentialite">En savoir plus</Link>
+        {COPY.text} <Link href={PRIVACY_PATH}>{COPY.more}</Link>
       </p>
       <div className="consent-actions">
         <button type="button" className="btn btn-ghost" onClick={() => choose("denied")}>
-          Refuser
+          {COPY.refuse}
         </button>
         <button type="button" className="btn btn-signal" onClick={() => choose("granted")}>
-          Accepter
+          {COPY.accept}
         </button>
       </div>
     </div>
@@ -72,7 +90,7 @@ export default function ConsentBanner() {
 export function ConsentSettingsButton() {
   return (
     <button type="button" className="foot-link-btn" onClick={() => window.dispatchEvent(new Event(OPEN_EVENT))}>
-      Gérer les cookies
+      {COPY.settings}
     </button>
   );
 }

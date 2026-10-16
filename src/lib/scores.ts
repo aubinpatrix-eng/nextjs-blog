@@ -1,5 +1,6 @@
 import fs from "fs";
 import { join } from "path";
+import { isEn, LANG_TAG, LOCALE } from "./i18n";
 
 // Public ATHX leaderboard rows (no athlete names), transcribed into _data/scores/*.csv.
 // Each row gives, for every scored zone, a (rank, score) pair. Levels such as "top 25 %" are read
@@ -15,15 +16,15 @@ export type ScoreSet = {
 };
 
 export const SEASON_2026: ScoreSet[] = [
-  { id: "femmes", label: "Femmes", athletes: 115, file: "femmes-individuel-2026.csv" },
-  { id: "hommes", label: "Hommes", athletes: 280, file: "hommes-individuel-2026.csv" },
+  { id: isEn ? "women" : "femmes", label: isEn ? "Women" : "Femmes", athletes: 115, file: "femmes-individuel-2026.csv" },
+  { id: isEn ? "men" : "hommes", label: isEn ? "Men" : "Hommes", athletes: 280, file: "hommes-individuel-2026.csv" },
 ];
 
 export const LEVELS = [
-  { id: "top10", label: "Top 10 %", share: 0.1 },
-  { id: "top25", label: "Top 25 %", share: 0.25 },
-  { id: "median", label: "Milieu du classement", share: 0.5 },
-  { id: "p75", label: "75 % du classement", share: 0.75 },
+  { id: "top10", label: isEn ? "Top 10%" : "Top 10 %", share: 0.1 },
+  { id: "top25", label: isEn ? "Top 25%" : "Top 25 %", share: 0.25 },
+  { id: "median", label: isEn ? "Middle of the field" : "Milieu du classement", share: 0.5 },
+  { id: "p75", label: isEn ? "75% of the field" : "75 % du classement", share: 0.75 },
 ];
 
 type Point = { rank: number; value: number };
@@ -91,7 +92,7 @@ export function formatScore(zone: Zone, value: number | null, exact = false) {
   if (zone === "strength") return `${exact ? value : Math.round(value / 5) * 5} kg`;
   if (zone === "endurance") {
     const digits = exact ? 3 : 2;
-    return `${value.toLocaleString("fr-FR", { minimumFractionDigits: digits, maximumFractionDigits: digits })} km`;
+    return `${value.toLocaleString(LANG_TAG[LOCALE], { minimumFractionDigits: digits, maximumFractionDigits: digits })} km`;
   }
   const seconds = exact ? value : Math.round(value / 5) * 5;
   return `${Math.floor(seconds / 60)}:${String(seconds % 60).padStart(2, "0")}`;
