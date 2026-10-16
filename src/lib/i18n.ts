@@ -33,6 +33,16 @@ export function href(frPath: string, locale: Locale = LOCALE) {
   return `${STATIC_ROUTES[path] ?? path}${rest}`;
 }
 
+// The English build serves fixed routes and categories through rewrites, so a page can see its internal
+// route (/calculateur-1rm, /blog/categorie/strength) instead of the address in the browser.
+// This returns the public address for either.
+export function publicPath(pathname: string) {
+  if (!isEn) return pathname;
+  const category = pathname.match(/^\/blog\/categorie\/([^/]+)$/);
+  if (category) return `/blog/category/${category[1]}`;
+  return STATIC_ROUTES[pathname] ?? pathname;
+}
+
 export function absoluteUrl(path: string, locale: Locale = LOCALE) {
   return `${SITE_URLS[locale]}${path === "/" ? "" : path}`;
 }

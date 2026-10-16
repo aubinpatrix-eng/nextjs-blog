@@ -500,4 +500,5 @@ content:
     fields:
       - { name: title, label: Titre SEO de la page d'accueil anglaise, type: string }
       - { name: description, label: Description SEO de la page d'accueil anglaise (~155 caractères), type: text }
+      - { name: buyUrl, label: "Lien de paiement Stripe du site anglais (optionnel ; vide = même lien que le site français)", type: string }
       - { name: disclaimer, label: Mention d'indépendance (pied de page), type: text }

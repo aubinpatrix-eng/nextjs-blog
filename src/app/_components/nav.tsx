@@ -1,6 +1,6 @@
 "use client";
 
-import { href, isEn } from "@/lib/i18n";
+import { href, isEn, publicPath } from "@/lib/i18n";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
@@ -22,7 +22,7 @@ const COPY = isEn
   : { home: "ATHX PREP — accueil", menu: "Menu", freeWeek: "Semaine gratuite", about: "Qui suis-je", program: "Mon programme", switchLabel: "EN", switchTitle: "English version" };
 
 function Dropdown({ menu, open, onToggle, onNavigate }: { menu: NavMenu; open: boolean; onToggle: () => void; onNavigate: () => void }) {
-  const pathname = usePathname();
+  const pathname = publicPath(usePathname());
   const active = menu.items.some((item) => pathname === item.href || pathname.startsWith(`${item.href}/`));
   return (
     <div className={`nav-dropdown${open ? " open" : ""}`} data-menu={menu.id}>
@@ -52,7 +52,7 @@ export default function Nav({ priceLabel, menus, freeWeekHref, switchMap, switch
   const [open, setOpen] = useState(false);
   const [openMenu, setOpenMenu] = useState<string | null>(null);
   const nav = useRef<HTMLElement>(null);
-  const pathname = usePathname();
+  const pathname = publicPath(usePathname());
   const switchHref = switchMap[pathname] ?? switchHome;
   const close = () => {
     setOpen(false);

@@ -68,7 +68,7 @@ export type About = {
 };
 
 // French data lives in _data/*.json; the English site reads _data/en/*.json when it exists.
-// _data/en/site.json only overrides the texts: price, payment link and settings stay shared.
+// _data/en/site.json only overrides the texts (and optionally the Stripe link): price and settings stay shared.
 function readJson<T>(path: string): T | null {
   const fullPath = join(process.cwd(), "_data", path);
   return fs.existsSync(fullPath) ? (JSON.parse(fs.readFileSync(fullPath, "utf8")) as T) : null;
@@ -82,7 +82,9 @@ function readData<T>(file: string): T {
 export function getSite(): Site {
   const site = readJson<Site>("site.json") as Site;
   const overrides = LOCALE === "fr" ? null : readJson<Partial<Site>>(`${LOCALE}/site.json`);
-  return { ...site, ...overrides, url: SITE_URLS[LOCALE] };
+  // A field left empty in Pages CMS keeps the French value (e.g. the Stripe link).
+  const filled = Object.fromEntries(Object.entries(overrides ?? {}).filter(([, value]) => value !== "" && value != null));
+  return { ...site, ...filled, url: SITE_URLS[LOCALE] };
 }
 
 export function getHome(): Home {

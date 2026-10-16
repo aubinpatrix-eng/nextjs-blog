@@ -4,7 +4,7 @@ import { CONSENT_KEY } from "@/lib/consent";
 import Nav from "@/app/_components/nav";
 import { getAllEvents } from "@/lib/events";
 import { getHubs, guidePath } from "@/lib/guides";
-import { absoluteUrl, href, isEn, LOCALE, OG_LOCALE } from "@/lib/i18n";
+import { absoluteUrl, href, isEn, LOCALE, OG_LOCALE, STATIC_ROUTES } from "@/lib/i18n";
 import { localPath } from "@/lib/paths";
 import { formatPrice, getSite } from "@/lib/site";
 import { sitemapEntries } from "@/lib/sitemap-entries";
@@ -71,6 +71,11 @@ function languageSwitchMap() {
     const own = paths[LOCALE];
     const other = paths[OTHER];
     if (own && other) map[own] = absoluteUrl(other, OTHER);
+  }
+  // Fixed routes left out of the sitemap (thank-you pages).
+  for (const [fr, en] of Object.entries(STATIC_ROUTES)) {
+    const [own, other] = isEn ? [en, fr] : [fr, en];
+    map[own] ??= absoluteUrl(other, OTHER);
   }
   return map;
 }
