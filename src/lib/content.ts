@@ -4,8 +4,9 @@ import { join } from "path";
 import { LOCALE, languageAlternates, type Locale } from "./i18n";
 
 // Markdown collections, one folder per language: _posts (French) and _posts_en (English), etc.
-// A translation keeps the French file name (its key), which links both versions for hreflang;
-// its own URL comes from the `slug` field. French URLs use the file name, as before.
+// A translation is linked to its French version (for hreflang) by its key: the French file name,
+// given either by the English file's own name or, for files created in Pages CMS, by `translationOf`.
+// Its URL comes from the `slug` field. French URLs use the file name, as before.
 
 export type Collection = "posts" | "guides" | "events" | "pages";
 
@@ -32,9 +33,10 @@ export function readCollection(collection: Collection, locale: Locale = LOCALE):
         .readdirSync(dir)
         .filter((file) => file.endsWith(".md"))
         .map((file) => {
-          const key = file.replace(/\.md$/, "");
+          const name = file.replace(/\.md$/, "");
           const { data, content } = matter(fs.readFileSync(join(dir, file), "utf8"));
-          const slug = locale === "fr" ? key : String(data.slug || key);
+          const key = locale === "fr" ? name : String(data.translationOf || name);
+          const slug = locale === "fr" ? name : String(data.slug || name);
           return { key, slug, data, content };
         })
     : [];

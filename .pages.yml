@@ -251,3 +251,253 @@ content:
       - { name: newsletterAction, label: URL du formulaire newsletter (Brevo, Mailchimp…), type: string }
       - { name: instagram, label: Lien Instagram, type: string }
       - { name: disclaimer, label: Mention d'indépendance (pied de page), type: text }
+
+  - name: posts_en
+    label: "Articles de blog (anglais)"
+    type: collection
+    path: _posts_en
+    filename: "{fields.slug}.md"
+    view:
+      fields: [ title, tag, date ]
+      primary: title
+    fields:
+      - { name: title, label: Titre (H1, affiché sur la page et dans l'image de partage), type: string, required: true }
+      - { name: slug, label: "Adresse anglaise de la page (ex. metcon-x-explained, minuscules et tirets)", type: string, required: true, pattern: { regex: "^[a-z0-9]+(-[a-z0-9]+)*$", message: "Minuscules, chiffres et tirets uniquement" } }
+      - { name: translationOf, label: "Adresse de la version française (ex. metcon-x-explique). Relie les deux langues pour Google (hreflang). Inutile pour les pages déjà traduites.", type: string }
+      - { name: seoTitle, label: "Titre Google (48 caractères max, « | ATHX PREP » est ajouté automatiquement ; vide = titre ci-dessus)", type: string }
+      - { name: excerpt, label: Résumé (meta description, ~155 caractères), type: text, required: true }
+      - name: tag
+        label: Catégorie
+        type: select
+        required: true
+        options:
+          values: [ Strength, Endurance, Nutrition, Format, Mindset ]
+      - { name: date, label: Date de publication, type: date, required: true }
+      - { name: updated, label: Date de mise à jour (optionnel), type: date }
+      - { name: author, label: Auteur (optionnel), type: string }
+      - { name: coverImage, label: Image de couverture (optionnel, affichée en haut de l'article), type: image }
+      - { name: coverImageAlt, label: Texte alternatif de la photo (décrit l'image pour Google Images et l'accessibilité), type: string }
+      - { name: summary, label: "Ce qu'il faut retenir (2-3 phrases, affiché avant le sommaire)", type: text }
+      - { name: body, label: "Contenu (les titres H2, H3, H4 forment le sommaire automatiquement)", type: rich-text }
+      - name: faq
+        label: FAQ (affichée en fin d'article)
+        type: object
+        list: true
+        fields:
+          - { name: question, label: Question, type: string }
+          - { name: answer, label: Réponse, type: text }
+
+  - name: events_en
+    label: "Préparation ATHX, pages villes (anglais)"
+    type: collection
+    path: _events_en
+    filename: "{fields.slug}.md"
+    view:
+      fields: [ menuLabel, dates ]
+      primary: menuLabel
+    fields:
+      - { name: title, label: "Titre complet (image de partage, et Google si « Titre Google » est vide)", type: string, required: true }
+      - { name: slug, label: "Adresse anglaise de la page (ex. athx-paris-training, minuscules et tirets)", type: string, required: true, pattern: { regex: "^[a-z0-9]+(-[a-z0-9]+)*$", message: "Minuscules, chiffres et tirets uniquement" } }
+      - { name: translationOf, label: "Adresse de la version française (ex. preparation-athx-paris). Relie les deux langues pour Google (hreflang). Inutile pour les pages déjà traduites.", type: string }
+      - { name: seoTitle, label: "Titre Google (48 caractères max, « | ATHX PREP » est ajouté automatiquement ; vide = titre ci-dessus)", type: string }
+      - { name: heading, label: "Titre affiché (H1 court, ex. Préparation ATHX Paris 2027)", type: string }
+      - { name: menuLabel, label: "Nom court (pied de page, ex. Préparation ATHX Paris)", type: string, required: true }
+      - { name: city, label: Ville, type: string, required: true }
+      - { name: kicker, label: Surtitre, type: string }
+      - { name: dates, label: "Dates affichées (ex. 13 et 14 février 2027)", type: string, required: true }
+      - { name: startDate, label: Premier jour de la compétition, type: date, required: true }
+      - { name: venue, label: Lieu, type: string }
+      - { name: prepStart, label: Début de préparation conseillé, type: date }
+      - { name: excerpt, label: "Résumé (meta description, ~155 caractères)", type: text, required: true }
+      - { name: summary, label: Ce qu'il faut retenir, type: text }
+      - { name: heroImage, label: Photo de l'en-tête, type: image }
+      - { name: heroImageAlt, label: Texte alternatif de la photo (décrit l'image pour Google Images et l'accessibilité), type: string }
+      - { name: ctaImage, label: Photo de l'encart programme (milieu de page), type: image }
+      - { name: ctaImageAlt, label: Texte alternatif de la photo (décrit l'image pour Google Images et l'accessibilité), type: string }
+      - { name: updated, label: Date de mise à jour, type: date }
+      - { name: body, label: "Contenu (les H2/H3/H4 forment le sommaire ; l'encart programme se place avant le H2 du milieu)", type: rich-text }
+      - name: faq
+        label: FAQ
+        type: object
+        list: true
+        fields:
+          - { name: question, label: Question, type: string }
+          - { name: answer, label: Réponse, type: text }
+
+  - name: guides_en
+    label: "Guides (anglais)"
+    type: collection
+    path: _guides_en
+    filename: "{fields.slug}.md"
+    view:
+      fields: [ menuLabel, parent ]
+      primary: menuLabel
+    fields:
+      - { name: title, label: "Titre complet (image de partage, et Google si « Titre Google » est vide)", type: string, required: true }
+      - { name: slug, label: "Adresse anglaise de la page (ex. strength-zone, minuscules et tirets)", type: string, required: true, pattern: { regex: "^[a-z0-9]+(-[a-z0-9]+)*$", message: "Minuscules, chiffres et tirets uniquement" } }
+      - { name: translationOf, label: "Adresse de la version française (ex. strength-zone). Relie les deux langues pour Google (hreflang). Inutile pour les pages déjà traduites.", type: string }
+      - { name: seoTitle, label: "Titre Google (48 caractères max, « | ATHX PREP » est ajouté automatiquement ; vide = titre ci-dessus)", type: string }
+      - { name: heading, label: Titre affiché (H1 court), type: string }
+      - { name: menuLabel, label: "Nom court (menus, fil d'Ariane)", type: string, required: true }
+      - { name: parent, label: "Page parente (vide = page principale d'un guide ; sinon adresse anglaise de la page parente, ex. athx-2027-workouts)", type: string }
+      - { name: order, label: Ordre d'affichage, type: number }
+      - { name: kicker, label: Surtitre, type: string }
+      - { name: excerpt, label: "Résumé (meta description, ~155 caractères)", type: text, required: true }
+      - { name: summary, label: Ce qu'il faut retenir, type: text }
+      - { name: heroImage, label: Photo de l'en-tête (optionnel), type: image }
+      - { name: heroImageAlt, label: Texte alternatif de la photo (décrit l'image pour Google Images et l'accessibilité), type: string }
+      - { name: newsletter, label: "Page « contenu gratuit » : boutons et encarts vers le PDF / la newsletter au lieu du programme", type: boolean }
+      - { name: updated, label: Date de mise à jour, type: date }
+      - { name: body, label: "Contenu (H2/H3/H4 = sommaire ; l'encart programme se place avant le H2 du milieu)", type: rich-text }
+      - name: faq
+        label: FAQ
+        type: object
+        list: true
+        fields:
+          - { name: question, label: Question, type: string }
+          - { name: answer, label: Réponse, type: text }
+
+  - name: pages_en
+    label: "Pages légales (anglais)"
+    type: collection
+    path: _pages_en
+    filename: "{fields.slug}.md"
+    view:
+      fields: [ title ]
+    fields:
+      - { name: title, label: Titre, type: string, required: true }
+      - { name: slug, label: "Adresse anglaise de la page (ex. privacy-policy, minuscules et tirets)", type: string, required: true, pattern: { regex: "^[a-z0-9]+(-[a-z0-9]+)*$", message: "Minuscules, chiffres et tirets uniquement" } }
+      - { name: translationOf, label: "Adresse de la version française (ex. confidentialite). Relie les deux langues pour Google (hreflang). Inutile pour les pages déjà traduites.", type: string }
+      - { name: description, label: Description (SEO), type: text }
+      - { name: body, label: Contenu, type: rich-text }
+
+  - name: home_en
+    label: "Page d'accueil (anglais)"
+    type: file
+    path: _data/en/home.json
+    fields:
+      - name: hero
+        label: En-tête
+        type: object
+        fields:
+          - { name: kicker, label: Surtitre, type: string }
+          - { name: title, label: "Titre (H1) — un retour à la ligne = une ligne", type: text }
+          - { name: lede, label: Texte d'introduction, type: text }
+          - { name: offerNote, label: Mention sous le prix, type: string }
+          - { name: features, label: Contenu de l'offre, type: string, list: true }
+          - { name: image, label: "Photo de l'en-tête (portrait, sujet sur la droite)", type: image }
+          - { name: imageAlt, label: Texte alternatif de la photo (décrit l'image pour Google Images et l'accessibilité), type: string }
+      - name: stats
+        label: Chiffres clés
+        type: object
+        list: true
+        fields:
+          - { name: value, label: Valeur, type: string }
+          - { name: label, label: Légende, type: string }
+      - name: personas
+        label: Section « Pour chaque profil »
+        type: object
+        fields:
+          - { name: title, label: Titre, type: text }
+          - { name: lede, label: Introduction, type: text }
+          - name: items
+            label: Profils
+            type: object
+            list: true
+            fields:
+              - { name: image, label: Photo (portrait), type: image }
+              - { name: imageAlt, label: Texte alternatif de la photo (décrit l'image pour Google Images et l'accessibilité), type: string }
+              - { name: label, label: Étiquette, type: string }
+              - { name: title, label: Titre, type: string }
+              - { name: text, label: Texte, type: text }
+      - name: format
+        label: Section « Le format »
+        type: object
+        fields:
+          - { name: title, label: Titre, type: text }
+          - { name: lede, label: Introduction, type: text }
+          - name: zones
+            label: Zones
+            type: object
+            list: true
+            fields:
+              - { name: name, label: Nom, type: string }
+              - { name: description, label: Description, type: text }
+              - { name: duration, label: Durée, type: string }
+      - name: program
+        label: Section « Le programme »
+        type: object
+        fields:
+          - { name: title, label: Titre, type: text }
+          - { name: lede, label: Introduction, type: text }
+          - name: blocks
+            label: Blocs
+            type: object
+            list: true
+            fields:
+              - { name: title, label: Titre, type: string }
+              - { name: description, label: Description, type: text }
+      - name: cta
+        label: Section achat (calculateur de PR)
+        type: object
+        fields:
+          - { name: title, label: Titre, type: text }
+          - { name: lede, label: Introduction, type: text }
+      - name: faq
+        label: FAQ
+        type: object
+        list: true
+        fields:
+          - { name: question, label: Question, type: string }
+          - { name: answer, label: Réponse, type: text }
+      - { name: finalCta, label: Phrase d'appel final, type: string }
+      - { name: finalImage, label: Photo de fond de l'appel final, type: image }
+      - { name: finalImageAlt, label: Texte alternatif de la photo (décrit l'image pour Google Images et l'accessibilité), type: string }
+
+  - name: about_en
+    label: "Qui suis-je (anglais)"
+    type: file
+    path: _data/en/about.json
+    fields:
+      - { name: name, label: Nom, type: string, required: true }
+      - { name: kicker, label: Surtitre, type: string }
+      - { name: title, label: Titre de la page (H1), type: string }
+      - { name: headline, label: "Accroche (ex. 1er de la Strength zone…)", type: string }
+      - { name: bio, label: "Bio courte (bloc auteur en bas des articles)", type: text }
+      - { name: intro, label: Introduction, type: text }
+      - { name: paragraphs, label: Paragraphes, type: text, list: true }
+      - name: results
+        label: Résultats (chiffres)
+        type: object
+        list: true
+        fields:
+          - { name: value, label: Valeur, type: string }
+          - { name: label, label: Légende, type: string }
+      - { name: proofImage, label: Capture du classement, type: image }
+      - { name: proofCaption, label: Légende de la capture, type: string }
+      - { name: photo, label: Photo principale, type: image }
+      - { name: avatar, label: "Photo ronde du bloc auteur (carrée, centrée sur le visage)", type: image }
+      - name: photos
+        label: Photos du slider
+        type: object
+        list: true
+        fields:
+          - { name: image, label: Photo, type: image }
+          - { name: caption, label: Légende, type: string }
+
+  - name: guide1rm_en
+    label: "Guide du calculateur 1RM (anglais)"
+    type: file
+    path: _data/en/guide-1rm.md
+    fields:
+      - { name: title, label: Titre interne, type: string }
+      - { name: body, label: "Contenu (H2 = titre du guide, H3 = sections, H4 = sous-parties ; le sommaire se crée tout seul)", type: rich-text }
+
+  - name: site_en
+    label: "Réglages du site (anglais : textes uniquement, le prix et le lien Stripe viennent des réglages français)"
+    type: file
+    path: _data/en/site.json
+    fields:
+      - { name: title, label: Titre SEO de la page d'accueil anglaise, type: string }
+      - { name: description, label: Description SEO de la page d'accueil anglaise (~155 caractères), type: text }
+      - { name: disclaimer, label: Mention d'indépendance (pied de page), type: text }
